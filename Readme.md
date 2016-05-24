@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Vladimir Tyalo](https://up.htmlacademy.ru/adaptive/7/user/32147).
-* Наставник: `Неизвестно`.
+* Наставник: [Екатерина Радакина](https://htmlacademy.ru/profile/id130585).
 
 ---
 
