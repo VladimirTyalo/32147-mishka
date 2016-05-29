@@ -8,32 +8,26 @@
   <body>
 
     <nav class="top-menu">
-      <div class="container">
+      <svg class="logo"></svg>
+      <div class="top-menu__burger"></div>
 
-        <div class="modal-menu visually-hidden">
-          <svg class="logo"></svg>
-          <button class="modal-menu__close"></button>
-          <ul class="modal-menu__list">
-            <li class="modal-menu__item">
-              <a href="#" class="modal-menu__link">Каталог товаров</a>
-            </li>
-            <li class="modal-menu__item">
-              <a href="#" class="modal-menu__link">Вязание на заказ</a>
-            </li>
-            <li class="modal-menu__item">
-              <a href="#" class="modal-menu__link modal-menu__link--search">Поиск по сайту</a>
-            </li>
-            <li class="modal-menu__item">
-              <a href="#" class="modal-menu__link modal-menu__link--cart">Корзина:
-                <i>пока пуста</i>
-              </a>
-            </li>
-          </ul>
-        </div>
+      <ul class="modal-menu modal-menu--hidden">
+        <li class="modal-menu__item">
+          <a href="#" class="modal-menu__link">Каталог товаров</a>
+        </li>
+        <li class="modal-menu__item">
+          <a href="#" class="modal-menu__link">Вязание на заказ</a>
+        </li>
+        <li class="modal-menu__item">
+          <a href="#" class="modal-menu__link modal-menu__link--search">Поиск по сайту</a>
+        </li>
+        <li class="modal-menu__item">
+          <a href="#" class="modal-menu__link modal-menu__link--cart">Корзина:
+            <i>пока пуста</i>
+          </a>
+        </li>
+      </ul>
 
-        <svg class="logo"></svg>
-        <div class="top-menu__burger"></div>
-      </div>
     </nav>
 
     <header class="index-header">
@@ -41,10 +35,16 @@
         <h1 class="index-header__title">Милые штуки ручной работы для дома</h1>
         <ul class="index-header__menu">
           <li class="index-header__item">
-            <a class="index-header__link" href="#">Предметы интерьера</a>
+            <a class="index-header__link" href="#">
+              <span class="index-header__text">Предметы интерьера</span>
+              <svg class="index-header__icon"></svg>
+            </a>
           </li>
           <li class="index-header__item">
-            <a class="index-header__link" href="#">Детские игрушки</a>
+            <a class="index-header__link" href="#">
+              <span class="index-header__text">Детские игрушки</span>
+              <svg class="index-header__icon"></svg>
+            </a>
           </li>
         </ul>
       </div>
