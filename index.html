@@ -8,7 +8,7 @@
   <body>
 
     <nav class="top-menu">
-      <svg class="logo"></svg>
+      <svg class="top-menu__logo"></svg>
       <div class="top-menu__burger"></div>
 
       <ul class="modal-menu modal-menu--hidden">
@@ -167,18 +167,25 @@
       <section class="contacts">
         <div class="container">
           <h1 class="contacts__title">Контакты</h1>
-          <div class="contacts__info contacts__info--email">
-            <div>e-mail:</div>
-            <a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+
+          <div class="contacts__info">
+            <div class="contacts__key">e-mail</div>
+            <div class="contacts__val">
+              <a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+            </div>
           </div>
-          <div class="contacts__info contacts__info--address">
-            <div>адрес:</div>
-            <pre>
-              г. Санкт-Петербург,
-              ул. Большая Конюшенная,
-              д. 19/8, офис 101
-            </pre>
+
+          <div class="contacts__info">
+            <div class="contacts__key">address</div>
+            <div class="contacts__val">
+              <pre>
+                г. Санкт-Петербург,
+                ул. Большая Конюшенная,
+                д. 19/8, офис 101
+              </pre>
+            </div>
           </div>
+
         </div>
 
         <div class="contacts__map">
