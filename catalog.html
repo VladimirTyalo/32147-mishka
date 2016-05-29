@@ -8,32 +8,26 @@
   <body>
 
     <nav class="top-menu">
-      <div class="container">
+      <a href="index.html"><svg class="logo"></svg></a>
+      <div class="top-menu__burger"></div>
 
-        <div class="modal-menu visually-hidden">
-          <svg class="logo"></svg>
-          <button class="modal-menu__close"></button>
-          <ul class="modal-menu__list">
-            <li class="modal-menu__item">
-              <a href="#" class="modal-menu__link">Каталог товаров</a>
-            </li>
-            <li class="modal-menu__item">
-              <a href="#" class="modal-menu__link">Вязание на заказ</a>
-            </li>
-            <li class="modal-menu__item">
-              <a href="#" class="modal-menu__link modal-menu__link--search">Поиск по сайту</a>
-            </li>
-            <li class="modal-menu__item">
-              <a href="#" class="modal-menu__link modal-menu__link--cart">Корзина:
-                <i>пока пуста</i>
-              </a>
-            </li>
-          </ul>
-        </div>
+      <ul class="modal-menu modal-menu--hidden">
+        <li class="modal-menu__item">
+          <a href="#" class="modal-menu__link">Каталог товаров</a>
+        </li>
+        <li class="modal-menu__item">
+          <a href="#" class="modal-menu__link">Вязание на заказ</a>
+        </li>
+        <li class="modal-menu__item">
+          <a href="#" class="modal-menu__link modal-menu__link--search">Поиск по сайту</a>
+        </li>
+        <li class="modal-menu__item">
+          <a href="#" class="modal-menu__link modal-menu__link--cart">Корзина:
+            <i>пока пуста</i>
+          </a>
+        </li>
+      </ul>
 
-        <svg class="logo"></svg>
-        <div class="top-menu__burger"></div>
-      </div>
     </nav>
 
     <header class="header">
@@ -47,7 +41,7 @@
           <a class="product-post__image-link" href="#">
             <img class="product-post__image" src="http://placehold.it/260x195" alt="Зайчик попрыгайчик">
           </a>
-          <h2 class="product-post__title">Зайчик-попрыгайчик</h2>
+          <a class="product-post__title-link" href="#"><h2 class="product-post__title">Зайчик-попрыгайчик</h2></a>
           <p class="product-post__descr">Рост 30см, вес 200г</p>
 
           <div class="product-post__buy">
@@ -66,7 +60,7 @@
           <a class="product-post__image-link" href="#">
             <img class="product-post__image" src="http://placehold.it/260x195" alt="Корзинка для белья">
           </a>
-          <h2 class="product-post__title">Корзинка для белья</h2>
+          <a class="product-post__title-link" href="#"><h2 class="product-post__title">Корзинка для белья</h2></a>
           <p class="product-post__descr">Диаметр 15см, высота 10см</p>
 
           <div class="product-post__buy">
@@ -84,7 +78,7 @@
           <a class="product-post__image-link" href="#">
             <img class="product-post__image" src="http://placehold.it/260x195" alt="Большая корзинка для игрушек">
           </a>
-          <h2 class="product-post__title">Большая корзинка для игрушек</h2>
+          <a class="product-post__title-link" href="#"><h2 class="product-post__title">Большая корзинка для игрушек</h2></a>
           <p class="product-post__descr">Диаметр 30см, высота 30см</p>
 
           <div class="product-post__buy">
@@ -100,12 +94,9 @@
 
 
         <article class="video-post">
-          <h2 class="video-post__title" width="260">Процесс производства</h2>
-          <video class="video-post__content">
+          <h2 class="video-post__title">Процесс производства</h2>
+          <video class="video-post__content" src="video-presentation.mp4">
             <div class="video-post__play-btn"></div>
-            <source src="video-production.mp4" type="video/mp4">
-            <source src="video-production.ogg" type="video/ogg">
-            Your browser does not support HTML5 video.
           </video>
           <p class="video-post__descr">
             По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
