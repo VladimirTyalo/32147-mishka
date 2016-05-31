@@ -1,5 +1,4 @@
 .modal-menu {
-
   width: 100%;
   background: $color-bg-main;
   margin: 0;
@@ -7,8 +6,6 @@
   list-style: none;
 
   &__item {
-
-
   }
 
   &__link {
@@ -21,9 +18,8 @@
 
   }
 
-
   &--hidden {
-    //display: none;
+    display: none;
   }
 
 }

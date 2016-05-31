@@ -2,5 +2,25 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  background: lightgray;
+}
+
+body {
+  background: $color-bg-main;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+
+ul {
+  list-sytle: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
 }

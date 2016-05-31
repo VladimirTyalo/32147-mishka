@@ -1,0 +1,12 @@
+.contacts {
+    width: 100%;
+
+
+  &__map {
+    width: 100%;
+    min-height: 458px;
+    background-image: url("./../img/map-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

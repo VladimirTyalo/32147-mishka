@@ -1,0 +1,25 @@
+.index-header {
+  background: $color-bg-header;
+
+
+  &__title {
+    min-height: 300px;
+    width: 100%;
+    background-image: url("./../img/hero-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+  }
+
+  &__item {
+
+    &--toys {
+      background: $color-bg-toys;
+    }
+
+    &--accessories {
+      background: $color-bg-accessories;
+    }
+  }
+}

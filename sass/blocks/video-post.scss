@@ -1,0 +1,19 @@
+.video-post {
+  position: relative;
+
+  &__play-btn {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 78px;
+    transform: translate(-50%, -50%);
+    background: $color-bg-play-btn;
+  }
+
+
+  &__icon {
+    fill: $color-icon-video-camera;
+  }
+}

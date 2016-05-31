@@ -1,0 +1,10 @@
+.social-links {
+
+  &__item {
+    display: inline-block;
+  }
+
+  &__icon {
+    fill: $color-icon-main-logo;
+  }
+}
