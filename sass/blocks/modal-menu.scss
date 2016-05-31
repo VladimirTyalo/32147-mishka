@@ -1,0 +1,26 @@
+.modal-menu {
+
+  width: 100%;
+  background: $color-bg-main;
+
+  &__item {
+
+
+  }
+
+  &__link {
+
+    &--search {
+    }
+
+    &--cart {
+    }
+
+  }
+
+
+  &--hidden {
+    //display: none;
+  }
+
+}
