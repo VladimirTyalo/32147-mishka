@@ -1,3 +1,15 @@
 @import "./global/normalize.css";
 
-@import "./blocks/top-menu.css";
+
+@import "variables.scss";
+@import "./mixin.css";
+
+
+@import "./global/base.css";
+@import "./global/layout.css";
+@import "./global/fonts.css";
+@import "./global/forms.css";
+
+
+@import "blocks/top-menu.scss";
+
