@@ -1,0 +1,31 @@
+.review {
+
+
+  &__title {
+    @include font($fnt-review-title, $line-h-review-title);
+  }
+
+  &__list {
+
+  }
+
+  &__item {
+
+  }
+
+  &__text {
+  @include font($fnt-review-text, $line-h-review-text);
+  }
+
+  &__author {
+  @include font($fnt-review-author, $line-h-review-author);
+  }
+
+  &__nick {
+  @include font($fnt-review-nick, $line-h-review-nick);
+  }
+
+  &__btn {
+
+  }
+}

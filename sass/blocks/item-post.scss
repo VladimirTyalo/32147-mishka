@@ -1,0 +1,36 @@
+.item-post {
+
+  &__title {
+    @include font($fnt-item-post-title, $line-h-item-post-title);
+  }
+
+  &__best-seller {
+    @include font($fnt-best-seller, $line-h-best-seller);
+  }
+
+  &__descr {
+    @include font($fnt-post-descr, $line-h-post-descr);
+  }
+
+  &__params {
+    @include font($fnt-params-table, $line-h-params-table);
+  }
+
+  &__param-key {
+  }
+
+  &__param-value {
+  }
+
+  &__image {
+  }
+
+  &__price,
+  &__price i {
+    @include font($fnt-price, $line-h-price);
+  }
+
+  &__make-order {
+    @include font($fnt-btn, $line-h-btn);
+  }
+}

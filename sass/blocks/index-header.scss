@@ -10,8 +10,14 @@
     background-size: cover;
     background-position: center;
 
+
+    @include font($fnt-index-header-title, $line-h-index-header-title);
+
   }
 
+  &__text {
+    @include font($fnt-index-header-text, $line-h-index-header-text);
+  }
   &__item {
 
     &--toys {

@@ -1,0 +1,5 @@
+.btn {
+  text-decoration: none;
+  @include font($fnt-btn, $line-h-btn);
+  color: $color-fnt-main;
+}

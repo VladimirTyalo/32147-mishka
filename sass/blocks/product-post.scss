@@ -1,0 +1,42 @@
+.product-post {
+
+  &__image-link {
+
+  }
+
+  &__image {
+
+  }
+
+  &__title {
+
+  }
+
+  &__title-link {
+    @include font($fnt-product-post-title, $line-h-product-post-title );
+  }
+
+  &__descr {
+    @include font($fnt-product-post-descr, $line-h-product-post-descr);
+  }
+
+  &__buy {
+
+  }
+
+  &__price {
+    @include font($fnt-product-post-price, $line-h-product-post-price);
+  }
+
+  &__price i {
+    @include font($fnt-product-post-price, $line-h-product-post-price);
+  }
+
+  &__make-order {
+
+  }
+
+  &__order-icon {
+
+  }
+}

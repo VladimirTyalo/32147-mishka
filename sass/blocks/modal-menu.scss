@@ -6,20 +6,26 @@
   list-style: none;
 
   &__item {
+
   }
 
   &__link {
 
+    @include font($fnt-burger-menu, $line-h-burger-menu);
+    font-weight:
+
     &--search {
+
     }
 
     &--cart {
+
     }
 
   }
 
   &--hidden {
-    display: none;
+    //display: none;
   }
 
 }

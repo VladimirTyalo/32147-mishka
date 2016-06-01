@@ -1,6 +1,14 @@
 .contacts {
     width: 100%;
 
+  &__title {
+    @include font($fnt-contacts-title, $line-h-contacts-title);
+  }
+
+  &__info {
+    @include font($fnt-contacts-info, $line-h-contacts-info);
+  }
+
 
   &__map {
     width: 100%;
