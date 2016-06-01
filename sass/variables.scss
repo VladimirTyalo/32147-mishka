@@ -10,6 +10,7 @@ $white-3: #ececec;
 $white-4: #d3d2d2;
 $grey-1:  #c7c7c7;
 $grey-2:  #ccc;
+$grey-3:  #fafafa;
 $green-1: #62d1ba;
 $green-2: #6bc5b3;
 $green-3: #63d1bb;
@@ -31,7 +32,9 @@ $color-bg-footer: $white-2;
 $color-bg-accessories: $green-3;
 $color-bg-toys: $green-4;
 $color-bg-play-btn: $green-1;
+$color-border-btn: $black-2;
 $color-bg-arrow: $black-1;
+$color-bg-index-header: $grey-3;
 
 // --- border colors ---
 $color-curly-line: $white-2;
@@ -54,8 +57,8 @@ $color-icon-about-field: $green-3;
 
 // --- TYPOGRAPHY ---
 
-$font-verdana: "Verdana", sans-serif;
-$font-
+$font-verdana: "Verdana", "Geneva", sans-serif;
+$font-open-sans: "Open Sans", sans-serif;
 
 $fnt-burger-menu: 16px;
 $line-h-burger-menu: 24px;
@@ -135,13 +138,16 @@ $line-h-video-descr: 24px;
 
 
 $fnt-form-descr: 15px;
-$line-height: 26px;
+$line-h-form-descr: 26px;
 
 $fnt-form-field: 17px;
 $line-h-form-field: 19px;
 
 $fnt-form-title: 17px;
 $line-h-form-title: 17px;
+
+$fnt-footer: 18px;
+$line-h-footer: 18px;
 
 
 

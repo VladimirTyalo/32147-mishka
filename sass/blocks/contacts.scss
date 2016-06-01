@@ -1,14 +1,32 @@
 .contacts {
     width: 100%;
 
+    // TODO replace with wavy line
+    border-top: 1px solid $color-curly-line;
+
+
   &__title {
     @include font($fnt-contacts-title, $line-h-contacts-title);
+    font-family: $font-verdana;
+    font-weight: bold;
   }
 
   &__info {
     @include font($fnt-contacts-info, $line-h-contacts-info);
+
+    font-family: $font-open-sans;
+    margin-top: 20px;
   }
 
+  &__key {
+    margin-right: 30px;
+  }
+
+  &__key,
+  &__val {
+    display: inline-block;
+    vertical-align: top;
+  }
 
   &__map {
     width: 100%;
@@ -16,5 +34,11 @@
     background-image: url("./../img/map-mobile@1x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    margin-top: 35px;
+  }
+
+  &__btn {
+    max-width: 260px;
+    margin: 40px auto;
   }
 }

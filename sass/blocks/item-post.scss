@@ -2,35 +2,64 @@
 
   &__title {
     @include font($fnt-item-post-title, $line-h-item-post-title);
+    font-family: $font-verdana;
+    font-weight: bold;
+    color: $color-fnt-main;
   }
 
   &__best-seller {
     @include font($fnt-best-seller, $line-h-best-seller);
+    font-family: $font-open-sans;
+    font-weight: bold;
+    color: $color-fnt-alternative;
+    text-transform: uppercase;
   }
 
   &__descr {
     @include font($fnt-post-descr, $line-h-post-descr);
+    font-family: $font-open-sans;
+    color: $color-fnt-main;
+
   }
 
   &__params {
     @include font($fnt-params-table, $line-h-params-table);
+    font-family: $font-open-sans;
+    border-collapse: collapse;
+    width: 260px;
   }
 
   &__param-key {
+    width: 98px;
   }
 
   &__param-value {
   }
 
+  [class*="__param-"] {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $color-top-menu-separator;
+  }
+
   &__image {
+    margin-top: 30px;
   }
 
   &__price,
   &__price i {
     @include font($fnt-price, $line-h-price);
+    font-family: $font-verdana;
+    font-weight: bold;
+    font-style: normal;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+
   }
 
   &__make-order {
     @include font($fnt-btn, $line-h-btn);
+    margin-bottom: 30px;
   }
 }

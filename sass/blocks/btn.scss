@@ -2,4 +2,12 @@
   text-decoration: none;
   @include font($fnt-btn, $line-h-btn);
   color: $color-fnt-main;
+  font-family: $font-open-sans;
+  font-weight: bold;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  text-align: center;
+  border: 2px solid $color-border-btn;
+  display: block;
+
 }

@@ -1,7 +1,25 @@
 .footer {
   background: $color-bg-footer;
+  border: 1px solid transparent;
+
+
+  &__copyright {
+    margin-bottom: 30px;
+    text-align: center;
+  }
 
   &__copyright-icon {
     fill: $color-icon-academy-logo;
+    display: inline-block;
+    vertical-align: middle;
+
+  }
+
+  &__footer__copyright b {
+    @include font($fnt-footer, $line-h-footer);
+    font-family: $font-open-sans;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: middle;
   }
 }

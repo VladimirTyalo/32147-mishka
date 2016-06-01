@@ -1,31 +1,39 @@
 .review {
 
-
   &__title {
     @include font($fnt-review-title, $line-h-review-title);
+    font-family: $font-verdana;
+    font-weight: bold;
+    margin-top: 30px;
   }
 
   &__list {
-
+    list-style: none;
   }
 
   &__item {
-
+    display: inline-block;
   }
 
   &__text {
-  @include font($fnt-review-text, $line-h-review-text);
+    @include font($fnt-review-text, $line-h-review-text);
+    font-family: $font-open-sans;
   }
 
   &__author {
-  @include font($fnt-review-author, $line-h-review-author);
+    @include font($fnt-review-author, $line-h-review-author);
+    font-family: $font-open-sans;
+    font-weight: bold;
   }
 
   &__nick {
-  @include font($fnt-review-nick, $line-h-review-nick);
+    @include font($fnt-review-nick, $line-h-review-nick);
+    font-family: $font-open-sans;
+    font-weight: normal;
   }
 
   &__btn {
-
+    margin-top: 38px;
+    margin-bottom: 40px;
   }
 }

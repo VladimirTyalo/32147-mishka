@@ -4,24 +4,37 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  text-align: center;
 
   &__item {
+    border-top: 1px solid $color-top-menu-separator;
 
+    &:last-of-type {
+      border-bottom: 1px solid $color-top-menu-separator;
+    }
   }
 
   &__link {
-
     @include font($fnt-burger-menu, $line-h-burger-menu);
-    font-weight:
+    font-family: $font-verdana;
+    font-weight: bold;
+    color: $color-fnt-main;
+    padding: 28px 20px;
+    display: block;
 
-    &--search {
+  }
 
-    }
+  &--search {
+  }
 
-    &--cart {
+  &--cart {
+  }
 
-    }
-
+  &--cart i {
+    @include font($fnt-burger-menu, $line-h-burger-menu);
+    font-family: $font-verdana;
+    font-style: normal;
+    font-weight: bold;
   }
 
   &--hidden {

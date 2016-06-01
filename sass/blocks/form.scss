@@ -1,0 +1,47 @@
+.form {
+
+  &__descr {
+    @include font($fnt-form-descr, $line-h-form-descr);
+    font-family: $font-verdana;
+    margin-top: 30px;
+  }
+
+  &__title {
+    @include font($fnt-form-title, $line-h-form-title);
+    font-family: $font-open-sans;
+    font-weight: bold;
+    color: $color-fnt-alternative;
+  }
+
+  &__radio-label,
+  &__checkbox-label,
+  &__input-label {
+    display: block;
+    @include font($fnt-form-field, $line-h-form-field);
+    font-family: $font-verdana;
+    font-weight: bold;
+    margin-top: 30px;
+  }
+
+  &__input {
+    padding: 15px 0;
+    @include font($fnt-form-field, $line-h-form-field);
+    color: $color-fnt-placeholder;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid $color-border-btn;
+
+    &--add-info {
+      border: 2px solid $color-border-btn;
+      padding: 10px;
+    }
+  }
+
+  &__button-submit {
+    margin: 60px 0;
+    width: 100%;
+    background: $color-bg-main;
+    cursor: pointer;
+  }
+
+}

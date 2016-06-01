@@ -1,12 +1,13 @@
 
 .top-menu {
+  position: relative;
   background: $color-bg-main;
-  width: auto;
+  width: 100%;
 
   position: relative;
   text-align: center;
 
-  padding: 20px 30px;
+
 
   overflow-x: hidden;
   overflow-y: hidden;
@@ -14,10 +15,12 @@
 
   &__logo {
     fill: $color-fnt-main;
-
+    margin: 20px auto;
   }
 
   &__burger {
-
+    position: absolute;
+    top: 20px;
+    right: 30px;
   }
 }

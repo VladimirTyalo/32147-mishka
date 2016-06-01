@@ -1,10 +1,16 @@
 .social-links {
+  margin-top: 30px;
+  margin-bottom: 45px;
+  text-align: center;
 
   &__item {
     display: inline-block;
+    vertical-align: top;
   }
 
   &__icon {
     fill: $color-icon-main-logo;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }
