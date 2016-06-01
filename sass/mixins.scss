@@ -1,10 +1,9 @@
 // $size - in pixels
 // return rem size
 
-
-
 @function calculateRem($size, $base-size: 16px) {
-  $remSize: $size / $base-size;
+    $remSize: $size / $base-size;
+
   @return $remSize * 1rem;
 }
 
@@ -18,7 +17,6 @@
   line-height: $line-height;
   line-height: calculateRem($line-height);
 }
-
 
 @mixin font($font-size, $line-height) {
   @include font-size($font-size);

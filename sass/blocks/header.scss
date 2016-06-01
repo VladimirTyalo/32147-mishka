@@ -1,13 +1,13 @@
 .header {
-  background: $color-bg-header;
   border: 1px solid transparent;
-
+  background: $color-bg-header;
 
   &__title {
-    @include font($fnt-header, $line-h-header);
     font-family: $font-verdana;
     font-weight: bold;
-    text-align: center;
     padding: 75px 0;
+    text-align: center;
+
+    @include font($fnt-header, $line-h-header);
   }
 }

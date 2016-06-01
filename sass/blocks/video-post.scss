@@ -1,7 +1,4 @@
 .video-post {
-
-
-
   &__title {
     @include font($fnt-product-post-title, $line-h-product-post-title);
   }
@@ -9,11 +6,6 @@
   &__descr {
     @include font($fnt-video-descr, $line-h-video-descr);
   }
-
-  &__play-btn {
-
-  }
-
 
   &__icon {
     fill: $color-icon-video-camera;

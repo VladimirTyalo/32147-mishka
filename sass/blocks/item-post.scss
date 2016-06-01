@@ -1,42 +1,41 @@
 .item-post {
-
   &__title {
-    @include font($fnt-item-post-title, $line-h-item-post-title);
     font-family: $font-verdana;
     font-weight: bold;
     color: $color-fnt-main;
+
+    @include font($fnt-item-post-title, $line-h-item-post-title);
   }
 
   &__best-seller {
-    @include font($fnt-best-seller, $line-h-best-seller);
     font-family: $font-open-sans;
     font-weight: bold;
-    color: $color-fnt-alternative;
     text-transform: uppercase;
+    color: $color-fnt-alternative;
+
+    @include font($fnt-best-seller, $line-h-best-seller);
   }
 
   &__descr {
-    @include font($fnt-post-descr, $line-h-post-descr);
     font-family: $font-open-sans;
     color: $color-fnt-main;
 
+    @include font($fnt-post-descr, $line-h-post-descr);
   }
 
   &__params {
-    @include font($fnt-params-table, $line-h-params-table);
     font-family: $font-open-sans;
-    border-collapse: collapse;
     width: 260px;
+    border-collapse: collapse;
+
+    @include font($fnt-params-table, $line-h-params-table);
   }
 
   &__param-key {
     width: 98px;
   }
 
-  &__param-value {
-  }
-
-  [class*="__param-"] {
+  [class*='__param-'] {
     padding-top: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid $color-top-menu-separator;
@@ -48,7 +47,6 @@
 
   &__price,
   &__price i {
-    @include font($fnt-price, $line-h-price);
     font-family: $font-verdana;
     font-weight: bold;
     font-style: normal;
@@ -56,10 +54,12 @@
     padding-bottom: 30px;
     text-align: center;
 
+    @include font($fnt-price, $line-h-price);
   }
 
   &__make-order {
-    @include font($fnt-btn, $line-h-btn);
     margin-bottom: 30px;
+
+    @include font($fnt-btn, $line-h-btn);
   }
 }

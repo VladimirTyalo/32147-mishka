@@ -1,55 +1,43 @@
 .product-post {
   margin-top: 30px;
 
-  &__image-link {
-
-  }
-
-  &__image {
-
-  }
-
   &__title {
-    padding-left: 30px;
     margin-bottom: 18px;
+    padding-left: 30px;
   }
 
   &__title-link {
-    @include font($fnt-product-post-title, $line-h-product-post-title );
     font-family: $font-verdana;
     font-weight: bold;
 
+    @include font($fnt-product-post-title, $line-h-product-post-title);
   }
 
   &__descr {
-    @include font($fnt-product-post-descr, $line-h-product-post-descr);
     font-family: $font-open-sans;
     padding-left: 30px;
 
+    @include font($fnt-product-post-descr, $line-h-product-post-descr);
   }
 
   &__buy {
-    margin-left: 30px;
     margin-right: 30px;
+    margin-left: 30px;
   }
 
   &__price,
   &__price i {
-    @include font($fnt-product-post-price, $line-h-product-post-price);
     font-family: $font-verdana;
     font-weight: bold;
-    paddin-left: 30px;
     font-style: normal;
     display: inline-block;
-  }
 
-
-  &__make-order {
-
+    @include font($fnt-product-post-price, $line-h-product-post-price);
+    paddin-left: 30px;
   }
 
   &__order-icon {
-    fill: green;
     display: inline-block;
+    fill: green;
   }
 }

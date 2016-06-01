@@ -1,10 +1,10 @@
 .review {
-
   &__title {
-    @include font($fnt-review-title, $line-h-review-title);
     font-family: $font-verdana;
     font-weight: bold;
     margin-top: 30px;
+
+    @include font($fnt-review-title, $line-h-review-title);
   }
 
   &__list {
@@ -16,20 +16,23 @@
   }
 
   &__text {
-    @include font($fnt-review-text, $line-h-review-text);
     font-family: $font-open-sans;
+
+    @include font($fnt-review-text, $line-h-review-text);
   }
 
   &__author {
-    @include font($fnt-review-author, $line-h-review-author);
     font-family: $font-open-sans;
     font-weight: bold;
+
+    @include font($fnt-review-author, $line-h-review-author);
   }
 
   &__nick {
-    @include font($fnt-review-nick, $line-h-review-nick);
     font-family: $font-open-sans;
     font-weight: normal;
+
+    @include font($fnt-review-nick, $line-h-review-nick);
   }
 
   &__btn {
