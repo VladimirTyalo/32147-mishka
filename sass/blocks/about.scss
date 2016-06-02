@@ -1,31 +1,31 @@
 .about {
   // TODO replace with wavy border
   border-top: 1px solid $color-border-btn;
+}
 
-  &__title {
-    font-family: $font-verdana;
-    font-weight: bold;
-    margin-top: 35px;
-    margin-bottom: 0;
+.about__title {
+  font-family: $font-verdana;
+  font-weight: bold;
+  margin-top: 35px;
+  margin-bottom: 0;
 
-    @include font($fnt-big, $line-h-big);
-  }
+  @include font($fnt-big, $line-h-big);
+}
 
-  &__list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
+.about__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
-  &__item-icon {
-    display: block;
-    fill: $color-icon-about-field;
-  }
+.about__item-icon {
+  display: block;
+  fill: $color-icon-about-field;
+}
 
-  &__item-text {
-    font-family: $font-verdana;
-    font-weight: bold;
+.about__item-text {
+  font-family: $font-verdana;
+  font-weight: bold;
 
-    @include font($fnt-base-size, $line-h-about-item);
-  }
+  @include font($fnt-base-size, $line-h-about-item);
 }
