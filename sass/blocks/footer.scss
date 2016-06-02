@@ -1,24 +1,24 @@
 .footer {
   border: 1px solid transparent;
   background: $color-bg-footer;
-
-  &__copyright {
-    margin-bottom: 30px;
-    text-align: center;
-  }
-
-  &__copyright-icon {
-    display: inline-block;
-    vertical-align: middle;
-    fill: $color-icon-academy-logo;
-  }
-
-  &__footer__copyright b {
-    font-family: $font-open-sans;
-    font-weight: bold;
-    display: inline-block;
-    vertical-align: middle;
-
-    @include font($fnt-footer, $line-h-footer);
-  }
 }
+
+.footer__copyright {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.footer__copyright-icon {
+  display: inline-block;
+  vertical-align: middle;
+  fill: $color-icon-academy-logo;
+}
+
+.footer__footer__copyright-text {
+  font-family: $font-open-sans;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
+  @include font($fnt-footer, $line-h-footer);
+}
+

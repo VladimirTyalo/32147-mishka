@@ -2,15 +2,16 @@
   margin-top: 30px;
   margin-bottom: 45px;
   text-align: center;
-
-  &__item {
-    display: inline-block;
-    vertical-align: top;
-  }
-
-  &__icon {
-    margin-right: 20px;
-    margin-left: 20px;
-    fill: $color-icon-main-logo;
-  }
 }
+
+.social-links__item {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.social-links__icon {
+  margin-right: 20px;
+  margin-left: 20px;
+  fill: $color-icon-main-logo;
+}
+

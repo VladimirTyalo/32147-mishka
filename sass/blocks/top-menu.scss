@@ -1,20 +1,17 @@
 .top-menu {
   position: relative;
-  position: relative;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  width: 100%;
   text-align: center;
   background: $color-bg-main;
-
-  &__logo {
-    margin: 20px auto;
-    fill: $color-fnt-main;
-  }
-
-  &__burger {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-  }
 }
+
+.top-menu__logo {
+  margin: 20px auto;
+  fill: $color-fnt-main;
+}
+
+.top-menu__burger {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
