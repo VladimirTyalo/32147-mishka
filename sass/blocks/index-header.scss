@@ -1,58 +1,57 @@
 .index-header {
   border: 1px solid transparent;
   background: $color-bg-index-header;
+}
 
-  &__title {
-    font-family: $font-verdana;
-    font-weight: bold;
-    width: 100%;
-    min-height: 300px;
-    margin: 0;
-    padding-top: 90px;
-    padding-right: 40px;
-    padding-left: 40px;
-    text-align: center;
-    background-image: url('./../img/hero-mobile@1x.jpg');
-    background-repeat: no-repeat;
-    background-position: center 10px;
-    background-size: cover;
+.index-header__title {
+  font-family: $font-verdana;
+  font-weight: bold;
 
-    @include font($fnt-big, $line-h-big);
+  //width: 100%;
+  min-height: 300px;
+  margin: 0;
+  padding-top: 90px;
+  padding-right: 40px;
+  padding-left: 40px;
+  text-align: center;
+  background-image: url('./../img/hero-mobile@1x.jpg');
+  background-repeat: no-repeat;
+  background-position: center 10px;
+  background-size: cover;
+
+  @include font($fnt-big, $line-h-big);
+}
+
+.index-header__menu {
+  list-style: none;
+}
+
+.index-header__text {
+  width: 50%;
+  display: inline-block;
+  padding-left: 0;
+  vertical-align: middle;
+  color: $color-fnt-invert;
+
+  @include font($fnt-index-header-text, $line-h-text);
+}
+
+.index-header__icon {
+  float: right;
+  opacity: 0.3;
+}
+
+.index-header__item {
+  &--toys {
+    background: $color-bg-toys;
   }
 
-  &__menu {
-    list-style: none;
+  &--accessories {
+    background: $color-bg-accessories;
   }
+}
 
-  &__text {
-    display: inline-block;
-    width: 50%;
-    padding-left: 0;
-    vertical-align: middle;
-    color: $color-fnt-invert;
-
-    @include font($fnt-index-header-text, $line-h-text);
-  }
-
-  &__icon {
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  &__item {
-    &--toys {
-      background: $color-bg-toys;
-    }
-
-    &--accessories {
-      background: $color-bg-accessories;
-    }
-  }
-
-  &__link {
-    display: inline-block;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 30px;
-  }
+.index-header__link {
+  display: block;
+  padding: 30px;
 }

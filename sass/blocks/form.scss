@@ -1,49 +1,89 @@
-.form {
-  &__descr {
-    font-family: $font-verdana;
-    margin-top: 30px;
+.form__type {
+  position: relative;
+  margin-top: 50px;
+}
 
-    @include font($fnt-text-size, $line-h-form-descr);
+.form__descr {
+  font-family: $font-verdana;
+  margin-top: 30px;
+
+  @include font($fnt-text-size, $line-h-form-descr);
+}
+
+.form__title {
+  font-family: $font-open-sans;
+  font-weight: bold;
+  color: $color-fnt-alternative;
+
+  @include font($fnt-form-title, $line-h-form-title);
+}
+
+.form__radio-label,
+.form__checkbox-label,
+.form__input-label {
+  font-family: $font-verdana;
+  font-weight: bold;
+  position: relative;
+  display: block;
+  margin-top: 30px;
+  padding-left: 62px;
+
+  @include font($fnt-form-field, $line-h-form-field);
+}
+
+.form__checkbox-label {
+  margin-top: 50px;
+}
+
+.form__input-label {
+  padding-left: 0;
+}
+
+.form__radio-label::before,
+.form__checkbox-label::before {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 45px;
+  height: 45px;
+  content: '';
+}
+
+.form__radio-label::before {
+  border: 3px solid $color-border-btn;
+  border-radius: 50%;
+}
+
+.form__checkbox-label::before {
+  border: 3px solid $color-border-btn;
+}
+
+.form__input {
+  width: 100%;
+  padding: 15px 0;
+  color: $color-fnt-placeholder;
+  border: none;
+  border-bottom: 2px solid $color-border-btn;
+
+  @include font($fnt-form-field, $line-h-form-field);
+
+  &--add-info {
+    padding: 10px;
+    border: 2px solid $color-border-btn;
   }
+}
 
-  &__title {
-    font-family: $font-open-sans;
-    font-weight: bold;
-    color: $color-fnt-alternative;
+.form__button-submit {
+  width: 100%;
+  margin: 60px 0;
+  cursor: pointer;
+  background: $color-bg-main;
+}
 
-    @include font($fnt-form-title, $line-h-form-title);
-  }
-
-  &__radio-label,
-  &__checkbox-label,
-  &__input-label {
-    font-family: $font-verdana;
-    font-weight: bold;
-    display: block;
-    margin-top: 30px;
-
-    @include font($fnt-form-field, $line-h-form-field);
-  }
-
-  &__input {
-    width: 100%;
-    padding: 15px 0;
-    color: $color-fnt-placeholder;
-    border: none;
-    border-bottom: 2px solid $color-border-btn;
-
-    @include font($fnt-form-field, $line-h-form-field);
-
-    &--add-info {
-      padding: 10px;
-      border: 2px solid $color-border-btn;
-    }
-  }
-
-  &__button-submit {
-    width: 100%;
-    margin: 60px 0;
-    cursor: pointer;
-    background: $color-bg-main;
-  }
+.form__icon-tel,
+.form__icon-email {
+  position: absolute;
+  right: 0;
+  bottom: 12px;
+  opacity: .3;
 }

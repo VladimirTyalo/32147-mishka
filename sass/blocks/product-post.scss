@@ -1,43 +1,47 @@
 .product-post {
   margin-top: 30px;
+}
 
-  &__title {
-    margin-bottom: 18px;
-    padding-left: 30px;
-  }
+.product-post__title {
+  margin-bottom: 18px;
+  padding-left: 30px;
+}
 
-  &__title-link {
-    font-family: $font-verdana;
-    font-weight: bold;
+.product-post__title-link {
+  font-family: $font-verdana;
+  font-weight: bold;
+  color: $color-fnt-main;
 
-    @include font($fnt-base-size, $line-h-text);
-  }
+  @include font($fnt-base-size, $line-h-text);
+}
 
-  &__descr {
-    font-family: $font-open-sans;
-    padding-left: 30px;
+.product-post__descr {
+  font-family: $font-open-sans;
+  padding-left: 30px;
 
-    @include font($fnt-text-size, $line-h-big);
-  }
+  @include font($fnt-text-size, $line-h-big);
+}
 
-  &__buy {
-    margin-right: 30px;
-    margin-left: 30px;
-  }
+.product-post__buy {
+  margin-right: 30px;
+  margin-left: 30px;
+  border-top: 1px solid $color-curly-line;
+  padding: 26px 0px;
+}
 
-  &__price,
-  &__price i {
-    font-family: $font-verdana;
-    font-weight: bold;
-    font-style: normal;
-    display: inline-block;
+.product-post__price {
+  font-family: $font-verdana;
+  font-weight: bold;
+  font-style: normal;
+  display: inline-block;
 
-    @include font($fnt-text-size, $line-h-text);
-    paddin-left: 30px;
-  }
+  @include font($fnt-text-size, $line-h-text);
+}
 
-  &__order-icon {
-    display: inline-block;
-    fill: green;
-  }
+.product-post__make-order {
+  float: right;
+}
+
+.product-post__order-icon {
+  opacity: 0.3;
 }

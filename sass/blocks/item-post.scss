@@ -1,65 +1,62 @@
 .item-post {
-  &__title {
-    font-family: $font-verdana;
-    font-weight: bold;
-    color: $color-fnt-main;
-
-    @include font($fnt-big, $line-h-big);
-  }
-
-  &__best-seller {
-    font-family: $font-open-sans;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: $color-fnt-alternative;
-
-    @include font($fnt-base-size, $line-h-best-seller);
-  }
-
-  &__descr {
-    font-family: $font-open-sans;
-    color: $color-fnt-main;
-
-    @include font($fnt-text-size, $line-h-text);
-  }
-
-  &__params {
-    font-family: $font-open-sans;
-    width: 260px;
-    border-collapse: collapse;
-
-    @include font($fnt-text-size, $line-h-params-table);
-  }
-
-  &__param-key {
-    width: 98px;
-  }
-
-  [class*='__param-'] {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid $color-top-menu-separator;
-  }
-
-  &__image {
-    margin-top: 30px;
-  }
-
-  &__price,
-  &__price i {
-    font-family: $font-verdana;
-    font-weight: bold;
-    font-style: normal;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-align: center;
-
-    @include font($fnt-base-size, $line-h-text);
-  }
-
-  &__make-order {
-    margin-bottom: 30px;
-
-    @include font($fnt-base-size, $line-h-btn);
-  }
 }
+
+.item-post__title {
+  font-family: $font-verdana;
+  font-weight: bold;
+  color: $color-fnt-main;
+  @include font($fnt-big, $line-h-big);
+}
+
+.item-post__best-seller {
+  font-family: $font-open-sans;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $color-fnt-alternative;
+  @include font($fnt-base-size, $line-h-best-seller);
+}
+
+.item-post__descr {
+  font-family: $font-open-sans;
+  color: $color-fnt-main;
+  @include font($fnt-text-size, $line-h-text);
+}
+
+.item-post__params {
+  font-family: $font-open-sans;
+  width: 260px;
+  border-collapse: collapse;
+  @include font($fnt-text-size, $line-h-params-table);
+}
+
+.item-post__param-key {
+  width: 98px;
+}
+
+.item-post__param-key,
+.item-post__param-value {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $color-top-menu-separator;
+}
+
+.item-post__image {
+  margin-top: 30px;
+}
+
+.item-post__price,
+.item-post__price i {
+  font-family: $font-verdana;
+  font-weight: bold;
+  font-style: normal;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+  @include font($fnt-base-size, $line-h-text);
+}
+
+.item-post__make-order {
+  margin-bottom: 30px;
+  @include font($fnt-base-size, $line-h-btn);
+}
+

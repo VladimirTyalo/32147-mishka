@@ -1,20 +1,16 @@
 // $size - in pixels
 // return rem size
-
 @function calculateRem($size, $base-size: 16px) {
     $remSize: $size / $base-size;
 
   @return $remSize * 1rem;
 }
 
-// if rem is not supported (IE 8 or else) provide fallback in px;
 @mixin font-size($size) {
-  font-size: $size;
   font-size: calculateRem($size);
 }
 
 @mixin line-height($line-height) {
-  line-height: $line-height;
   line-height: calculateRem($line-height);
 }
 

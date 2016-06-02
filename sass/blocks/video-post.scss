@@ -1,13 +1,16 @@
 .video-post {
-  &__title {
-    @include font($fnt-base-size, $line-h-text);
-  }
-
-  &__descr {
-    @include font($fnt-text-size, $line-h-text);
-  }
-
-  &__icon {
-    fill: $color-icon-video-camera;
-  }
+  @include font($fnt-base-size, $line-h-text);
 }
+
+.video-post__title {
+
+}
+
+.video-post__descr {
+
+}
+
+.video-post__icon {
+  fill: $color-icon-video-camera;
+}
+
