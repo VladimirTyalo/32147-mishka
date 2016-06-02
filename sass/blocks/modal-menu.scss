@@ -5,6 +5,7 @@
   list-style: none;
   text-align: center;
   background: $color-bg-main;
+  transition: transform 1s;
 
   &__item {
     border-top: 1px solid $color-top-menu-separator;
@@ -33,6 +34,6 @@
   }
 
   &--hidden {
-    //display: none;
+    display: none;
   }
 }

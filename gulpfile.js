@@ -11,6 +11,31 @@ const gulp = require("gulp"),
   svgmin = require('gulp-svgmin'),
   svgstore = require("gulp-svgstore");
 
+const SVGMIN_PLUGINS = [
+  {
+    removeDoctype: true
+  },
+  {
+    removeComments: true
+  },
+  {
+    cleanupNumericValues: {
+      floatPrecision: 2
+    }
+  },
+  {
+    convertColors: {
+      names2hex: false, rgb2hex: false
+    }
+  },
+  {
+    collections: true
+  },
+  {
+    moveElemsAttrsToGroup: true
+  }
+];
+
 
 gulp.task("style", function () {
   gulp.src("sass/style.scss")
@@ -46,49 +71,28 @@ gulp.task("serve", ["style"], function () {
 
 // run only once to make optimize svg and make svg sprite
 gulp.task('svgmin', function () {
-  return gulp.src('./img/svg-icons/*.svg')
-             .pipe(svgmin(function getOptions(file) {
-               var prefix = path.basename(file.relative, path.extname(file.relative));
+  return gulp
+    .src('./img/svg-icons/*.svg')
+    .pipe(svgmin(function getOptions(file) {
+      var prefix = path.basename(file.relative, path.extname(file.relative));
+      var cleanUpPlugin = {
+        cleanupIDs: {
+          prefix: prefix + '-', minify: true
+        }
+      };
 
-               SVGMIN_PLAGINS.push({
-                 cleanupIDs: {
-                   prefix: prefix + '-', minify: true
-                 }
-               });
-               return {
-                 plugins: SVGMIN_PLAGINS
-               }
-             }))
-             .pipe(svgmin({
-               js2svg: {
-                 pretty: true
-               }
-             }))
-             .pipe(svgstore())
-             .pipe(gulp.dest('./img/sprite/'));
+      SVGMIN_PLUGINS.push(cleanUpPlugin);
+
+      return {
+        plugins: SVGMIN_PLUGINS
+      }
+    }))
+    .pipe(svgmin({
+      js2svg: {
+        pretty: true
+      }
+    }))
+    .pipe(svgstore())
+    .pipe(gulp.dest('./img/sprite/'));
 });
 
-const SVGMIN_PLAGINS = [
-  {
-    removeDoctype: true
-  },
-  {
-    removeComments: true
-  },
-  {
-    cleanupNumericValues: {
-      floatPrecision: 2
-    }
-  },
-  {
-    convertColors: {
-      names2hex: false, rgb2hex: false
-    }
-  },
-  {
-    collections: true
-  },
-  {
-    moveElemsAttrsToGroup: true
-  }
-];
