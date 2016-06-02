@@ -4,7 +4,7 @@
     font-weight: bold;
     color: $color-fnt-main;
 
-    @include font($fnt-item-post-title, $line-h-item-post-title);
+    @include font($fnt-big, $line-h-big);
   }
 
   &__best-seller {
@@ -13,14 +13,14 @@
     text-transform: uppercase;
     color: $color-fnt-alternative;
 
-    @include font($fnt-best-seller, $line-h-best-seller);
+    @include font($fnt-base-size, $line-h-best-seller);
   }
 
   &__descr {
     font-family: $font-open-sans;
     color: $color-fnt-main;
 
-    @include font($fnt-post-descr, $line-h-post-descr);
+    @include font($fnt-text-size, $line-h-text);
   }
 
   &__params {
@@ -28,7 +28,7 @@
     width: 260px;
     border-collapse: collapse;
 
-    @include font($fnt-params-table, $line-h-params-table);
+    @include font($fnt-text-size, $line-h-params-table);
   }
 
   &__param-key {
@@ -54,12 +54,12 @@
     padding-bottom: 30px;
     text-align: center;
 
-    @include font($fnt-price, $line-h-price);
+    @include font($fnt-base-size, $line-h-text);
   }
 
   &__make-order {
     margin-bottom: 30px;
 
-    @include font($fnt-btn, $line-h-btn);
+    @include font($fnt-base-size, $line-h-btn);
   }
 }

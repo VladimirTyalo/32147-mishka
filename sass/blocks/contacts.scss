@@ -8,14 +8,14 @@
     font-family: $font-verdana;
     font-weight: bold;
 
-    @include font($fnt-contacts-title, $line-h-contacts-title);
+    @include font($fnt-big, $line-h-big);
   }
 
   &__info {
     font-family: $font-open-sans;
     margin-top: 20px;
 
-    @include font($fnt-contacts-info, $line-h-contacts-info);
+    @include font($fnt-text-size, $line-h-big);
   }
 
   &__key {

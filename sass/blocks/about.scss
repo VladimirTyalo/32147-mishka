@@ -8,7 +8,7 @@
     margin-top: 35px;
     margin-bottom: 0;
 
-    @include font($fnt-about-title, $line-h-about-title);
+    @include font($fnt-big, $line-h-big);
   }
 
   &__list {
@@ -26,6 +26,6 @@
     font-family: $font-verdana;
     font-weight: bold;
 
-    @include font($fnt-about-item, $line-h-about-item);
+    @include font($fnt-base-size, $line-h-about-item);
   }
 }

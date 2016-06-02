@@ -4,7 +4,7 @@
     font-weight: bold;
     margin-top: 30px;
 
-    @include font($fnt-review-title, $line-h-review-title);
+    @include font($fnt-big, $line-h-big);
   }
 
   &__list {
@@ -18,21 +18,21 @@
   &__text {
     font-family: $font-open-sans;
 
-    @include font($fnt-review-text, $line-h-review-text);
+    @include font($fnt-text-size, $line-h-big);
   }
 
   &__author {
     font-family: $font-open-sans;
     font-weight: bold;
 
-    @include font($fnt-review-author, $line-h-review-author);
+    @include font($fnt-text-size, $line-h-text);
   }
 
   &__nick {
     font-family: $font-open-sans;
     font-weight: normal;
 
-    @include font($fnt-review-nick, $line-h-review-nick);
+    @include font($fnt-text-size, $line-h-big);
   }
 
   &__btn {

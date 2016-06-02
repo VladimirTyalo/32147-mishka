@@ -1,10 +1,10 @@
 .video-post {
   &__title {
-    @include font($fnt-product-post-title, $line-h-product-post-title);
+    @include font($fnt-base-size, $line-h-text);
   }
 
   &__descr {
-    @include font($fnt-video-descr, $line-h-video-descr);
+    @include font($fnt-text-size, $line-h-text);
   }
 
   &__icon {

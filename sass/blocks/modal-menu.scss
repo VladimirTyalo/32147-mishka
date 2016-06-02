@@ -22,7 +22,7 @@
     padding: 28px 20px;
     color: $color-fnt-main;
 
-    @include font($fnt-burger-menu, $line-h-burger-menu);
+    @include font($fnt-base-size);//, $line-h-burger-menu);
   }
 
   &--cart i {
@@ -30,10 +30,10 @@
     font-weight: bold;
     font-style: normal;
 
-    @include font($fnt-burger-menu, $line-h-burger-menu);
+    @include font($fnt-base-size, $line-h-base-size);
   }
 
   &--hidden {
-    display: none;
+    //display: none;
   }
 }

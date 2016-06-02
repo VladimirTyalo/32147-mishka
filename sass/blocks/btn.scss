@@ -9,5 +9,5 @@
   color: $color-fnt-main;
   border: 2px solid $color-border-btn;
 
-  @include font($fnt-btn, $line-h-btn);
+  @include font($fnt-base-size, $line-h-btn);
 }

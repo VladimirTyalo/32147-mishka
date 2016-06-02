@@ -1,5 +1,3 @@
-
-
 // --- COLOR SCHEME ---
 $black-1: #000;
 $black-2: #221f1f;
@@ -57,87 +55,35 @@ $color-icon-about-field: $green-3;
 
 // --- TYPOGRAPHY ---
 
-$font-verdana: "Verdana", "Geneva", sans-serif;
+$font-verdana: Verdana, Geneva, Arial, sans-serif;
 $font-open-sans: "Open Sans", sans-serif;
 
-$fnt-burger-menu: 16px;
-$line-h-burger-menu: 24px;
+$fnt-text-size: 14px;
+$line-h-text: 24px;
 
-$fnt-index-header-title: 24px;
-$line-h-index-header-title: 30px;
+$fnt-base-size: 16px;
+$line-h-base-size: 24px;
+
+$fnt-big: 24px;
+$line-h-big: 30px;
+
+
+// --------------- non standard font params ----------
+
 
 $fnt-index-header-text: 18px;
-$line-h-index-header-text: 24px;
 
-$fnt-item-post-title: 24px;
-$line-h-item-post-title: 30px;
-
-$fnt-best-seller: 16px;
 $line-h-best-seller: 16px;
 
-
-$fnt-post-descr: 14px;
-$line-h-post-descr: 24px;
-
-
-$fnt-params-table: 14px;
 $line-h-params-table: 20px;
 
-$fnt-price: 16px;
-$line-h-price: 24px;
-
-$fnt-btn: 16px;
 $line-h-btn: 16px;
 
-
-$fnt-about-title: 24px;
-$line-h-about-title: 30px;
-
-$fnt-about-item: 16px;
 $line-h-about-item: 20px;
-
-
-$fnt-review-title: 24px;
-$line-h-review-title: 30px;
-
-$fnt-review-text: 14px;
-$line-h-review-text: 30px;
-
-$fnt-review-author: 14px;
-$line-h-review-author: 24px;
-
-$fnt-review-nick: 14px;
-$line-h-review-nick: 30px;
-
-$fnt-contacts-title: 24px;
-$line-h-contacts-title: 30px;
-
-$fnt-contacts-info: 14px;
-$line-h-contacts-info: 30px;
 
 $fnt-copyright: 18px;
 $line-h-copyright: 18px;
 
-
-$fnt-header: 24px;
-$line-h-header: 30px;
-
-$fnt-product-post-title: 16px;
-$line-h-product-post-title: 24px;
-
-$fnt-product-post-descr: 14px;
-$line-h-product-post-descr: 30px;
-
-
-$fnt-product-post-price: 14px;
-$line-h-product-post-price: 24px;
-
-
-$fnt-video-descr: 14px;
-$line-h-video-descr: 24px;
-
-
-$fnt-form-descr: 15px;
 $line-h-form-descr: 26px;
 
 $fnt-form-field: 17px;

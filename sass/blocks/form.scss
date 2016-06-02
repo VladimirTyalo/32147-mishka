@@ -3,7 +3,7 @@
     font-family: $font-verdana;
     margin-top: 30px;
 
-    @include font($fnt-form-descr, $line-h-form-descr);
+    @include font($fnt-text-size, $line-h-form-descr);
   }
 
   &__title {

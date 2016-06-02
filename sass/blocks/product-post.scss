@@ -10,14 +10,14 @@
     font-family: $font-verdana;
     font-weight: bold;
 
-    @include font($fnt-product-post-title, $line-h-product-post-title);
+    @include font($fnt-base-size, $line-h-text);
   }
 
   &__descr {
     font-family: $font-open-sans;
     padding-left: 30px;
 
-    @include font($fnt-product-post-descr, $line-h-product-post-descr);
+    @include font($fnt-text-size, $line-h-big);
   }
 
   &__buy {
@@ -32,7 +32,7 @@
     font-style: normal;
     display: inline-block;
 
-    @include font($fnt-product-post-price, $line-h-product-post-price);
+    @include font($fnt-text-size, $line-h-text);
     paddin-left: 30px;
   }
 
