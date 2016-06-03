@@ -13,5 +13,14 @@
   position: absolute;
   top: 20px;
   right: 30px;
+  width: 22px;
+  height: 22px;
+  background-image: url("./../img/svg-icons/icon-menu-open.svg");
+  background-repeat: no-repeat;
+
+  &--close {
+    background-image: url("./../img/svg-icons/icon-menu-close.svg");
+  }
 }
+
 
