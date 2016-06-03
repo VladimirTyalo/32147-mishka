@@ -1,0 +1,45 @@
+.modal-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: $color-bg-main;
+
+}
+
+.modal-menu__item {
+  border-top: 1px solid $color-top-menu-separator;
+
+  &:last-of-type {
+    border-bottom: 1px solid $color-top-menu-separator;
+  }
+}
+
+.modal-menu__link {
+  position: relative;
+  font-family: $font-verdana;
+  font-weight: bold;
+  display: block;
+  padding: 28px 20px;
+  color: $color-fnt-main;
+  @include font($fnt-base-size, $line-h-base-size);
+}
+
+.modal-menu--cart {
+  font-family: $font-verdana;
+  font-weight: bold;
+  font-style: normal;
+  @include font($fnt-base-size, $line-h-base-size);
+}
+
+.modal-menu--hidden {
+  display: none;
+}
+
+
+.modal-menu__icon-search,
+.modal-menu__icon-cart {
+  position: absolute;
+  left: 30px;
+  opacity: 0.3;
+}
+

@@ -1,0 +1,26 @@
+.top-menu {
+  position: relative;
+  text-align: center;
+  background: $color-bg-main;
+}
+
+.top-menu__logo {
+  margin: 20px auto;
+  fill: $color-fnt-main;
+}
+
+.top-menu__burger {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  width: 22px;
+  height: 22px;
+  background-image: url("./../img/svg-icons/icon-menu-open.svg");
+  background-repeat: no-repeat;
+
+  &--close {
+    background-image: url("./../img/svg-icons/icon-menu-close.svg");
+  }
+}
+
+

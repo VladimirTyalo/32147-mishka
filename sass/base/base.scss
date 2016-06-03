@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: $color-bg-main;
+  font-family: $font-open-sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $fnt-base-size;
+  line-height: $line-h-base-size;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-sytle: none;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}

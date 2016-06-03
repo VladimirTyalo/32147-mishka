@@ -1,0 +1,41 @@
+.review {
+}
+
+.review__title {
+  font-family: $font-verdana;
+  font-weight: bold;
+  margin-top: 30px;
+  @include font($fnt-big, $line-h-big);
+}
+
+.review__list {
+  list-style: none;
+}
+
+.review__item {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.review__text {
+  font-family: $font-open-sans;
+  @include font($fnt-text-size, $line-h-big);
+}
+
+.review__author {
+  font-family: $font-open-sans;
+  font-weight: bold;
+  @include font($fnt-text-size, $line-h-text);
+}
+
+.review__nick {
+  font-family: $font-open-sans;
+  font-weight: normal;
+  @include font($fnt-text-size, $line-h-big);
+}
+
+.review__btn {
+  margin-top: 38px;
+  margin-bottom: 40px;
+}
+

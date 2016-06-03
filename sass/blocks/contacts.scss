@@ -1,0 +1,49 @@
+.contacts {
+  // TODO replace with wavy line
+  border-top: 1px solid $color-curly-line;
+}
+
+.contacts__title {
+  font-family: $font-verdana;
+  font-weight: bold;
+
+  @include font($fnt-big, $line-h-big);
+}
+
+.contacts__info {
+  font-family: $font-open-sans;
+  margin-top: 20px;
+
+  @include font($fnt-text-size, $line-h-big);
+}
+
+.contacts__key {
+  margin-right: 30px;
+}
+
+.contacts__key,
+.contacts__val {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.contacts__map {
+  position: relative;
+  min-height: 458px;
+  margin-top: 35px;
+  background-image: url('./../img/map-mobile@1x.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contacts__icon-map-pin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.contacts__btn {
+  max-width: 260px;
+  margin: 40px auto;
+}
