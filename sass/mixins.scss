@@ -18,3 +18,12 @@
   @include font-size($font-size);
   @include line-height($line-height);
 }
+
+
+@mixin clerafix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
