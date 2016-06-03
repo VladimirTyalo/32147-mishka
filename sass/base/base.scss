@@ -1,9 +1,3 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 body {
   background: $color-bg-main;
   font-family: $font-open-sans;
