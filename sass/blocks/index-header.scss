@@ -6,9 +6,7 @@
 .index-header__title {
   font-family: $font-verdana;
   font-weight: bold;
-
-  //width: 100%;
-  min-height: 300px;
+  min-height: 220px;
   margin: 0;
   padding-top: 90px;
   padding-right: 40px;
@@ -16,7 +14,7 @@
   text-align: center;
   background-image: url('./../img/hero-mobile@1x.jpg');
   background-repeat: no-repeat;
-  background-position: center 10px;
+  background-position: center;
   background-size: cover;
   @include font($fnt-big, $line-h-big);
 }
@@ -27,7 +25,7 @@
 
 .index-header__text {
   display: inline-block;
-  width: 50%;
+  max-width: 150px;
   padding-left: 0;
   vertical-align: middle;
   color: $color-fnt-invert;
@@ -36,10 +34,13 @@
 
 .index-header__icon {
   float: right;
+  padding-bottom: 20px;
   opacity: .3;
 }
 
 .index-header__item {
+  overflow: hidden;
+
   &--toys {
     background: $color-bg-toys;
   }
@@ -52,9 +53,37 @@
 .index-header__link {
   display: block;
   padding: 30px;
+  padding-top: 20px;
 }
 
 @media #{$tablet-size} {
+  .index-header {
+    font-size: 0;
+    margin-right: 50px;
+    margin-left: 50px;
+
+    // wavy border
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-repeat: repeat;
+      height: 10px;
+      background-size: 20px 20px;
+      background-image: radial-gradient(circle at 10px -5px, $color-bg-toys 12px, $color-bg-main 13px);
+    }
+
+
+  }
+
+  .index-header__item {
+    width: 50%;
+    @include block-align();
+  }
 }
 
 @media #{$laptop-size} {
