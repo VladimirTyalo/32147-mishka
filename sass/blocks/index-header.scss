@@ -18,7 +18,6 @@
   background-repeat: no-repeat;
   background-position: center 10px;
   background-size: cover;
-
   @include font($fnt-big, $line-h-big);
 }
 
@@ -27,18 +26,17 @@
 }
 
 .index-header__text {
-  width: 50%;
   display: inline-block;
+  width: 50%;
   padding-left: 0;
   vertical-align: middle;
   color: $color-fnt-invert;
-
   @include font($fnt-index-header-text, $line-h-text);
 }
 
 .index-header__icon {
   float: right;
-  opacity: 0.3;
+  opacity: .3;
 }
 
 .index-header__item {
@@ -54,4 +52,13 @@
 .index-header__link {
   display: block;
   padding: 30px;
+}
+
+@media #{$tablet-size} {
+}
+
+@media #{$laptop-size} {
+  .index-header {
+    border-top: 1px solid $color-top-menu-separator;
+  }
 }

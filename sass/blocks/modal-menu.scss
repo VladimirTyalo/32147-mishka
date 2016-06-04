@@ -30,40 +30,34 @@
   display: block;
   padding: 28px 0;
   color: $color-fnt-main;
-
   @include font($fnt-base-size, $line-h-base-size);
 }
 
 .modal-menu__icon-search,
 .modal-menu__icon-cart {
   position: absolute;
-  left: calc(100% * 30/360);
+  left: calc(100% * 30 / 360);
   opacity: .3;
 }
 
-
 @media #{$tablet-size} {
-
   .modal-menu {
     position: absolute;
-    left: 50px;
     right: 50px;
-    background: none;
-    border-bottom: none;
+    left: 50px;
     text-align: left;
-
+    border-bottom: none;
+    background: none;
 
     &--hidden {
       display: block;
     }
   }
 
-
   .modal-menu__item {
-    @include block-align();
-    border: none;
     margin-top: 90px;
-
+    border: none;
+    @include block-align();
 
     &--new,
     &--sale {
@@ -75,7 +69,6 @@
       right: 0;
       text-align: right;
       white-space: nowrap;
-
     }
 
     &:last-child .modal-menu__link {
@@ -86,10 +79,43 @@
   .modal-menu__link {
     padding: 20px 30px 20px 0;
   }
-
-
 }
 
-@media #{$laptop-size-condition} {
+@media #{$laptop-size} {
+  .modal-menu {
+    font-size: 0;
+    position: static;
+    max-width: 460px;
+    @include block-align();
+  }
 
+  .modal-menu__item {
+    margin: 0;
+    padding: 0;
+    @include block-align();
+
+    &--catalog {
+      border-right: 1px solid $color-top-menu-separator;
+    }
+
+    &--delivery {
+      margin-right: 50px;
+    }
+  }
+
+  .modal-menu__link {
+    width: 165px;
+    min-height: 30px;
+    padding: 34px 30px 26px 30px;
+  }
+
+  .modal-menu__item--delivery .modal-menu__link {
+    min-width: 300px;
+  }
+
+  .modal-menu__item--new .modal-menu__link,
+  .modal-menu__item--sale .modal-menu__link,
+  .modal-menu__item--delivery .modal-menu__link {
+    padding-top: 15px;
+  }
 }

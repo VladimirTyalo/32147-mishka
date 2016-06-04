@@ -12,7 +12,7 @@
 
 .top-menu__burger {
   position: absolute;
-  top: 30px;
+  top: 30px; /**/
   right: calc(100% * 30 / 360);
   width: 22px;
   height: 22px;
@@ -46,5 +46,18 @@
   }
 }
 
-@media #{$laptop-size-condition} {
+@media #{$laptop-size} {
+  .top-menu {
+    position: static;
+    margin-bottom: -72px;
+    text-align: left;
+  }
+
+  .top-menu__logo-link {
+    position: absolute;
+    z-index: 10;
+    right: 50%;
+    left: 50%;
+    background: red;
+  }
 }
