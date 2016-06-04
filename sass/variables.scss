@@ -52,6 +52,11 @@ $color-form-phone: $grey-2;
 $color-icon-email: $grey-2;
 $color-icon-about-field: $green-3;
 
+// --- BREAK POINTS ----
+
+$tablet-size-condition: "only screen and (min-width : 768px)";
+$laptop-size-condition: "only screen and (max-width : 1150px)";
+
 
 // --- TYPOGRAPHY ---
 

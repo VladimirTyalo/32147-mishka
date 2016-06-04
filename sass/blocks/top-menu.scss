@@ -2,25 +2,53 @@
   position: relative;
   text-align: center;
   background: $color-bg-main;
+  background: lightgoldenrodyellow; // for testing
 }
 
 .top-menu__logo {
-  margin: 20px auto;
+  display: inline-block;
+  margin: 20px 0;
+  vertical-align: middle;
   fill: $color-fnt-main;
 }
 
 .top-menu__burger {
   position: absolute;
-  top: 20px;
-  right: 30px;
+  top: 30px;
+  right: calc(100% * 30/360);
   width: 22px;
   height: 22px;
-  background-image: url("./../img/svg-icons/icon-menu-open.svg");
+  background-image: url('./../img/svg-icons/icon-menu-open.svg');
   background-repeat: no-repeat;
 
   &--close {
-    background-image: url("./../img/svg-icons/icon-menu-close.svg");
+    background-image: url('./../img/svg-icons/icon-menu-close.svg');
   }
 }
 
+@media #{$tablet-size-condition} {
+
+  .top-menu {
+    position: absolute;
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+  .top-menu__burger {
+    display: none;
+  }
+
+  .top-menu__logo {
+    margin-left: 50px;
+  }
+
+
+
+}
+
+
+@media #{$laptop-size-condition} {
+
+}
 

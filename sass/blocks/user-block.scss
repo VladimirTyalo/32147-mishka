@@ -1,0 +1,30 @@
+.user-block {
+  position: relative;
+  background: $color-bg-main;
+}
+
+.user-block__item {
+  border-top: 1px solid $color-top-menu-separator;
+
+  &:last-child {
+    border-bottom: 1px solid $color-top-menu-separator;
+  }
+}
+
+.user-block__link {
+  font-family: $font-verdana;
+  font-weight: bold;
+  position: relative;
+  display: block;
+  padding: 28px 0;
+  color: $color-fnt-main;
+  @include font($fnt-base-size, $line-h-base-size);
+}
+
+.user-block__icon-search,
+.user-block__icon-cart {
+  position: absolute;
+  left: calc(100% * 30 / 360);
+  top: 25px;
+  opacity: .3;
+}
