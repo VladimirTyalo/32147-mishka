@@ -6,9 +6,6 @@
 .user-block__item {
   border-top: 1px solid $color-top-menu-separator;
 
-  &:last-child {
-    border-bottom: 1px solid $color-top-menu-separator;
-  }
 }
 
 .user-block__link {
@@ -16,15 +13,51 @@
   font-weight: bold;
   position: relative;
   display: block;
-  padding: 28px 0;
+  padding: 34px 0px 26px 0;
   color: $color-fnt-main;
   @include font($fnt-base-size, $line-h-base-size);
+
+  &--cart {
+    border-bottom: 1px solid $color-top-menu-separator;
+  }
 }
 
 .user-block__icon-search,
 .user-block__icon-cart {
   position: absolute;
   left: calc(100% * 30 / 360);
-  top: 25px;
+  top: 30px;
   opacity: .3;
+}
+
+@media #{$tablet-size} {
+
+  .user-block {
+    float: right;
+    margin-right: 50px;
+  }
+
+  .user-block__item {
+    @include block-align();
+    border-top: none;
+  }
+
+  .user-block__link {
+    min-height: 30px;
+
+    border-bottom: none;
+    &--search {
+      font-size: 0px; // to hide text
+      min-width: 90px;
+
+      border-right: 1px solid $color-top-menu-separator;
+      border-left: 1px solid $color-top-menu-separator;
+    }
+
+    &--cart {
+      padding-left: 70px;
+      padding-right: 50px;
+    }
+  }
+
 }

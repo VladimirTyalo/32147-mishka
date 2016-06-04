@@ -12,9 +12,15 @@
 .modal-menu__item {
   border-top: 1px solid $color-top-menu-separator;
 
-  &:nth-last-of-type(-n + 2) {
+  &--new,
+  &--sale,
+  &--delivery {
     display: none;
   }
+}
+
+.modal-menu__item--delivery .modal-menu__link {
+  font-weight: normal;
 }
 
 .modal-menu__link {
@@ -36,25 +42,52 @@
 }
 
 
-@media #{$tablet-size-condition} {
+@media #{$tablet-size} {
+
   .modal-menu {
-    @include clerafix();
-    float: right;
-    white-space: nowrap;
-  }
+    position: absolute;
+    left: 50px;
+    right: 50px;
+    background: none;
+    border-bottom: none;
+    text-align: left;
 
-  .modal-menu--hidden {
-    display: block;
-  }
 
-  .modal-menu__item {
-    display: inline-block;
-    vertical-align: bottom;
-
-    &:nth-last-child(n + 2) {
-      display: none;
+    &--hidden {
+      display: block;
     }
   }
+
+
+  .modal-menu__item {
+    @include block-align();
+    border: none;
+    margin-top: 90px;
+
+
+    &--new,
+    &--sale {
+      display: none;
+    }
+
+    &--delivery {
+      position: absolute;
+      right: 0;
+      text-align: right;
+      white-space: nowrap;
+
+    }
+
+    &:last-child .modal-menu__link {
+      padding-right: 0;
+    }
+  }
+
+  .modal-menu__link {
+    padding: 20px 30px 20px 0;
+  }
+
+
 }
 
 @media #{$laptop-size-condition} {

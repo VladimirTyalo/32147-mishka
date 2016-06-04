@@ -2,20 +2,18 @@
   position: relative;
   text-align: center;
   background: $color-bg-main;
-  background: lightgoldenrodyellow; // for testing
 }
 
-.top-menu__logo {
+.top-menu__logo-link {
   display: inline-block;
   margin: 20px 0;
   vertical-align: middle;
-  fill: $color-fnt-main;
 }
 
 .top-menu__burger {
   position: absolute;
   top: 30px;
-  right: calc(100% * 30/360);
+  right: calc(100% * 30 / 360);
   width: 22px;
   height: 22px;
   background-image: url('./../img/svg-icons/icon-menu-open.svg');
@@ -26,29 +24,27 @@
   }
 }
 
-@media #{$tablet-size-condition} {
-
+@media #{$tablet-size} {
   .top-menu {
-    position: absolute;
-    display: block;
-    width: 100%;
-    text-align: left;
+    position: relative;
+    padding-left: 50px;
+    border: none;
+    border-bottom: 1px solid $color-top-menu-separator;
+    @include clerafix();
   }
 
   .top-menu__burger {
     display: none;
   }
 
-  .top-menu__logo {
-    margin-left: 50px;
+  .top-menu__logo-link {
+    position: relative;
+    z-index: 10;
+    float: left;
+    margin: 23px 0;
+    @include clerafix();
   }
-
-
-
 }
-
 
 @media #{$laptop-size-condition} {
-
 }
-
