@@ -1,16 +1,17 @@
 .footer {
+  padding-bottom: 30px;
   border: 1px solid transparent;
   background: $color-bg-footer;
 }
 
 .footer__copyright {
-  margin-bottom: 30px;
-  text-align: center;
+  padding-right: 6.8%;
+  padding-left: 6.8%;
 }
 
 .footer__copyright-icon {
-  display: inline-block;
-  vertical-align: middle;
+  float: right;
+  @include block-align();
   fill: $color-icon-academy-logo;
 }
 
@@ -21,4 +22,3 @@
   vertical-align: middle;
   @include font($fnt-footer, $line-h-footer);
 }
-
