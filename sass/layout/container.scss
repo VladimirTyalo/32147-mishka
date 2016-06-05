@@ -4,12 +4,10 @@
   padding: 0 30px;
 
   @media #{$tablet-size} {
-    margin: 20px auto;
-  }
-
-
-  @media #{$laptop-size} {
-    margin: 20px auto;
+    margin: 20px 50px;
+    width: auto;
+    max-width: 758px;
+    padding: 0;
   }
 
 }
