@@ -1,5 +1,6 @@
 .slider {
   overflow: hidden;
+  position: relative;
 }
 
 .slider__inner {
@@ -39,3 +40,30 @@
     background-position: center;
   }
 }
+
+
+
+@media #{$tablet-size} {
+
+
+  .slider__controls {
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    width: 180px;
+  }
+
+  .slider__btn {
+    border: none;
+  }
+
+
+
+}
+
+
+
+@media #{$laptop-size} {
+
+}
+
