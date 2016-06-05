@@ -19,6 +19,7 @@
 }
 
 .about__item-icon {
+  height: 80px;
   display: block;
   fill: $color-icon-about-field;
 }
@@ -28,4 +29,21 @@
   font-weight: bold;
 
   @include font($fnt-base-size, $line-h-about-item);
+}
+
+
+@media #{$tablet-size} {
+  .about__list {
+    font-size: 0;
+  }
+
+  .about__item {
+    @include block-align();
+    width: 50%;
+  }
+
+  .about__item-text {
+    padding-bottom: 50px;
+  }
+
 }
