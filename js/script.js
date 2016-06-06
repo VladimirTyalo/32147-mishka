@@ -9,7 +9,7 @@
     ev.preventDefault();
 
     burgerButton.classList.toggle("top-menu__burger--close");
-    console.log(modalMenus.length);
+    console.log("burger/close button is clicked");
     for(var i = 0; i < modalMenus.length; i++) {
       modalMenus[i].classList.toggle("modal-menu--hidden");
     }
