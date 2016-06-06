@@ -1,6 +1,6 @@
 .slider {
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
 }
 
 .slider__inner {
@@ -41,29 +41,22 @@
   }
 }
 
-
-
 @media #{$tablet-size} {
-
-
   .slider__controls {
     position: absolute;
-    bottom: 80px;
     right: 0;
+    bottom: 80px;
     width: 180px;
+    border: none;
   }
 
   .slider__btn {
     border: none;
   }
-
-
-
 }
-
-
 
 @media #{$laptop-size} {
-
+  .slider__item {
+    padding-left: 0;
+  }
 }
-
