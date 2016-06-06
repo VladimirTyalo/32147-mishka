@@ -15,3 +15,9 @@
   fill: $color-icon-main-logo;
 }
 
+@media #{$tablet-size} {
+  .social-links {
+    margin: 0;
+    @include block-align();
+  }
+}

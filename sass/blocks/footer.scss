@@ -4,6 +4,10 @@
   background: $color-bg-footer;
 }
 
+.footer__logo-link {
+  display: none;
+}
+
 .footer__copyright {
   padding-right: 6.8%;
   padding-left: 6.8%;
@@ -11,6 +15,7 @@
 
 .footer__copyright-icon {
   float: right;
+  margin-left: 20px;
   @include block-align();
   fill: $color-icon-academy-logo;
 }
@@ -21,4 +26,32 @@
   display: inline-block;
   vertical-align: middle;
   @include font($fnt-footer, $line-h-footer);
+}
+
+@media #{$tablet-size} {
+  .footer {
+    padding-top: 45px;
+    text-align: center;
+    @include clerafix();
+  }
+
+  .footer__logo-link,
+  .footer__copyright {
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer__logo-link {
+  }
+
+  .footer__copyright {
+    float: right;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media #{$laptop-size} {
 }
