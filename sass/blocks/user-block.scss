@@ -1,6 +1,10 @@
 .user-block {
   position: relative;
   background: $color-bg-main;
+
+  &--closed {
+    display: none;
+  }
 }
 
 .user-block__item {
@@ -33,6 +37,11 @@
   .user-block {
     float: right;
     margin-right: 50px;
+
+    &--closed {
+      // allways show
+      display: block;
+    }
   }
 
   .user-block__item {
@@ -52,7 +61,7 @@
     }
 
     &--cart {
-      padding-right: 50px;
+      padding-right: 0px;
       padding-left: 70px;
     }
   }

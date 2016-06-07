@@ -1,5 +1,4 @@
 .index-header {
-  border: 1px solid transparent;
   background: $color-bg-index-header;
 }
 
@@ -85,7 +84,6 @@
     width: 50%;
 
     @include block-align();
-
   }
 }
 

@@ -4,9 +4,10 @@
   list-style: none;
   background: $color-bg-main;
 
-  &--hidden {
+  &--closed {
     display: none;
   }
+
 }
 
 .modal-menu__item {
@@ -17,6 +18,8 @@
   &--delivery {
     display: none;
   }
+
+
 }
 
 .modal-menu__item--delivery .modal-menu__link {
@@ -49,9 +52,10 @@
     border-bottom: none;
     background: none;
 
-    &--hidden {
-      display: block;
+    &--closed {
+      display: none;
     }
+
   }
 
   .modal-menu__item {
@@ -79,6 +83,11 @@
   .modal-menu__link {
     padding: 20px 30px 20px 0;
     z-index: 10;
+  }
+
+  .modal-menu__item--catalog .modal-menu__link,
+  .modal-menu__item--new .modal-menu__link {
+    padding-left: 0px;
   }
 }
 
@@ -119,4 +128,5 @@
   .modal-menu__item--delivery .modal-menu__link {
     padding-top: 15px;
   }
+
 }
