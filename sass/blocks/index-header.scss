@@ -16,6 +16,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
   @include font($fnt-big, $line-h-big);
 }
 
@@ -29,6 +30,7 @@
   padding-left: 0;
   vertical-align: middle;
   color: $color-fnt-invert;
+
   @include font($fnt-index-header-text, $line-h-text);
 }
 
@@ -39,8 +41,6 @@
 }
 
 .index-header__item {
-  overflow: hidden;
-
   &--toys {
     background: $color-bg-toys;
   }
@@ -59,30 +59,33 @@
 @media #{$tablet-size} {
   .index-header {
     font-size: 0;
+    position: relative;
     margin-right: 50px;
     margin-left: 50px;
-
-    // wavy border
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      background-repeat: repeat;
-      height: 10px;
-      background-size: 20px 20px;
-      background-image: radial-gradient(circle at 10px -5px, $color-bg-toys 12px, $color-bg-main 13px);
-    }
-
-
   }
 
+
+  .index-header__menu {
+    // wavy border
+    &::after {
+      position: absolute;
+      bottom: -20px;
+      left: 0px;
+      height: 39px;
+      width: 100%;
+      content: '';
+      background-image: url('./../img/wave-up.png');
+      background-repeat: repeat-x;
+      background-position: -9px 2px;
+      background-size: 39px 23px;
+    }
+  }
   .index-header__item {
+    overflow: hidden;
     width: 50%;
+
     @include block-align();
+
   }
 }
 
