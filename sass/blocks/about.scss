@@ -1,13 +1,29 @@
 .about {
-  // TODO replace with wavy border
-  border-top: 1px solid $color-border-btn;
+  position: relative;
+  padding-top: 35px;
+
+
+  // wavy border
+  &::after {
+    position: absolute;
+    top: -25px;
+    left: 0px;
+    height: 39px;
+    width: 100%;
+    content: '';
+    background-image: url("./../img/wavy-border-gray.png");
+    background-repeat: repeat-x;
+    background-position: -9px 2px;
+    background-size: 39px 23px;
+    z-index: 20;
+  }
 }
 
 .about__title {
   font-family: $font-verdana;
   font-weight: bold;
-  margin-top: 35px;
   margin-bottom: 0;
+  margin-top: 0;
 
   @include font($fnt-big, $line-h-big);
 }
@@ -30,6 +46,7 @@
 
   @include font($fnt-base-size, $line-h-about-item);
 }
+
 
 
 @media #{$tablet-size} {
