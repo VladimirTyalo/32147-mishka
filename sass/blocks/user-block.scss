@@ -9,6 +9,7 @@
 
 .user-block__item {
   border-top: 1px solid $color-top-menu-separator;
+  position: relative;
 }
 
 .user-block__link {
@@ -25,22 +26,30 @@
   }
 }
 
-.user-block__icon-search,
-.user-block__icon-cart {
+.user-block__icon-cart,
+.user-block__icon-search {
   position: absolute;
   top: 30px;
-  left: calc(100% * 30 / 360);
+  left: 35px;
   opacity: .3;
+}
+
+.user-block__item {
+
+  &--delivery {
+    display: none;
+    margin-left: 20%;
+  }
 }
 
 @media #{$tablet-size} {
   .user-block {
     float: right;
-    margin-right: 50px;
-
+    width: 50%;
+    @include block-align();
     &--closed {
       // allways show
-      display: block;
+      @include block-align();
     }
   }
 
@@ -62,13 +71,26 @@
 
     &--cart {
       padding-right: 0px;
+      // padding for cart icon
       padding-left: 70px;
     }
+
+    &--delivery {
+      z-index: 10;
+    }
+  }
+
+  .user-block__link--delivery {
+    padding: 20px 0px 0px 0;
+  }
+
+  .user-block__icon-cart {
+    left: 20px;
   }
 }
 
 @media #{$laptop-size} {
   .user-block {
-    float: right;
+    max-width: 400px;
   }
 }

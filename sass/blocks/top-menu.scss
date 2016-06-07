@@ -5,9 +5,8 @@
 }
 
 .top-menu__logo-link {
-  display: inline-block;
+  @include block-align();
   margin: 20px 0;
-  vertical-align: middle;
 }
 
 .top-menu__burger {
@@ -27,8 +26,8 @@
 
 @media #{$tablet-size} {
   .top-menu {
+    height: 90px;
     position: relative;
-    padding-left: 50px;
     border: none;
     border-bottom: 1px solid $color-top-menu-separator;
     @include clerafix();
@@ -39,26 +38,23 @@
   }
 
   .top-menu__logo-link {
-    position: relative;
+    position: absolute;
     z-index: 10;
-    float: left;
+    left: 50px;
     margin: 23px 0;
     @include clerafix();
   }
 }
 
 @media #{$laptop-size} {
-  .top-menu {
-    position: static;
-    margin-bottom: -72px;
-    text-align: left;
-  }
 
   .top-menu__logo-link {
+    width: 170px;
     position: absolute;
     z-index: 10;
     right: 50%;
     left: 50%;
-    background: red;
+    transform: translateX(-50%);
+    text-align: center;
   }
 }

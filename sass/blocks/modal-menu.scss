@@ -7,24 +7,15 @@
   &--closed {
     display: none;
   }
-
 }
 
 .modal-menu__item {
   border-top: 1px solid $color-top-menu-separator;
-
-  &--new,
-  &--sale,
-  &--delivery {
+  &:nth-last-of-type(-n + 2) {
     display: none;
   }
-
-
 }
 
-.modal-menu__item--delivery .modal-menu__link {
-  font-weight: normal;
-}
 
 .modal-menu__link {
   font-family: $font-verdana;
@@ -45,39 +36,21 @@
 
 @media #{$tablet-size} {
   .modal-menu {
-    position: absolute;
-    right: 50px;
-    left: 50px;
+    float: left;
+    width: 50%;
+    top: 100%;
     text-align: left;
-    border-bottom: none;
-    background: none;
 
     &--closed {
-      display: none;
+      // always show
+      display: block;
     }
-
   }
 
   .modal-menu__item {
     margin-top: 90px;
     border: none;
     @include block-align();
-
-    &--new,
-    &--sale {
-      display: none;
-    }
-
-    &--delivery {
-      position: absolute;
-      right: 0;
-      text-align: right;
-      white-space: nowrap;
-    }
-
-    &:last-child .modal-menu__link {
-      padding-right: 0;
-    }
   }
 
   .modal-menu__link {
@@ -85,48 +58,31 @@
     z-index: 10;
   }
 
-  .modal-menu__item--catalog .modal-menu__link,
-  .modal-menu__item--new .modal-menu__link {
-    padding-left: 0px;
+  .modal-menu__item:nth-of-type(2n) .modal-menu__link {
+    padding-right: 0;
   }
 }
 
 @media #{$laptop-size} {
   .modal-menu {
-    font-size: 0;
-    position: static;
-    max-width: 460px;
+    max-width: 400px;
+  }
+
+  .modal-menu__item:nth-last-of-type(-n + 2) {
     @include block-align();
+    padding-top: 0px;
   }
 
   .modal-menu__item {
     margin: 0;
-    padding: 0;
-    @include block-align();
 
-    &--catalog {
-      border-right: 1px solid $color-top-menu-separator;
-    }
-
-    &--delivery {
-      margin-right: 50px;
+    &:nth-last-of-type(-n + 2) {
+      @include block-align();
     }
   }
 
   .modal-menu__link {
-    width: 165px;
-    min-height: 30px;
-    padding: 34px 30px 26px 30px;
+    padding-top: 34px;
+    padding-bottom: 26px;
   }
-
-  .modal-menu__item--delivery .modal-menu__link {
-    min-width: 300px;
-  }
-
-  .modal-menu__item--new .modal-menu__link,
-  .modal-menu__item--sale .modal-menu__link,
-  .modal-menu__item--delivery .modal-menu__link {
-    padding-top: 15px;
-  }
-
 }
