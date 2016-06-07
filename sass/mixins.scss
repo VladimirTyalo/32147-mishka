@@ -24,12 +24,6 @@
   display: #{$display};
   vertical-align: #{$vertical};
 }
-// gradient
-
-// filter
-
-// shadow
-
 
 @mixin clerafix() {
   &::after {
