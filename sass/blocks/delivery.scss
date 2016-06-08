@@ -1,0 +1,25 @@
+.delivery {
+  display: none;
+}
+
+
+@media #{$tablet-size} {
+  .delivery {
+    display: flex;
+    order: 4;
+
+  }
+
+  .delivery__link {
+    @include font($fnt-text-size, $line-h-text);
+    font-weight: normal;
+    padding: 20px 0px 20px 0;
+    z-index: 10;
+  }
+}
+
+@media #{$laptop-size} {
+  .delivery {
+    align-self: flex-end;
+  }
+}

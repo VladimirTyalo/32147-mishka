@@ -4,22 +4,28 @@
 }
 
 .top-menu .container {
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
   padding: 0;
 }
 
 @media #{$tablet-size} {
 
-  .container,
+  .container {
+    display: flex;
+    margin: 0 50px;
+  }
+
   .top-menu .container {
-    margin: 20px 50px;
-    width: auto;
-    padding: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-    text-align: right;
+    flex-flow: row wrap;
+    justify-content: space-between;
   }
 }
 
+@media #{$laptop-size} {
 
+  .top-menu .container {
+    justify-content: flex-end;
+  }
 
+}

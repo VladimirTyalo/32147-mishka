@@ -3,7 +3,6 @@
   padding: 0;
   list-style: none;
   background: $color-bg-main;
-
   &--closed {
     display: none;
   }
@@ -11,16 +10,16 @@
 
 .modal-menu__item {
   border-top: 1px solid $color-top-menu-separator;
+  text-align: center;
+
   &:nth-last-of-type(-n + 2) {
     display: none;
   }
 }
 
-
 .modal-menu__link {
   font-family: $font-verdana;
   font-weight: bold;
-  position: relative;
   display: block;
   padding: 28px 0;
   color: $color-fnt-main;
@@ -30,59 +29,68 @@
 .modal-menu__icon-search,
 .modal-menu__icon-cart {
   position: absolute;
-  left: calc(100% * 30 / 360);
+  left: calc(100% * 30 / 320);
   opacity: .3;
 }
 
 @media #{$tablet-size} {
   .modal-menu {
-    float: left;
-    width: 50%;
-    top: 100%;
-    text-align: left;
-
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1 0 50%;
+    order: 3;
     &--closed {
       // always show
-      display: block;
+      display: flex;
     }
   }
 
   .modal-menu__item {
-    margin-top: 90px;
     border: none;
-    @include block-align();
+    z-index: 10;
   }
 
   .modal-menu__link {
     padding: 20px 30px 20px 0;
-    z-index: 10;
-  }
-
-  .modal-menu__item:nth-of-type(2n) .modal-menu__link {
-    padding-right: 0;
   }
 }
 
 @media #{$laptop-size} {
+
   .modal-menu {
-    max-width: 400px;
+    order: 1;
+    flex: 1 0 430px;
+    flex-flow: row wrap;
   }
 
-  .modal-menu__item:nth-last-of-type(-n + 2) {
-    @include block-align();
-    padding-top: 0px;
+  .modal-menu__item{
+    flex: 0 0 200px;
+    text-align: left;
+    &:nth-last-of-type(-n + 2) {
+      display: flex;
+      padding-top: 0px;
+    }
   }
 
   .modal-menu__item {
     margin: 0;
-
-    &:nth-last-of-type(-n + 2) {
-      @include block-align();
-    }
   }
 
   .modal-menu__link {
     padding-top: 34px;
     padding-bottom: 26px;
+  }
+}
+
+
+@media #{$laptop-size} {
+  .modal-menu {
+    height: 90px;
+    flex: 1 0 40%;
+    justify-content: flex-start;
+  }
+
+  .modal-menu__item {
+    flex: 1 0 50%;
   }
 }
