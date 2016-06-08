@@ -50,12 +50,18 @@
     padding-bottom: 0;
   }
 
-  .item-post__image {
+  .item-post__image-wrapper {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 334px;
-    margin-top: 70px;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 20%;
+  }
+
+  .item-post__image {
+    height: 100%;
+    width: auto;
   }
 
   .item-post__params{
@@ -73,8 +79,7 @@
     padding-left: 16.67%;
   }
 
-  .item-post__image {
-    width: 525px;
+  .item-post__image-wrapper {
     z-index: -1;
   }
 
