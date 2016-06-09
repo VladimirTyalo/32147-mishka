@@ -1,5 +1,17 @@
 .container {
+  margin: 0 auto;
+  padding: 0px 30px;
 
-  @include container-fluid();
+  @media #{$tabet-width}{
+    /* 1050px * 0.91 ~= 955px (центровка начнётся чуть раньше 1050px) */
+    width: 87%;
+    max-width: 955px;
+    width: auto;
+    padding: 0 50px;
+  }
 
+  @media #{$desktop-width} {
+    width: 91%;
+    max-width: 1050px;
+  }
 }

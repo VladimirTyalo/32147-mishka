@@ -5,17 +5,24 @@
 
 @media #{$tabet-width} {
   .delivery {
-    align-slef: flex-end;
+    display: flex;
+    flex: 1 0 87%;
+    justify-content: flex-end;
   }
 
   .delivery__link {
     @include font($fnt-text-size, $line-h-text);
     font-weight: normal;
     padding: 20px 0px 20px 0;
-    z-index: 10;
+
+    text-align: right;
   }
 }
 
 @media #{$desktop-width} {
-
+    .delivery {
+      flex:  1 0 91%;
+      justify-content: flex-end;
+      max-width: 1050px;
+    }
 }
