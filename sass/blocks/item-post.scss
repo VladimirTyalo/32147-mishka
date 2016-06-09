@@ -43,7 +43,7 @@
   @include font($fnt-base-size, $line-h-btn);
 }
 
-@media #{$tablet-size}
+@media #{$tabet-width}
 {
   .item-post {
     padding-right: calc(50% + 40px);
@@ -73,7 +73,7 @@
   }
 }
 
-@media #{$laptop-size} {
+@media #{$desktop-width} {
 
   .item-post {
     padding-left: 16.67%;

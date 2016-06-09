@@ -1,8 +1,7 @@
 // $size - in pixels
 // return rem size
 @function calculateRem($size, $base-size: 16px) {
-    $remSize: $size / $base-size;
-
+  $remSize: $size / $base-size;
   @return $remSize * 1rem;
 }
 
@@ -32,3 +31,28 @@
     clear: both;
   }
 }
+
+@mixin centering($width, $maxWidth) {
+  width: $width;
+  max-width: $maxWidth;
+  margin: 0 auto;
+}
+
+@mixin container-fluid {
+  /* width:  260 / 320 ~= 81% */
+  /* max-width: 768 * 0.81 ~= 668px (центровка начинается чуть раньше 768px) */
+  @include centering(81%, 668px);
+
+  @media #{$tabet-width}{
+    /* 1150px * 0.91 ~= 1000px (центровка начнётся чуть раньше 1150px) */
+    @include centering(87%, 1000px);
+  }
+
+  @media #{$desktop-width} {
+    /* после 1400px фиксированная ширина */
+    @include centering(91%, 1400px);
+  }
+}
+
+
+

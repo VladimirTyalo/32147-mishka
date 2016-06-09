@@ -3,11 +3,9 @@
 }
 
 
-@media #{$tablet-size} {
+@media #{$tabet-width} {
   .delivery {
-    display: flex;
-    order: 4;
-
+    align-slef: flex-end;
   }
 
   .delivery__link {
@@ -18,8 +16,6 @@
   }
 }
 
-@media #{$laptop-size} {
-  .delivery {
-    align-self: flex-end;
-  }
+@media #{$desktop-width} {
+
 }

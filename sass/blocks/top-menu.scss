@@ -1,5 +1,6 @@
 .top-menu {
   background: $color-bg-main;
+  border-bottom: 1px solid $color-top-menu-separator;
 }
 
 .top-menu__logo-link {
@@ -23,11 +24,20 @@
   }
 }
 
-@media #{$tablet-size} {
+.top-menu .container {
+  @include centering(100%, 768px);
+}
+
+@media #{$tabet-width} {
+
+  .top-menu .container {
+    @include centering(87%, 1000px);
+    display: flex;
+    flex-flow: row wrap;
+  }
 
   .top-menu {
     height: 90px;
-    border-bottom: 1px solid $color-top-menu-separator;
   }
 
   .top-menu__burger {
@@ -42,17 +52,13 @@
 
 }
 
-@media #{$laptop-size} {
-
+@media #{$desktop-width} {
 
   .top-menu__logo-link {
     order: 2;
     flex: 1 0 20%;
-    justify-content: center;
-    height: 90px;
-    margin: 0;
     display: flex;
-    align-items: center;
+    justify-content: center;
   }
 
 }

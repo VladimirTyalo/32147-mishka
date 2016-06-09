@@ -55,16 +55,13 @@
   padding-top: 20px;
 }
 
-@media #{$tablet-size} {
+@media #{$tabet-width} {
   .index-header {
     font-size: 0;
     position: relative;
     padding-right: 50px;
     padding-left: 50px;
-  }
 
-
-  .index-header__menu {
     // wavy border
     &::after {
       position: absolute;
@@ -78,6 +75,12 @@
       background-position: -9px 2px;
       background-size: 39px 23px;
     }
+
+  }
+
+
+  .index-header__menu {
+
   }
   .index-header__item {
     overflow: hidden;
@@ -87,8 +90,6 @@
   }
 }
 
-@media #{$laptop-size} {
-  .index-header {
-    border-top: 1px solid $color-top-menu-separator;
-  }
+@media #{$desktop-width} {
+
 }

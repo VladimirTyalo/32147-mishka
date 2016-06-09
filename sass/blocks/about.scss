@@ -49,7 +49,7 @@
 
 
 
-@media #{$tablet-size} {
+@media #{$tabet-width} {
   .about__list {
     font-size: 0;
   }
@@ -65,7 +65,7 @@
 
 }
 
-@media #{$laptop-size} {
+@media #{$desktop-width} {
 
   .about__title {
     @include font(50px, 57px);

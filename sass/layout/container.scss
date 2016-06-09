@@ -1,31 +1,5 @@
 .container {
-  margin: 0px auto;
-  padding: 0 30px;
-}
 
-.top-menu .container {
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-}
-
-@media #{$tablet-size} {
-
-  .container {
-    display: flex;
-    margin: 0 50px;
-  }
-
-  .top-menu .container {
-    flex-flow: row wrap;
-    justify-content: space-between;
-  }
-}
-
-@media #{$laptop-size} {
-
-  .top-menu .container {
-    justify-content: flex-end;
-  }
+  @include container-fluid();
 
 }

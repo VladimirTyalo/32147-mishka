@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  background: $color-bg-main;
   &--closed {
     display: none;
   }
@@ -26,14 +25,8 @@
   @include font($fnt-base-size, $line-h-base-size);
 }
 
-.modal-menu__icon-search,
-.modal-menu__icon-cart {
-  position: absolute;
-  left: calc(100% * 30 / 320);
-  opacity: .3;
-}
 
-@media #{$tablet-size} {
+@media #{$tabet-width} {
   .modal-menu {
     display: flex;
     flex-flow: row wrap;
@@ -55,7 +48,7 @@
   }
 }
 
-@media #{$laptop-size} {
+@media #{$desktop-width} {
 
   .modal-menu {
     order: 1;
@@ -83,14 +76,17 @@
 }
 
 
-@media #{$laptop-size} {
+@media #{$desktop-width} {
   .modal-menu {
-    height: 90px;
     flex: 1 0 40%;
     justify-content: flex-start;
   }
 
   .modal-menu__item {
     flex: 1 0 50%;
+  }
+
+  .modal-menu__link {
+    padding-right: 10px;
   }
 }

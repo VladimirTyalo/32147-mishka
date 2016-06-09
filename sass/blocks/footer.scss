@@ -28,7 +28,7 @@
   @include font($fnt-footer, $line-h-footer);
 }
 
-@media #{$tablet-size} {
+@media #{$tabet-width} {
   .footer {
     padding-top: 45px;
     text-align: center;
@@ -53,5 +53,5 @@
   }
 }
 
-@media #{$laptop-size} {
+@media #{$desktop-width} {
 }

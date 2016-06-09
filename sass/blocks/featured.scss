@@ -24,7 +24,7 @@
 }
 
 
-@media #{$tablet-size} {
+@media #{$tabet-width} {
 
   .featured {
     margin-top: 40px;
@@ -55,7 +55,7 @@
 
 
 
-@media #{$laptop-size} {
+@media #{$desktop-width} {
 
   .featured__header {
     margin-top: 110px;

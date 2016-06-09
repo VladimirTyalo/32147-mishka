@@ -15,7 +15,7 @@
   fill: $color-icon-main-logo;
 }
 
-@media #{$tablet-size} {
+@media #{$tabet-width} {
   .social-links {
     margin: 0;
     @include block-align();
