@@ -24,7 +24,6 @@
   font-weight: bold;
   margin-bottom: 30px;
   margin-top: 40px;
-
   @include font($fnt-big, $line-h-big);
 }
 
@@ -37,6 +36,7 @@
 .about__item {
   margin-bottom: 20px;
 }
+
 .about__item-icon {
   height: 80px;
   display: block;
@@ -46,11 +46,8 @@
 .about__item-text {
   font-family: $font-verdana;
   font-weight: bold;
-
   @include font($fnt-base-size, $line-h-about-item);
 }
-
-
 
 @media #{$tabet-width} {
 
@@ -105,8 +102,6 @@
 }
 
 @media #{$desktop-width} {
-
-
 
   .about__title {
     @include font(50px, 57px);

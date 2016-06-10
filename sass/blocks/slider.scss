@@ -1,18 +1,17 @@
 .slider {
   position: relative;
-  overflow: hidden;
 }
 
-.slider__inner {
-  width: 330%; // 3 times width + padding right 10%
-  white-space: nowrap;
-}
 
 .slider__item {
-  width: 30%;
-  padding-right: 5%;
-  white-space: normal;
-  @include block-align('inline-block', 'bottom');
+  width: 100%;
+  display: none;
+
+  &--shown {
+    display: block;
+  }
+
+
 }
 
 .slider__controls {
@@ -23,6 +22,7 @@
 }
 
 .slider__btn {
+  cursor: pointer;
   font-size: 20px;
   display: inline-block;
   width: 49.9%;
@@ -38,6 +38,11 @@
   &--next {
     background: url('./../img/svg-icons/icon-right-arrow.svg') no-repeat;
     background-position: center;
+  }
+
+  &--disabled {
+    cursor: not-allowed;
+    opacity: 0.1;
   }
 }
 
