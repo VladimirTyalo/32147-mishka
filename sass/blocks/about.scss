@@ -1,7 +1,7 @@
 .about {
   position: relative;
-  padding-top: 35px;
-
+  // to prevent title up margin from falling out.
+  padding-top: 1px;
 
   // wavy border
   &::after {
@@ -22,8 +22,8 @@
 .about__title {
   font-family: $font-verdana;
   font-weight: bold;
-  margin-bottom: 0;
-  margin-top: 0;
+  margin-bottom: 30px;
+  margin-top: 40px;
 
   @include font($fnt-big, $line-h-big);
 }
@@ -34,6 +34,9 @@
   list-style: none;
 }
 
+.about__item {
+  margin-bottom: 20px;
+}
 .about__item-icon {
   height: 80px;
   display: block;
@@ -50,34 +53,68 @@
 
 
 @media #{$tabet-width} {
+
+  .about {
+    padding-top: 20px;
+    display: flex;
+  }
+
   .about__list {
-    font-size: 0;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .about__title {
+    @include font(40px, 50px);
   }
 
   .about__item {
-    @include block-align();
-    width: 50%;
+    flex: 1 0 48%;
+    padding-right: 2%;
   }
 
   .about__item-text {
     padding-bottom: 50px;
+    @include font(20px, 20px);
+  }
+
+  &:nth-of-type(1) {
+    order: 1;
+  }
+
+  &:nth-of-type(2) {
+    order: 3;
+  }
+
+  &:nth-of-type(3) {
+    order: 5;
+  }
+
+  &:nth-of-type(4) {
+    order: 2;
+  }
+
+  &:nth-of-type(5) {
+    order: 4;
+  }
+
+  &:nth-of-type(6) {
+    order: 6;
   }
 
 }
 
 @media #{$desktop-width} {
 
+
+
   .about__title {
     @include font(50px, 57px);
-    padding-left: 16.7%;
-  }
-  .about__list {
-    margin-right: 16.7%;
-    margin-left: 16.7%;
   }
 
-  .about__item {
-    width: 35%;
-    padding-right: 15%;
+  .about__list {
+    width: 66.67%;
+    margin: 0 auto;
   }
+
 }
