@@ -1,6 +1,10 @@
+.review {
+  padding-bottom: 40px;
+  position: relative;
+}
+
 .review__item {
-  // for short reviews
-  min-height: 200px;
+
 }
 
 .review__title {
@@ -34,7 +38,6 @@
 
 .review__btn {
   margin-top: 38px;
-  margin-bottom: 40px;
 }
 
 @media #{$tabet-width} {
@@ -47,9 +50,7 @@
   .review__item {
     background-image: url("./../img/review@1x.jpg");
     background-repeat: no-repeat;
-
-    padding-left: 50px;
-    min-height: 457px;
+    padding: 0 50px;
   }
 
   .review__title {
@@ -62,7 +63,6 @@
 
   .review__text {
     padding-top: 184px;
-
   }
 
   .review__btn {
@@ -78,26 +78,20 @@
   }
 }
 
-
-
 @media #{$desktop-width} {
 
   .review {
     margin-left: 0;
-
   }
-
 
   .review__title {
     @include font(50px, 57px);
     left: 16.67%;
     padding-left: 0;
-
   }
 
   .review__text {
     padding-left: 16.67%;
-
   }
 
   .review__author {

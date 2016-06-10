@@ -1,5 +1,21 @@
 .contacts {
+  padding-top: 1px;
 
+  position: relative;
+
+  // wavy border
+  &::before {
+    position: absolute;
+    top: -20px;
+    left: 0px;
+    height: 39px;
+    width: 100%;
+    content: '';
+    background-image: url('./../img/wavy-border-gray.png');
+    background-repeat: repeat-x;
+    background-position: -9px 2px;
+    background-size: 39px 23px;
+  }
 }
 
 .contacts__title {
@@ -45,20 +61,20 @@
 }
 
 .contacts__btn {
-  max-width: calc(100% - 60px);
-  padding-left: 0;
-  padding-right: 0;
+  max-width: 225px;
+
   margin: 40px auto;
   display: block;
 }
 
 @media #{$tabet-width} {
   .contacts__title {
-    margin-top: 60px;
+    padding-top: 60px;
+    margin-top: 0;
     margin-bottom: 60px;
     background-image: url('./../img/svg-icons/icon-flag.svg');
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: right 40px;
     @include font(40px, 50px);
   }
 
@@ -73,17 +89,19 @@
   .contacts {
     margin-right: 50px;
     margin-left: 50px;
-    padding-bottom: 110px;
-    @include clerafix();
+    padding-bottom: 30px;
+    display: flex;
+    flex-flow: row wrap;
   }
 
   .contacts .container {
-    float: left;
-    margin-bottom: 40px;
+    flex: 1 0 300px;
+    margin-bottom: 50px;
     padding-left: 16.67%;
     background-image: url('./../img/svg-icons/icon-flag.svg');
     background-repeat: no-repeat;
     background-position: 8.3% 60px;
+    order: 1;
   }
 
   .contacts__title {
@@ -102,15 +120,16 @@
   }
 
   .contacts__map {
-    float: right;
-    width: 50%;
+    flex: 0 0 48%;
+    order: 2;
   }
 
   .contacts__btn {
-    float: left;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 21.4%;
-    margin-left: calc(16.67% + 50px);
+    order: 3;
+    margin: 0;
+    margin-left: 16.67%;
+    position: relative;
+    top: - 60px;
   }
+
 }
