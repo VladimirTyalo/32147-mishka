@@ -20,10 +20,6 @@
   padding: 34px 0 26px 0;
   color: $color-fnt-main;
   @include font($fnt-base-size, $line-h-base-size);
-
-  &--cart {
-    border-bottom: 1px solid $color-top-menu-separator;
-  }
 }
 
 .user-block__icon-cart,

@@ -5,8 +5,6 @@
   @media #{$tabet-width}{
     /* 1050px * 0.91 ~= 955px (центровка начнётся чуть раньше 1050px) */
     width: 87%;
-    max-width: 955px;
-    width: auto;
     padding: 0 50px;
   }
 

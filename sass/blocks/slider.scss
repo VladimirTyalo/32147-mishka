@@ -2,7 +2,6 @@
   position: relative;
 }
 
-
 .slider__item {
   width: 100%;
   display: none;
@@ -10,7 +9,6 @@
   &--shown {
     display: block;
   }
-
 
 }
 
@@ -47,10 +45,14 @@
 }
 
 @media #{$tabet-width} {
+
+  .slider {
+    position: relative;
+  }
   .slider__controls {
     position: absolute;
     right: 0;
-    bottom: 80px;
+    bottom: 100px;
     width: 180px;
     border: none;
   }

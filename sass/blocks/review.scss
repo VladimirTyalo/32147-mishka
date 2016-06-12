@@ -4,7 +4,7 @@
 }
 
 .review__item {
-
+  min-height: 310px;
 }
 
 .review__title {
@@ -41,40 +41,36 @@
 }
 
 @media #{$tabet-width} {
-
   .review {
-    margin-left: -50px;
-    margin-top: 10px;
+    background-image: url("./../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    overflow: hidden;
+    padding-bottom: 75px;
   }
 
   .review__item {
-    background-image: url("./../img/review@1x.jpg");
-    background-repeat: no-repeat;
+    box-sizing: border-box;
     padding: 0 50px;
+    min-height: 175px;
   }
 
   .review__title {
     @include font(40px, 50px);
-    position: absolute;
-    top: 75px;
+    margin-top: 80px;
+    margin-bottom: 50px;
     padding-left: 50px;
-    margin-top: 0px;
-  }
-
-  .review__text {
-    padding-top: 184px;
   }
 
   .review__btn {
     width: 180px;
-    position: absolute;
-    top: 75px;
-    right: 0;
     margin: 0;
+    position: absolute;
+    top: 82px;
+    right: 0;
   }
 
   .review__nick {
-    margin-bottom: 80px;
+    margin-bottom: 0;
   }
 }
 
@@ -86,7 +82,7 @@
 
   .review__title {
     @include font(50px, 57px);
-    left: 16.67%;
+    margin-left: 16.67%;
     padding-left: 0;
   }
 

@@ -2,6 +2,7 @@
   position: relative;
   // to prevent title up margin from falling out.
   padding-top: 1px;
+  padding-bottom: 45px;
 
   // wavy border
   &::after {
@@ -11,11 +12,23 @@
     height: 39px;
     width: 100%;
     content: '';
-    background-image: url("./../img/wavy-border-gray.png");
+    background: url("./../img/wavy-border-gray.png") repeat-x -9px 2px;
+    background-size: 39px 23px;
+    z-index: 20;
+  }
+
+  // wavy border
+  &::before {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 39px;
+    width: 100%;
+    content: '';
+    background-image: url('./../img/wavy-border-gray.png');
     background-repeat: repeat-x;
     background-position: -9px 2px;
     background-size: 39px 23px;
-    z-index: 20;
   }
 }
 
@@ -53,7 +66,10 @@
 
   .about {
     padding-top: 20px;
-    display: flex;
+  }
+
+  .about .container {
+    margin-bottom: 75px;
   }
 
   .about__list {
@@ -68,35 +84,36 @@
   .about__item {
     flex: 1 0 48%;
     padding-right: 2%;
+
+    &:nth-of-type(1) {
+      order: 1;
+    }
+
+    &:nth-of-type(2) {
+      order: 3;
+    }
+
+    &:nth-of-type(3) {
+      order: 5;
+    }
+
+    &:nth-of-type(4) {
+      order: 2;
+    }
+
+    &:nth-of-type(5) {
+      order: 4;
+    }
+
+    &:nth-of-type(6) {
+      order: 6;
+    }
+
   }
 
   .about__item-text {
     padding-bottom: 50px;
     @include font(20px, 20px);
-  }
-
-  &:nth-of-type(1) {
-    order: 1;
-  }
-
-  &:nth-of-type(2) {
-    order: 3;
-  }
-
-  &:nth-of-type(3) {
-    order: 5;
-  }
-
-  &:nth-of-type(4) {
-    order: 2;
-  }
-
-  &:nth-of-type(5) {
-    order: 4;
-  }
-
-  &:nth-of-type(6) {
-    order: 6;
   }
 
 }
