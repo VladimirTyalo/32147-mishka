@@ -1,21 +1,40 @@
 .form__type {
   position: relative;
   margin-top: 50px;
+  background: $color-bg-main;
 }
 
 .form__descr {
   font-family: $font-verdana;
+  margin: 30px 30px;
   margin-top: 30px;
-
   @include font($fnt-text-size, $line-h-form-descr);
 }
 
 .form__title {
   font-family: $font-open-sans;
   font-weight: bold;
+  position: relative;
+  z-index: 10;
+  top: -15px;
+  display: inline-block;
+  padding-right: 30px;
   color: $color-fnt-alternative;
-
+  background: $color-bg-main;
   @include font($fnt-form-title, $line-h-form-title);
+}
+
+.form__type .container {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 10px;
+    width: calc(100% - 60px);
+    height: 1px;
+    content: '';
+    background: $color-bg-toys;
+  }
 }
 
 .form__radio-label,
@@ -24,11 +43,17 @@
   font-family: $font-verdana;
   font-weight: bold;
   position: relative;
+  position: relative;
   display: block;
   margin-top: 30px;
   padding-left: 62px;
-
   @include font($fnt-form-field, $line-h-form-field);
+}
+
+.form__radio-label {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 62px;
 }
 
 .form__checkbox-label {
@@ -42,16 +67,30 @@
 .form__radio-label::before,
 .form__checkbox-label::before {
   position: absolute;
-  top: -10px;
-  left: -10px;
-  width: 45px;
-  height: 45px;
+  top: 50%;
+  left: 0;
+  width: 40px;
+  height: 40px;
   content: '';
+  transform: translateY(-50%);
 }
 
 .form__radio-label::before {
   border: 3px solid $color-border-btn;
   border-radius: 50%;
+}
+
+#accessory:checked + label::after,
+#toy:checked + label::after {
+  position: absolute;
+  top: 50%;
+  left: 23px;
+  width: 16px;
+  height: 16px;
+  content: '';
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: $color-bg-toys;
 }
 
 .form__checkbox-label::before {
@@ -64,7 +103,6 @@
   color: $color-fnt-placeholder;
   border: none;
   border-bottom: 2px solid $color-border-btn;
-
   @include font($fnt-form-field, $line-h-form-field);
 
   &--add-info {
@@ -83,7 +121,166 @@
 .form__icon-tel,
 .form__icon-email {
   position: absolute;
-  right: 0;
+  right: 30px;
   bottom: 12px;
   opacity: .3;
+}
+
+.form__type--checkbox input:checked + label::after {
+  position: absolute;
+  top: 0;
+  left: 7px;
+  width: 24px;
+  content: url('./../img/svg-icons/icon-tick.svg');
+  heigth: 24px;
+}
+
+.form__required-info {
+  display: none;
+}
+
+.form__input--add-info {
+  box-sizing: border-box;
+  margin-top: 30px;
+}
+
+.form__button-submit {
+  display: block;
+  width: 100%;
+}
+
+@media #{$tabet-width} {
+  .form__descr {
+    margin-top: 80px;
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+
+  .form .container {
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+    padding-bottom: 20px;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    &::before {
+      background: none;
+    }
+  }
+
+  .form {
+    margin-top: 70px;
+    padding-bottom: 50px;
+  }
+
+  .form__type {
+    display: flex;
+    margin-top: 0;
+    flex-flow: row nowrap;
+    flex: 0 0 100%;
+  }
+
+  .form__title {
+    margin-top: 30px;
+    padding: 30px 0 30px 0;
+    background: none;
+    flex: 0 0 25%;
+  }
+
+  .fomr__descr {
+    width: 87%;
+  }
+
+  .form__input-wrapper {
+    position: relative;
+    display: flex;
+    margin-top: 25px;
+    margin-bottom: 75px;
+    flex: 0 0 75%;
+    flex-flow: row wrap;
+  }
+
+  .form__radio-label {
+    flex: 1 0 100%;
+  }
+
+  .form__type--checkbox {
+    background: $color-bg-header;
+  }
+
+  .form__checkbox-label {
+    box-sizing: border-box;
+    flex: 1 0 50%;
+  }
+
+  .form__input-wrapper .form__text {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+  }
+
+  .form__type--phone,
+  .form__type--email {
+    background: $color-bg-header;
+  }
+
+  .form__input {
+    background: none;
+  }
+
+  .form__icon-tel,
+  .form__icon-email {
+    position: absolute;
+  }
+
+  .form__button-submit,
+  .form__required-info {
+    margin: 0;
+    flex: 1 0 50%;
+  }
+
+  .form__button-submit {
+    width: 30%;
+  }
+
+  .form__required-info {
+    display: inline-block;
+    text-align: right;
+    vertical-align: bottom;
+  }
+
+  .form__input-label,
+  .form__input {
+    display: inline-block;
+  }
+}
+
+@media #{$desktop-width} {
+  .form__title {
+    display: flex;
+    margin-top: 0;
+    padding-top: 90px;
+    flex: 0 0 16.67%;
+    justify-content: center;
+  }
+
+  .form__input-wrapper {
+    flex: 0 0 83.33%;
+    flex-flow: row wrap;
+  }
+
+  .form__descr {
+    width: 66.67%;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .form__type:nth-last-of-type(-n + 4) .form__input-wrapper {
+    flex: 0 0 66.67%;
+  }
+
+  .form__checkbox-label {
+    box-sizing: border-box;
+    flex: 1 0 33%;
+  }
 }

@@ -12,8 +12,8 @@
     To emphasise this I use inline style="display: none" -->
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
       <!--<symbol id="htmlacademy" viewBox="0 0 60 60">-->
-        <!--&lt;!&ndash; TODO remove not used icons &ndash;&gt;-->
-        <!--<path fill="#2E368F" d="M30.2 5H30L10.3 7.1v36.2L30 55l19.7-11.7V7.1L30.2 5zm17 36.8L30 52 12.8 41.8V27l17.1 10.2V39l-11.7-7v1.8L30 40.9v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8L29.9 12.8 12.8 23V9.4L30 7.6l17.2 1.8V23z"/>-->
+      <!--&lt;!&ndash; TODO remove not used icons &ndash;&gt;-->
+      <!--<path fill="#2E368F" d="M30.2 5H30L10.3 7.1v36.2L30 55l19.7-11.7V7.1L30.2 5zm17 36.8L30 52 12.8 41.8V27l17.1 10.2V39l-11.7-7v1.8L30 40.9v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8L29.9 12.8 12.8 23V9.4L30 7.6l17.2 1.8V23z"/>-->
       <!--</symbol>-->
       <symbol id="icon-cart" viewBox="264.205 370.961 20.294 18.849">
         <path fill="#231F20" d="M283.75 378.19h-3.151l-3.407-6.814a.75.75 0 1 0-1.341.671l3.071 6.143h-9.138l3.072-6.143a.75.75 0 0 0-1.341-.671l-3.407 6.814h-3.151a.75.75 0 0 0 0 1.5h.157l.855 2.991a.737.737 0 0 0-.316.595c0 .396.309.71.697.739l1.656 5.795h12.697l1.656-5.795a.745.745 0 0 0 .698-.739.738.738 0 0 0-.316-.596l.854-2.991h.157a.75.75 0 1 0-.002-1.499zm-4.181 10.121h-10.433l-1.224-4.284h12.881l-1.224 4.284zm1.653-5.785h-13.739l-.81-2.836h15.359l-.81 2.836z"/>
@@ -85,7 +85,7 @@
 
     <nav class="top-menu">
       <div class="container">
-        <a class="top-menu__logo-link">
+        <a class="top-menu__logo-link" href="index.html">
           <svg class="top-menu__logo" width="90" height="40">
             <use x="0" y="0" xlink:href="#logo-mobile"></use>
           </svg>
@@ -140,98 +140,137 @@
 
 
     <header class="header">
-      <h1 class="header__title">Вязание на заказ</h1>
+      <div class="container">
+        <div class="delivery">
+          <a href="#" class="delivery__link">
+            Бесплатная доставка по России
+          </a>
+        </div>
+        <h1 class="header__title">Каталог товаров</h1>
+      </div>
     </header>
 
-    <div class="container">
-      <form class="form" method="POST" action="#" id="form">
 
-        <p class="form__descr">
-          Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа,
-          и мы свяжемся с вами, чтобы уточнить детали.
-        </p>
+    <form class="form" method="POST" action="#" id="form">
 
-        <div class="form__type">
+
+      <p class="form__descr">
+        Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа,
+        и мы свяжемся с вами, чтобы уточнить детали.
+      </p>
+
+      <div class="form__type">
+        <div class="container">
+
+
           <h2 class="form__title">Тип</h2>
 
-          <input class="visually-hidden" type="radio" name="type" checked id="accessory">
-          <label class="form__radio-label" for="accessory">Аксессуар для интерьера</label>
+          <div class="form__input-wrapper">
+            <input class="visually-hidden" type="radio" name="type" checked id="accessory">
+            <label class="form__radio-label" for="accessory">Аксессуар для интерьера</label>
 
-          <input class="visually-hidden" type="radio" name="type" id="toy">
-          <label class="form__radio-label" for="toy">Детская игрушка</label>
-
+            <input class="visually-hidden" type="radio" name="type" id="toy">
+            <label class="form__radio-label" for="toy">Детская игрушка</label>
+          </div>
         </div>
+      </div>
 
-        <div class="form__type">
+      <div class="form__type form__type--checkbox">
+        <div class="container">
           <h2 class="form__title">Цвет</h2>
 
-          <input class="visually-hidden" type="checkbox" name="white" checked id="white">
-          <label class="form__checkbox-label" for="white">Белый</label>
+          <div class="form__input-wrapper">
+            <input class="visually-hidden" type="checkbox" name="white" checked id="white">
+            <label class="form__checkbox-label" for="white">Белый</label>
 
-          <input class="visually-hidden" type="checkbox" name="grey" checked id="grey">
-          <label class="form__checkbox-label" for="grey">Серый</label>
+            <input class="visually-hidden" type="checkbox" name="grey" checked id="grey">
+            <label class="form__checkbox-label" for="grey">Серый</label>
 
-          <input class="visually-hidden" type="checkbox" name="tiffany" id="tiffany">
-          <label class="form__checkbox-label" for="tiffany">«Тиффани»</label>
+            <input class="visually-hidden" type="checkbox" name="tiffany" id="tiffany">
+            <label class="form__checkbox-label" for="tiffany">«Тиффани»</label>
 
-          <input class="visually-hidden" type="checkbox" name="black" id="black">
-          <label class="form__checkbox-label" for="black">Черный</label>
+            <input class="visually-hidden" type="checkbox" name="black" id="black">
+            <label class="form__checkbox-label" for="black">Черный</label>
 
-          <input class="visually-hidden" type="checkbox" name="pink" id="pink">
-          <label class="form__checkbox-label" for="pink">Розовый</label>
+            <input class="visually-hidden" type="checkbox" name="pink" id="pink">
+            <label class="form__checkbox-label" for="pink">Розовый</label>
 
-          <input class="visually-hidden" type="checkbox" name="orange" id="orange">
-          <label class="form__checkbox-label" for="orange">Оранжевый</label>
+            <input class="visually-hidden" type="checkbox" name="orange" id="orange">
+            <label class="form__checkbox-label" for="orange">Оранжевый</label>
+          </div>
         </div>
-
-        <div class="form__type">
+      </div>
+      <div class="form__type form__type--name">
+        <div class="container">
           <h2 class="form__title">ФИО</h2>
+          <div class="form__input-wrapper">
+            <label class="form__text">
+              <span class="form__input-label"> Фамилия:</span>
+              <input class="form__input  form__input--last-name" type="text" name="lastName" placeholder="Укажите фамилию" required>
+            </label>
 
-          <label class="form__text">
-            <span class="form__input-label"> Фамилия:</span>
-            <input class="form__input  form__input--last-name" type="text" name="lastName" placeholder="Укажите фамилию" required>
-          </label>
+            <label class="form__text">
+              <span class="form__input-label">Имя:</span>
+              <input class="form__input  form__input--first-name" type="text" name="firstName" placeholder="Введите ваше имя" required>
+            </label>
 
-          <label class="form__text">
-            <span class="form__input-label">Имя:</span>
-            <input class="form__input  form__input--first-name" type="text" name="firstName" placeholder="Введите ваше имя" required>
-          </label>
-
-          <label class="form__text">
-            <span class="form__input-label">Отчество:</span>
-            <input class="form__input  form__input--middle-name" type="text" name="middleName" placeholder="Отчество, если желаеете">
-          </label>
-
+            <label class="form__text">
+              <span class="form__input-label">Отчество:</span>
+              <input class="form__input  form__input--middle-name" type="text" name="middleName" placeholder="Отчество, если желаеете">
+            </label>
+          </div>
         </div>
+      </div>
 
-        <div class="form__type">
+      <div class="form__type form__type--phone">
+        <div class="container">
           <h2 class="form__title">ТЕЛ</h2>
-          <input class="form__input" type="tel" placeholder="+7 XXX XX XX">
-          <svg class="form__icon-tel" width="40" height="40">
-            <use x="0" y="0" xlink:href="#icon-phone"></use>
-          </svg>
+          <div class="form__input-wrapper">
+            <input class="form__input" type="tel" placeholder="+7 XXX XX XX">
+            <svg class="form__icon-tel" width="40" height="40">
+              <use x="0" y="0" xlink:href="#icon-phone"></use>
+            </svg>
+          </div>
         </div>
+      </div>
 
-        <div class="form__type">
+      <div class="form__type form__type--email">
+        <div class="container">
           <h2 class="form__title">E-MAIL</h2>
-          <input class="form__input" type="email" placeholder="Ваш e-mail" required>
-          <svg class="form__icon-email" width="40" height="40">
-            <use x="0" y="0" xlink:href="#icon-mail"></use>
-          </svg>
+          <div class="form__input-wrapper">
+            <input class="form__input" type="email" placeholder="Ваш e-mail" required>
+            <svg class="form__icon-email" width="40" height="40">
+              <use x="0" y="0" xlink:href="#icon-mail"></use>
+            </svg>
+          </div>
         </div>
+      </div>
 
-        <div class="form__type">
+      <div class="form__type">
+        <div class="container">
           <h2 class="form__title">ДОП</h2>
-          <textarea class="form__input  form__input--add-info" rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          <div class="form__input-wrapper">
+            <textarea class="form__input  form__input--add-info" rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          </div>
+          <button class="btn form__button-submit" type="submit">Отправить заказ</button>
+          <div class="form__required-info">Все поля являются обязательными</div>
         </div>
 
-        <button class="btn form__button-submit" type="submit">Отправить заказ</button>
+      </div>
 
-      </form>
-    </div>
+
+    </form>
+
 
     <footer class="footer">
       <div class="container">
+
+        <a class="footer__logo-link">
+          <svg class="footer__logo" width="90" height="40">
+            <use x="0" y="0" xlink:href="#logo-mobile"></use>
+          </svg>
+        </a>
+
 
         <ul class="social-links">
           <li class="social-links__item">
@@ -266,9 +305,7 @@
 
       </div>
     </footer>
-
     <script src="js/script.js"></script>
-
 
 
   </body>
