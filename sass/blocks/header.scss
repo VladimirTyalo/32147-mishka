@@ -6,8 +6,34 @@
 .header__title {
   font-family: $font-verdana;
   font-weight: bold;
-  padding: 75px 0;
+  margin: 75px 0;
   text-align: center;
   @include font($fnt-big, $line-h-big);
+}
+
+@media #{$tabet-width} {
+  .header {
+    position: relative;
+
+    // wavy border
+
+    &::after {
+      position: absolute;
+      bottom: -20px;
+      left: 0px;
+      height: 39px;
+      width: 100%;
+      content: '';
+      background-image: url('./../img/wave-up.png');
+      background-repeat: repeat-x;
+      background-position: -9px 2px;
+      background-size: 39px 23px;
+    }
+  }
+
+  .header__title {
+    @include font(40px, 50px);
+    margin: 75px 0 90px 0;
+  }
 }
 

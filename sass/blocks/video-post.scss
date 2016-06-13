@@ -1,16 +1,130 @@
 .video-post {
   @include font($fnt-base-size, $line-h-text);
+  border-top: 1px solid $color-top-menu-separator;
+  margin-top: 30px;
+}
+
+.video-post--desktop {
+  display: none;
+}
+
+
+.video-post__content {
+  width: 100%;
+  height: auto;
+  position: relative;
 }
 
 .video-post__title {
+  margin-left: 90px;
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 25px;
 
+  &::before {
+    content: url("./../img/svg-icons/icon-video.svg");
+    width: 50px;
+    height: 40px;
+    position: absolute;
+    top: 20px;
+    left: -60px;
+  }
+}
+
+.video-post__content-wrapper {
+  position: relative;
+
+  &::after {
+    content: url("./../img/svg-icons/icon-play.svg");
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 105px;
+    height: 80px;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .video-post__descr {
+  @include font(14px, 24px);
+  color: $color-fnt-main;
+  padding: 30px 30px 25px 30px;
+}
+
+.video-post__btn {
+  margin: 0 30px;
+}
+
+@media #{$tabet-width} {
+  .video-post {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 54px;
+  }
+
+  .video-post__content-wrapper {
+    flex: 1 0 100%;
+    order: -1;
+  }
+
+  .video-post__btn {
+    box-sizing: border-box;
+    flex: 1 0 calc(100% - 2*40px);
+  }
+
+  .video-post__descr {
+    padding-top: 0;
+
+  }
+
+  .video-post--desktop {
+    display: none;
+  }
 
 }
 
-.video-post__icon {
-  fill: $color-icon-video-camera;
+@media #{$desktop-width} {
+
+  .video-post {
+    display: none;
+
+  }
+
+  .video-post--desktop {
+    display: flex;
+    flex-flow: row nowrap;
+    border: none;
+  }
+
+  .video-post__content {
+    display: block;
+  }
+
+  .video-post__content-wrapper {
+    flex: 0 0 65%;
+  }
+
+  .video-post__info {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .video-post__title {
+    margin-top: 70px;
+    margin-left: 30px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    width: 190px;
+
+    &::before {
+      top: -30px;
+      left: 0px;
+    }
+  }
+
+  .video-post__btn {
+    align-self: flex-start;
+  }
+
 }
 

@@ -84,10 +84,11 @@
 
     <nav class="top-menu">
       <div class="container">
-        <a class="top-menu__logo-link">
+        <a class="top-menu__logo-link" href="index.html">
           <svg class="top-menu__logo" width="90" height="40">
             <use x="0" y="0" xlink:href="#logo-mobile"></use>
           </svg>
+          <!--<object class="top-menu__logo" data="img/svg-icons/logo-mobile.svg" type="image/svg+xml"></object>-->
         </a>
 
         <div class="top-menu__burger"></div>
@@ -121,6 +122,7 @@
             <svg class="user-block__icon-search" width="24" height="24">
               <use x="0" y="0" xlink:href="#icon-search"></use>
             </svg>
+            <!--<object class="user-block__icon-search" data="img/svg-icons/icon-search.svg" type="image/svg+xml"></object>-->
             <a href="#" class="user-block__link user-block__link--search">
               Поиск по сайту
             </a>
@@ -130,6 +132,7 @@
               <svg class="user-block__icon-cart" width="24" height="24">
                 <use x="0" y="0" xlink:href="#icon-cart"></use>
               </svg>
+              <!--<object class="user-block__icon-cart" data="img/svg-icons/icon-cart.svg" type="image/svg+xml"></object>-->
               Корзина: пока пуста
             </a>
           </div>
@@ -138,33 +141,38 @@
     </nav>
 
     <header class="header">
-      <h1 class="header__title">Каталог товаров</h1>
-      <div class="delivery">
-        <a href="#" class="delivery__link">
-          Бесплатная доставка по России
-        </a>
+      <div class="container">
+        <div class="delivery">
+          <a href="#" class="delivery__link">
+            Бесплатная доставка по России
+          </a>
+        </div>
+        <h1 class="header__title">Каталог товаров</h1>
       </div>
     </header>
 
     <main class="catalog-content">
-      <div class="container posts-flex-wrapper">
+      <div class="container">
 
         <article class="product-post">
           <a class="product-post__image-link" href="#">
             <img class="product-post__image" src="img/photo-1-mobile@1x.jpg" width="260" height="195" alt="Зайчик попрыгайчик">
           </a>
-          <h2 class="product-post__title">
-            <a class="product-post__title-link" href="#">Зайчик-попрыгайчик</a>
-          </h2>
-          <p class="product-post__descr">Рост 30см, вес 200г</p>
 
-          <div class="product-post__buy">
-            <div class="product-post__price">1200 руб.</div>
-            <a href="#" class="product-post__make-order">
-              <svg class="product-post__order-icon" width="22" height="22">
-                <use x="0" y="0" xlink:href="#icon-cart"></use>
-              </svg>
-            </a>
+          <div class="product-post__info">
+            <h2 class="product-post__title">
+              <a class="product-post__title-link" href="#">Зайчик-попрыгайчик</a>
+            </h2>
+            <p class="product-post__descr">Рост 30см, вес 200г</p>
+
+            <div class="product-post__buy">
+              <div class="product-post__price">1200 руб.</div>
+              <a href="#" class="product-post__make-order">
+                <svg class="product-post__order-icon" width="22" height="22">
+                  <use x="0" y="0" xlink:href="#icon-cart"></use>
+                </svg>
+              </a>
+            </div>
           </div>
         </article>
 
@@ -173,18 +181,20 @@
           <a class="product-post__image-link" href="#">
             <img class="product-post__image" src="img/photo-2-mobile@1x.jpg" width="260" height="195" alt="Корзинка для белья">
           </a>
-          <h2 class="product-post__title">
-            <a class="product-post__title-link" href="#">Корзинка для белья</a>
-          </h2>
-          <p class="product-post__descr">Диаметр 15см, высота 10см</p>
+          <div class="product-post__info">
+            <h2 class="product-post__title">
+              <a class="product-post__title-link" href="#">Корзинка для белья</a>
+            </h2>
+            <p class="product-post__descr">Диаметр 15см, высота 10см</p>
 
-          <div class="product-post__buy">
-            <div class="product-post__price">690 руб.</div>
-            <a href="#" class="product-post__make-order">
-              <svg class="product-post__order-icon" width="22" height="22">
-                <use x="0" y="0" xlink:href="#icon-cart"></use>
-              </svg>
-            </a>
+            <div class="product-post__buy">
+              <div class="product-post__price">690 руб.</div>
+              <a href="#" class="product-post__make-order">
+                <svg class="product-post__order-icon" width="22" height="22">
+                  <use x="0" y="0" xlink:href="#icon-cart"></use>
+                </svg>
+              </a>
+            </div>
           </div>
         </article>
 
@@ -192,44 +202,68 @@
           <a class="product-post__image-link" href="#">
             <img class="product-post__image" src="img/photo-3-mobile@1x.jpg" width="260" height="195" alt="Большая корзинка для игрушек">
           </a>
-          <h2 class="product-post__title">
-            <a class="product-post__title-link" href="#">Большая корзинка для игрушек</a>
-          </h2>
-          <p class="product-post__descr">Диаметр 30см, высота 30см</p>
+          <div class="product-post__info">
+            <h2 class="product-post__title">
+              <a class="product-post__title-link" href="#">Большая корзинка для игрушек</a>
+            </h2>
+            <p class="product-post__descr">Диаметр 30см, высота 30см</p>
 
-          <div class="product-post__buy">
-            <div class="product-post__price">1500 руб.</div>
-            <a href="#" class="product-post__make-order">
-              <svg class="product-post__order-icon" width="22" height="22">
-                <use x="0" y="0" xlink:href="#icon-cart"></use>
-              </svg>
-            </a>
+            <div class="product-post__buy">
+              <div class="product-post__price">1500 руб.</div>
+              <a href="#" class="product-post__make-order">
+                <svg class="product-post__order-icon" width="22" height="22">
+                  <use x="0" y="0" xlink:href="#icon-cart"></use>
+                </svg>
+              </a>
+            </div>
           </div>
         </article>
 
 
         <article class="video-post">
           <h2 class="video-post__title">
-            <svg class="video-post__icon" width="40" height="30">
-              <use x="0" y="0" xlink:href="#icon-video"></use>
-            </svg>
             Процесс производства
           </h2>
-          <video class="video-post__content" src="video-presentation.mp4" poster="img/video-mobile@1x.jpg">
-            <div class="video-post__play-btn"></div>
-          </video>
+          <div class="video-post__content-wrapper">
+            <video class="video-post__content" src="video-presentation.mp4" poster="img/video-mobile@1x.jpg">
+            </video>
+          </div>
           <p class="video-post__descr">
             По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
           </p>
+          <a href="#" class="btn video-post__btn">Сделать заказ</a>
         </article>
 
-        <a href="#" class="btn">Сделать заказ</a>
+        <article class="video-post video-post--desktop">
+          <div class="video-post__content-wrapper">
+            <video class="video-post__content" src="video-presentation.mp4" poster="img/video-mobile@1x.jpg">
+            </video>
+          </div>
+          <div class="video-post__info">
+            <h2 class="video-post__title">
+              Процесс производства
+            </h2>
+
+            <p class="video-post__descr">
+              По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+            </p>
+            <a href="#" class="btn video-post__btn">Сделать заказ</a>
+          </div>
+        </article>
+
       </div>
     </main>
 
 
     <footer class="footer">
       <div class="container">
+
+        <a class="footer__logo-link">
+          <svg class="footer__logo" width="90" height="40">
+            <use x="0" y="0" xlink:href="#logo-mobile"></use>
+          </svg>
+        </a>
+
 
         <ul class="social-links">
           <li class="social-links__item">
@@ -266,7 +300,6 @@
     </footer>
 
     <script src="js/script.js"></script>
-
 
 
   </body>

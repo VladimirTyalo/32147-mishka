@@ -8,8 +8,9 @@
 }
 
 .top-menu__logo-link {
-  align-self: flex-start;
   margin: 20px 0;
+  text-align: center;
+  display: block;
 }
 
 .top-menu__burger {
@@ -46,19 +47,18 @@
     flex: 1 0 150px;
     justify-content: flex-start;
     order: 1;
+    text-align: left;
   }
-
 }
 
 @media #{$desktop-width} {
-
-
 
   .top-menu__logo-link {
     order: 2;
     flex: 1 0 20%;
     display: flex;
     justify-content: center;
+
   }
 
 }
