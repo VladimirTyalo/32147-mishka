@@ -4,31 +4,28 @@
   padding-top: 1px;
   padding-bottom: 45px;
 
-  // wavy border
-  &::after {
+  &::after,
+  &::before {
+    content: '';
     position: absolute;
-    top: -25px;
-    left: 0px;
     height: 39px;
     width: 100%;
-    content: '';
-    background: url("./../img/wavy-border-gray.png") repeat-x -9px 2px;
+    background-image: url('../img/wavy-border-gray.png');
+    background-repeat: repeat-x;
+    background-position: -9px 2px;
     background-size: 39px 23px;
-    z-index: 20;
+  }
+
+  // wavy border
+  &::after {
+    top: -25px;
+    left: 0px;
   }
 
   // wavy border
   &::before {
-    position: absolute;
     bottom: 0px;
     left: 0px;
-    height: 39px;
-    width: 100%;
-    content: '';
-    background-image: url('./../img/wavy-border-gray.png');
-    background-repeat: repeat-x;
-    background-position: -9px 2px;
-    background-size: 39px 23px;
   }
 }
 
@@ -121,6 +118,7 @@
 @media #{$desktop-width} {
 
   .about__title {
+    margin-left: 16.67%;
     @include font(50px, 57px);
   }
 

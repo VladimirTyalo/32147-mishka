@@ -4,7 +4,7 @@
 }
 
 .review__item {
-  min-height: 310px;
+  min-height: 200px;
 }
 
 .review__title {
@@ -42,7 +42,7 @@
 
 @media #{$tabet-width} {
   .review {
-    background-image: url("./../img/review@1x.jpg");
+    background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     overflow: hidden;
     padding-bottom: 75px;
@@ -80,21 +80,23 @@
     margin-left: 0;
   }
 
+  .review__item {
+    padding: 0;
+  }
+
   .review__title {
     @include font(50px, 57px);
     margin-left: 16.67%;
     padding-left: 0;
   }
 
-  .review__text {
-    padding-left: 16.67%;
+  .review__content-wrapper {
+    width: 66.67%;
+    margin: 0 auto;
   }
 
-  .review__author {
-    padding-left: 16.67%;
-  }
-
-  .review__nick {
-    padding-left: 16.67%;
+  .review__btn {
+    box-sizing: border-box;
+    width: 16.67%;
   }
 }

@@ -1,6 +1,6 @@
 .index-header {
   background-color: $color-bg-index-header;
-  background-image: url('./../img/hero-mobile@1x.jpg');
+  background-image: url('../img/hero-mobile@1x.jpg');
   background-repeat: no-repeat;
   background-position: center top;
 }
@@ -77,15 +77,13 @@
     // wavy border
     &::after {
       position: absolute;
-      bottom: -20px;
+      bottom: -10px;
       left: 0px;
-      height: 39px;
+      height: 24px;
       width: 100%;
       content: '';
-      background-image: url('./../img/wave-up.png');
+      background-image: url('../img/wave.png');
       background-repeat: repeat-x;
-      background-position: -9px 2px;
-      background-size: 39px 23px;
     }
 
   }

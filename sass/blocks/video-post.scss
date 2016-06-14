@@ -22,7 +22,7 @@
   padding-bottom: 25px;
 
   &::before {
-    content: url("./../img/svg-icons/icon-video.svg");
+    content: url("../img/svg-icons/icon-video.svg");
     width: 50px;
     height: 40px;
     position: absolute;
@@ -35,7 +35,7 @@
   position: relative;
 
   &::after {
-    content: url("./../img/svg-icons/icon-play.svg");
+    content: url("../img/svg-icons/icon-play.svg");
     position: absolute;
     left: 50%;
     top: 50%;

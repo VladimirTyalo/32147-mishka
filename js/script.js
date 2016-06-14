@@ -13,9 +13,12 @@
 
   initMenuState();
 
+
   handleMenu();
 
-  handleSlider();
+  if (slider && btnPrev && btnNext) {
+    handleSlider();
+  }
 
 
   function handleSlider() {

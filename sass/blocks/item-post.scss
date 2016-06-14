@@ -27,12 +27,10 @@
 @media #{$tabet-width}
 {
   .item-post {
-    order: 3;
-    padding-right: calc(50% + 40px);
+    box-sizing: border-box;
+    padding-right: 45px;
     padding-bottom: 0;
-    flex: 1 0 43%;
-    padding-right: 7%;
-    margin-right: 50%;
+    flex: 0 0 50%;
   }
 
   .item-post__params {
@@ -40,6 +38,7 @@
   }
 
   .item-post__descr {
+    margin-top: -7px;
     margin-bottom: 25px;
   }
 }
@@ -47,17 +46,19 @@
 @media #{$desktop-width} {
 
   .item-post {
-    order: 2;
-    flex: 0 0 28%;
-    padding-right: 50px;
+    padding-right: 60px;
+    flex: 0 0 40%;
   }
 
   .item-post__descr {
-    margin-bottom: 70px;
+    margin-top: 160px;
+    margin-bottom: 50px;
+
   }
 
   .item-post__params {
-    pargin-bottom: 110px;
+    margin-bottom: 0;
   }
+
 
 }
