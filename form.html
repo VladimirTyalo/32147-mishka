@@ -146,7 +146,7 @@
             Бесплатная доставка по России
           </a>
         </div>
-        <h1 class="header__title">Каталог товаров</h1>
+        <h1 class="header__title">Вязание на заказ</h1>
       </div>
     </header>
 
@@ -154,14 +154,13 @@
     <form class="form" method="POST" action="#" id="form">
 
 
-      <p class="form__descr">
-        Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа,
-        и мы свяжемся с вами, чтобы уточнить детали.
-      </p>
+        <p class="form__descr">
+          Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа,
+          и мы свяжемся с вами, чтобы уточнить детали.
+        </p>
 
       <div class="form__type">
-        <div class="container">
-
+        <div class="form__type-wrapper">
 
           <h2 class="form__title">Тип</h2>
 
@@ -176,7 +175,7 @@
       </div>
 
       <div class="form__type form__type--checkbox">
-        <div class="container">
+        <div class="form__type-wrapper">
           <h2 class="form__title">Цвет</h2>
 
           <div class="form__input-wrapper">
@@ -201,7 +200,7 @@
         </div>
       </div>
       <div class="form__type form__type--name">
-        <div class="container">
+        <div class="form__type-wrapper">
           <h2 class="form__title">ФИО</h2>
           <div class="form__input-wrapper">
             <label class="form__text">
@@ -223,7 +222,7 @@
       </div>
 
       <div class="form__type form__type--phone">
-        <div class="container">
+        <div class="form__type-wrapper">
           <h2 class="form__title">ТЕЛ</h2>
           <div class="form__input-wrapper">
             <input class="form__input" type="tel" placeholder="+7 XXX XX XX">
@@ -235,10 +234,10 @@
       </div>
 
       <div class="form__type form__type--email">
-        <div class="container">
+        <div class="form__type-wrapper">
           <h2 class="form__title">E-MAIL</h2>
           <div class="form__input-wrapper">
-            <input class="form__input" type="email" placeholder="Ваш e-mail" required>
+            <input class="form__input" type="email" placeholder="Мы не будем спамить, честно!" required>
             <svg class="form__icon-email" width="40" height="40">
               <use x="0" y="0" xlink:href="#icon-mail"></use>
             </svg>
@@ -246,19 +245,18 @@
         </div>
       </div>
 
-      <div class="form__type">
-        <div class="container">
+      <div class="form__type form__type--textarea">
+        <div class="form__type-wrapper">
           <h2 class="form__title">ДОП</h2>
           <div class="form__input-wrapper">
             <textarea class="form__input  form__input--add-info" rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </div>
+
           <button class="btn form__button-submit" type="submit">Отправить заказ</button>
-          <div class="form__required-info">Все поля являются обязательными</div>
+          <span class="form__required-info">Все поля являются обязательными</span>
+
         </div>
-
       </div>
-
-
     </form>
 
 

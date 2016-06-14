@@ -6,35 +6,19 @@
 
 .form__descr {
   font-family: $font-verdana;
-  margin: 30px 30px;
-  margin-top: 30px;
+  margin: 30px;
   @include font($fnt-text-size, $line-h-form-descr);
 }
 
 .form__title {
   font-family: $font-open-sans;
   font-weight: bold;
-  position: relative;
   z-index: 10;
-  top: -15px;
   display: inline-block;
   padding-right: 30px;
   color: $color-fnt-alternative;
   background: $color-bg-main;
   @include font($fnt-form-title, $line-h-form-title);
-}
-
-.form__type .container {
-  position: relative;
-
-  &::before {
-    position: absolute;
-    top: 10px;
-    width: calc(100% - 60px);
-    height: 1px;
-    content: '';
-    background: $color-bg-toys;
-  }
 }
 
 .form__radio-label,
@@ -116,6 +100,7 @@
   margin: 60px 0;
   cursor: pointer;
   background: $color-bg-main;
+  display: block;
 }
 
 .form__icon-tel,
@@ -131,8 +116,8 @@
   top: 0;
   left: 7px;
   width: 24px;
-  content: url('./../img/svg-icons/icon-tick.svg');
-  heigth: 24px;
+  content: url('../img/svg-icons/icon-tick.svg');
+  height: 24px;
 }
 
 .form__required-info {
@@ -144,9 +129,10 @@
   margin-top: 30px;
 }
 
-.form__button-submit {
-  display: block;
-  width: 100%;
+
+.form__type-wrapper {
+  margin: 0 auto;
+  padding: 0px 30px;
 }
 
 @media #{$tabet-width} {
@@ -156,17 +142,13 @@
     margin-left: 50px;
   }
 
-  .form .container {
+  .form__type-wrapper {
+    box-sizing: border-box;
     display: flex;
-    margin: 0 auto;
-    padding: 0;
-    padding-bottom: 20px;
+    padding: 30px 50px 75px;
     flex-flow: row wrap;
-    justify-content: center;
-
-    &::before {
-      background: none;
-    }
+    justify-content: flex-start;
+    flex: 0 0 100%
   }
 
   .form {
@@ -176,29 +158,26 @@
 
   .form__type {
     display: flex;
-    margin-top: 0;
+    flex: 1 0 100%;
     flex-flow: row nowrap;
-    flex: 0 0 100%;
+    margin-top: 0;
   }
 
   .form__title {
-    margin-top: 30px;
-    padding: 30px 0 30px 0;
+    padding: 0;
+    margin: 0;
+    margin-top: 50px;
     background: none;
     flex: 0 0 25%;
+    align-self: flex-start;
   }
 
-  .fomr__descr {
-    width: 87%;
-  }
 
   .form__input-wrapper {
-    position: relative;
     display: flex;
-    margin-top: 25px;
-    margin-bottom: 75px;
     flex: 0 0 75%;
     flex-flow: row wrap;
+    position: relative;
   }
 
   .form__radio-label {
@@ -214,9 +193,12 @@
     flex: 1 0 50%;
   }
 
-  .form__input-wrapper .form__text {
+  .form__text {
     box-sizing: border-box;
     flex: 0 0 100%;
+    display: flex;
+    margin-top: 10px;
+
   }
 
   .form__type--phone,
@@ -224,42 +206,72 @@
     background: $color-bg-header;
   }
 
-  .form__input {
-    background: none;
+  .form__type--phone .form__input,
+  .form__type--email .form__input {
+    background: $color-bg-header;
   }
+
+
+  .form__type--phone .form__type-wrapper {
+    padding-bottom: 0;
+  }
+
 
   .form__icon-tel,
   .form__icon-email {
     position: absolute;
   }
 
-  .form__button-submit,
+  .form__button-submit {
+    flex: 1 0 30%;
+    margin: 0;
+  }
+
+
+  .form__type--textarea .form__type-wrapper {
+    padding-bottom: 10px;
+  }
+
+  .form__type--textarea .form__input-wrapper {
+    margin-bottom: 52px;
+  }
+
   .form__required-info {
     margin: 0;
-    flex: 1 0 50%;
-  }
-
-  .form__button-submit {
-    width: 30%;
-  }
-
-  .form__required-info {
+    flex: 1 0 70%;
     display: inline-block;
     text-align: right;
-    vertical-align: bottom;
+    vertical-align: baseline;
+    padding-top: 18px;
   }
 
   .form__input-label,
   .form__input {
-    display: inline-block;
+    width: auto;
+  }
+
+  .form__input {
+    flex: 1 0 auto;
+  }
+
+  .form__input-label {
+    margin-right: 20px;
+  }
+
+  .form__type--email {
+    margin-top: 0;
   }
 }
 
 @media #{$desktop-width} {
+
+  .form__type-wrapper {
+    padding-right: 16.67%;
+  }
   .form__title {
     display: flex;
     margin-top: 0;
-    padding-top: 90px;
+    padding-top: 40px;
     flex: 0 0 16.67%;
     justify-content: center;
   }
@@ -269,18 +281,26 @@
     flex-flow: row wrap;
   }
 
-  .form__descr {
-    width: 66.67%;
-    max-width: 700px;
-    margin: 0 auto;
-  }
-
-  .form__type:nth-last-of-type(-n + 4) .form__input-wrapper {
-    flex: 0 0 66.67%;
-  }
-
   .form__checkbox-label {
     box-sizing: border-box;
     flex: 1 0 33%;
+  }
+
+  .form__button-submit {
+    margin-left: 16.67%;
+    flex: 0 0 30%;
+  }
+
+  .form__required-info {
+    flex: 0 0 33%;
+  }
+
+  .form__type--textarea .form__type-wrapper {
+    justify-content: space-between;
+  }
+
+  .form__descr {
+    width: 66.67%;
+    margin: 0 16.67%;
   }
 }

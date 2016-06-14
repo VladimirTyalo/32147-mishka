@@ -1,5 +1,4 @@
 .catalog-content {
-
   margin-top: 80px;
 }
 
@@ -14,17 +13,12 @@
 
 
 @media #{$tabet-width} {
-  .catalog-content .container {
-    box-sizing: border-box;
-  }
+
 }
 
 @media #{$desktop-width} {
   .catalog-content .container {
     flex-flow: row wrap;
     justify-content: space-between;
-    padding-right: 0;
-    padding-left: 0;
-
   }
 }

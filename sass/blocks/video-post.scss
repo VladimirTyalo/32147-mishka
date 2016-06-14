@@ -1,13 +1,8 @@
 .video-post {
   @include font($fnt-base-size, $line-h-text);
-  border-top: 1px solid $color-top-menu-separator;
+  border: 1px solid $color-top-menu-separator;
   margin-top: 30px;
 }
-
-.video-post--desktop {
-  display: none;
-}
-
 
 .video-post__content {
   width: 100%;
@@ -20,6 +15,10 @@
   position: relative;
   padding-top: 30px;
   padding-bottom: 25px;
+
+  &--desktop {
+    display: none;
+  }
 
   &::before {
     content: url("../img/svg-icons/icon-video.svg");
@@ -53,6 +52,7 @@
 
 .video-post__btn {
   margin: 0 30px;
+  margin-bottom: 35px;
 }
 
 @media #{$tabet-width} {
@@ -69,32 +69,16 @@
 
   .video-post__btn {
     box-sizing: border-box;
-    flex: 1 0 calc(100% - 2*40px);
+    flex: 1 0 calc(100% - 2 * 40px);
+    margin-bottom: 50px;
   }
 
   .video-post__descr {
     padding-top: 0;
-
   }
-
-  .video-post--desktop {
-    display: none;
-  }
-
 }
 
 @media #{$desktop-width} {
-
-  .video-post {
-    display: none;
-
-  }
-
-  .video-post--desktop {
-    display: flex;
-    flex-flow: row nowrap;
-    border: none;
-  }
 
   .video-post__content {
     display: block;
@@ -105,25 +89,35 @@
   }
 
   .video-post__info {
-    display: flex;
-    flex-flow: row wrap;
+    box-sizing: border-box;
+    flex: 0 0 35%;
+    padding-left: 78px;
+    padding-right: 56px;
   }
 
   .video-post__title {
-    margin-top: 70px;
-    margin-left: 30px;
-    margin-bottom: 0;
+    margin: 70px 0px 0;
     padding-bottom: 0;
-    width: 190px;
+    //width: 190px;
+    display: none;
 
+    &--desktop {
+      display: block;
+    }
     &::before {
       top: -30px;
       left: 0px;
     }
   }
 
+  .video-post__descr {
+    padding: 0;
+    margin-bottom: 45px;
+  }
+
   .video-post__btn {
     align-self: flex-start;
+    margin: 0;
   }
 
 }

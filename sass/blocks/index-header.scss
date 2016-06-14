@@ -5,7 +5,7 @@
   background-position: center top;
 }
 
-.index-header .container {
+.index-header .form__type-wrapper {
   padding: 0;
   display: flex;
   flex-flow: row wrap;
@@ -67,7 +67,7 @@
 
 @media #{$tabet-width} {
 
-  .index-header .container {
+  .index-header .form__type-wrapper {
     padding: 0 50px;
     margin: 0 auto;
   }
