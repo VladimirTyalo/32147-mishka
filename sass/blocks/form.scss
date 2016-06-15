@@ -12,12 +12,28 @@
 .form__title {
   font-family: $font-open-sans;
   font-weight: bold;
-  z-index: 10;
-  display: inline-block;
+  display: block;
   padding-right: 30px;
   color: $color-fnt-alternative;
   background: $color-bg-main;
   @include font($fnt-form-title, $line-h-form-title);
+  text-transform: uppercase;
+  position: relative;
+  width: auto;
+
+  &::after {
+    content: "";
+    width: calc(100% - 2*30px);
+    position: absolute;
+    border: 1px solid $color-fnt-alternative;
+    top: 50%;
+    box-sizing: border-box;
+  }
+}
+
+.form__title-element {
+  padding-right: 20px;
+  background: $color-bg-main;
 }
 
 .form__radio-label,
@@ -39,7 +55,8 @@
 }
 
 .form__checkbox-label {
-  margin-top: 50px;
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
 
 .form__input-label {
@@ -49,6 +66,7 @@
 .form__radio-label::before,
 .form__checkbox-label::before {
   position: absolute;
+  cursor: pointer;
   top: 50%;
   left: 0;
   width: 40px;
@@ -109,9 +127,17 @@
   opacity: .3;
 }
 
+
+.form__type--textarea {
+  resize: none;
+  overflow: auto;
+  box-sizing: border-box;
+  display: block;
+}
+
 .form__type--checkbox input:checked + label::after {
   position: absolute;
-  top: 0;
+  top: 10px;
   left: 7px;
   width: 24px;
   content: url('../img/svg-icons/icon-tick.svg');
@@ -161,6 +187,15 @@
     flex: 1 0 25%;
     align-self: flex-start;
     box-sizing: border-box;
+
+    &::after {
+      content: none;
+    }
+  }
+
+  .form__title-element {
+    // to reset mobile background
+    background: transparent;
   }
 
   .form__input-wrapper {
@@ -169,6 +204,10 @@
     flex-flow: row wrap;
     position: relative;
     box-sizing: border-box;
+  }
+
+  .form__sentence {
+    display: block;
   }
 
   .form__radio-label {
@@ -213,10 +252,6 @@
     padding-right: 10px;
   }
 
-  .form__type--textarea .form__type-wrapper {
-    padding-bottom: 10px;
-  }
-
   .form__type--textarea .form__input-wrapper {
     margin-bottom: 52px;
   }
@@ -241,6 +276,7 @@
 
   .form__input-label {
     margin-right: 20px;
+    padding-bottom: 25px;
   }
 
   .form__type--email {
@@ -277,9 +313,7 @@
     flex: 0 0 33%;
   }
 
-
   .form__descr {
-    width: 66.67%;
     margin: 0 16.67%;
   }
 }

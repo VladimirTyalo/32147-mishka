@@ -54,7 +54,7 @@
 }
 
 @media #{$tabet-width} {
-  .product-post {
+  .product-post  {
     display: flex;
     flex-flow: row nowrap;
     margin-top: 54px;
@@ -64,6 +64,10 @@
     padding: 0 30px;
     display: flex;
     flex-flow: column nowrap;
+    flex: 1 0 50%;
+  }
+
+  .product-post__image-link {
     flex: 1 0 50%;
   }
 

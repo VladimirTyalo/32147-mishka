@@ -104,12 +104,12 @@
               Вязание на заказ
             </a>
           </li>
-          <li class="modal-menu__item modal-menu__item--new">
+          <li class="modal-menu__item">
             <a href="#" class="modal-menu__link">
               Новые поступления
             </a>
           </li>
-          <li class="modal-menu__item modal-menu__item--sale">
+          <li class="modal-menu__item">
             <a href="#" class="modal-menu__link ">
               Распродажа
             </a>
@@ -155,12 +155,13 @@
 
       <div class="container">
         <p class="form__descr">
-          Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа,
-          и мы свяжемся с вами, чтобы уточнить детали.
+          <span class="form__sentence">Мы будем рады воплотить в жизнь ваши пожелания!</span>
+          <span class="form__sentence">Заполните простую форму заказа,
+          и мы свяжемся с вами, чтобы уточнить детали.</span>
         </p>
 
         <div class="form__type form__type--radio">
-          <h2 class="form__title">Тип</h2>
+          <h2 class="form__title"><span class="form__title-element">Тип</span></h2>
           <div class="form__input-wrapper">
             <input class="visually-hidden" type="radio" name="type" checked id="accessory">
             <label class="form__radio-label" for="accessory">Аксессуар для интерьера</label>
@@ -174,7 +175,7 @@
 
       <div class="form__type form__type--checkbox">
         <div class="container">
-          <h2 class="form__title">Цвет</h2>
+          <h2 class="form__title"><span class="form__title-element">Цвет</span></h2>
 
           <div class="form__input-wrapper">
             <input class="visually-hidden" type="checkbox" name="white" checked id="white">
@@ -199,7 +200,7 @@
       </div>
       <div class="form__type form__type--name">
         <div class="container">
-          <h2 class="form__title">ФИО</h2>
+          <h2 class="form__title"><span class="form__title-element">ФИО</span></h2>
           <div class="form__input-wrapper">
             <label class="form__text">
               <span class="form__input-label"> Фамилия:</span>
@@ -221,9 +222,9 @@
 
       <div class="form__type form__type--phone">
         <div class="container">
-          <h2 class="form__title">ТЕЛ</h2>
+          <h2 class="form__title"><span class="form__title-element">ТЕЛ</span></h2>
           <div class="form__input-wrapper">
-            <input class="form__input" type="tel" placeholder="+7 XXX XX XX">
+            <input class="form__input" type="tel" placeholder="+7 XXX XX XX" required>
             <svg class="form__icon-tel" width="40" height="40">
               <use x="0" y="0" xlink:href="#icon-phone"></use>
             </svg>
@@ -233,7 +234,7 @@
 
       <div class="form__type form__type--email">
         <div class="container">
-          <h2 class="form__title">E-MAIL</h2>
+          <h2 class="form__title"><span class="form__title-element">E-MAIL</span></h2>
           <div class="form__input-wrapper">
             <input class="form__input" type="email" placeholder="Мы не будем спамить, честно!" required>
             <svg class="form__icon-email" width="40" height="40">
@@ -245,9 +246,9 @@
 
       <div class="form__type form__type--textarea">
         <div class="container">
-          <h2 class="form__title">ДОП</h2>
+          <h2 class="form__title"><span class="form__title-element">ДОП</span></h2>
           <div class="form__input-wrapper">
-            <textarea class="form__input  form__input--add-info" rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            <textarea class="form__input  form__input--add-info" rows="6" placeholder="Опишите все ваши пожелания к заказу" required></textarea>
           </div>
 
           <button class="btn form__button-submit" type="submit">Отправить заказ</button>

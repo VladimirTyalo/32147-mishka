@@ -12,13 +12,9 @@
   text-align: center;
   margin: 0;
 
-  &--new,
-  &--sale {
+  &:nth-of-type(n + 3) {
     display: none;
   }
-  //&:nth-of-type(n + 3) {
-  //  display: none;
-  //}
 }
 
 .modal-menu__link {

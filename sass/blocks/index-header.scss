@@ -67,6 +67,10 @@
 
 @media #{$tabet-width} {
 
+  .index-header__line-break {
+    display: none;
+  }
+
   .index-header .form__type-wrapper {
     padding: 0 50px;
     margin: 0 auto;
@@ -111,7 +115,6 @@
       padding-right: 35px;
     }
   }
-
 }
 
 @media #{$desktop-width} {
@@ -121,8 +124,6 @@
 
     .index-header__title {
       @include font(50px, 57px);
-      flex: 0 0 630px;
+      flex: 1 0 630px;
     }
-
-
 }
