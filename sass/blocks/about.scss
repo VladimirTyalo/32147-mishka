@@ -105,20 +105,20 @@
     &:nth-of-type(6) {
       order: 6;
     }
-
   }
 
   .about__item-text {
     padding-bottom: 50px;
     @include font(20px, 20px);
   }
-
 }
 
 @media #{$desktop-width} {
 
   .about__title {
-    margin-left: 16.67%;
+    //margin-left: 16.67%;
+    width: 66.67%;
+    margin: 56px auto;
     @include font(50px, 57px);
   }
 

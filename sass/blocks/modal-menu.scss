@@ -12,9 +12,13 @@
   text-align: center;
   margin: 0;
 
-  &:nth-last-of-type(-n + 2) {
+  &--new,
+  &--sale {
     display: none;
   }
+  //&:nth-of-type(n + 3) {
+  //  display: none;
+  //}
 }
 
 .modal-menu__link {

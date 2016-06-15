@@ -33,7 +33,7 @@
   position: relative;
   min-height: 458px;
   margin-top: 35px;
-  background-image: url('./../img/map-mobile@1x.jpg');
+  background-image: url('../img/map-mobile@1x.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -64,7 +64,7 @@
     padding-top: 60px;
     margin-top: 0;
     margin-bottom: 60px;
-    background-image: url('./../img/svg-icons/icon-flag.svg');
+    background-image: url('../img/svg-icons/icon-flag.svg');
     background-repeat: no-repeat;
     background-position: right 40px;
     @include font(40px, 50px);
@@ -85,13 +85,13 @@
     display: flex;
     flex-flow: row wrap;
     max-width: 1050px;
-    background-image: url('./../img/svg-icons/icon-flag.svg');
+    background-image: url('../img/svg-icons/icon-flag.svg');
     background-repeat: no-repeat;
     background-position: 5% 60px;
 
   }
 
-  .contacts .form__type-wrapper {
+  .contacts .container {
     flex: 0 0 33%;
     margin-right: 0;
 

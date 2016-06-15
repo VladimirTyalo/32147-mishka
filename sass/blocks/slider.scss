@@ -29,7 +29,7 @@
   border: 1px solid $color-top-menu-separator;
 
   &--prev {
-    background: url('./../img/svg-icons/icon-left-arrow.svg') no-repeat;
+    background: url('../img/svg-icons/icon-left-arrow.svg') no-repeat;
     background-position: center;
   }
 
@@ -63,7 +63,4 @@
 }
 
 @media #{$desktop-width} {
-  .slider__item {
-    padding-left: 0;
-  }
 }

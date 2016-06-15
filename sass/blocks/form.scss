@@ -6,7 +6,6 @@
 
 .form__descr {
   font-family: $font-verdana;
-  margin: 30px;
   @include font($fnt-text-size, $line-h-form-descr);
 }
 
@@ -26,7 +25,6 @@
 .form__input-label {
   font-family: $font-verdana;
   font-weight: bold;
-  position: relative;
   position: relative;
   display: block;
   margin-top: 30px;
@@ -129,26 +127,9 @@
   margin-top: 30px;
 }
 
-
-.form__type-wrapper {
-  margin: 0 auto;
-  padding: 0px 30px;
-}
-
 @media #{$tabet-width} {
   .form__descr {
     margin-top: 80px;
-    margin-right: 50px;
-    margin-left: 50px;
-  }
-
-  .form__type-wrapper {
-    box-sizing: border-box;
-    display: flex;
-    padding: 30px 50px 75px;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    flex: 0 0 100%
   }
 
   .form {
@@ -156,28 +137,38 @@
     padding-bottom: 50px;
   }
 
-  .form__type {
+  .form__type .container,
+  .form__type--radio {
     display: flex;
     flex: 1 0 100%;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     margin-top: 0;
+  }
+
+  .form__type--checkbox .container,
+  .form__type--email .container {
+    padding-bottom: 70px;
+  }
+
+  .form__type--phone .container {
+    padding-bottom: 40px;
   }
 
   .form__title {
     padding: 0;
-    margin: 0;
-    margin-top: 50px;
+    margin: 50px 0 0;
     background: none;
-    flex: 0 0 25%;
+    flex: 1 0 25%;
     align-self: flex-start;
+    box-sizing: border-box;
   }
-
 
   .form__input-wrapper {
     display: flex;
-    flex: 0 0 75%;
+    flex: 1 0 75%;
     flex-flow: row wrap;
     position: relative;
+    box-sizing: border-box;
   }
 
   .form__radio-label {
@@ -198,7 +189,6 @@
     flex: 0 0 100%;
     display: flex;
     margin-top: 10px;
-
   }
 
   .form__type--phone,
@@ -211,22 +201,17 @@
     background: $color-bg-header;
   }
 
-
-  .form__type--phone .form__type-wrapper {
-    padding-bottom: 0;
-  }
-
-
   .form__icon-tel,
   .form__icon-email {
     position: absolute;
   }
 
   .form__button-submit {
-    flex: 1 0 30%;
+    flex: 0 0 30%;
     margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
   }
-
 
   .form__type--textarea .form__type-wrapper {
     padding-bottom: 10px;
@@ -265,9 +250,6 @@
 
 @media #{$desktop-width} {
 
-  .form__type-wrapper {
-    padding-right: 16.67%;
-  }
   .form__title {
     display: flex;
     margin-top: 0;
@@ -277,7 +259,7 @@
   }
 
   .form__input-wrapper {
-    flex: 0 0 83.33%;
+    flex: 0 0 66.67%;
     flex-flow: row wrap;
   }
 
@@ -295,9 +277,6 @@
     flex: 0 0 33%;
   }
 
-  .form__type--textarea .form__type-wrapper {
-    justify-content: space-between;
-  }
 
   .form__descr {
     width: 66.67%;
