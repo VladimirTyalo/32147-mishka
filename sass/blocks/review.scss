@@ -57,12 +57,14 @@
 
   .review__title {
     @include font(40px, 50px);
-    margin: 80px auto 65px 50px;
+    margin: 80px 25% 65px 50px;
   }
 
   .review__btn {
-    width: 180px;
+    width: 25%;
     margin: 0;
+    padding-right: 0;
+    padding-left: 0;
     position: absolute;
     top: 82px;
     right: 0;
@@ -74,14 +76,6 @@
 }
 
 @media #{$desktop-width} {
-
-  .review {
-    margin-left: 0;
-  }
-
-  .review__item {
-    padding: 0;
-  }
 
   .review__title {
     @include font(50px, 57px);

@@ -65,6 +65,7 @@
     display: flex;
     flex-flow: column nowrap;
     flex: 1 0 50%;
+    box-sizing: border-box;
   }
 
   .product-post__image-link {
@@ -89,5 +90,9 @@
   .product-post {
     flex: 0 0 30%;
     flex-flow: column nowrap;
+  }
+
+  .product-post__info {
+    flex: 1 0 auto;
   }
 }

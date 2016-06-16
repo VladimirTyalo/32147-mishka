@@ -60,6 +60,8 @@
     display: flex;
     flex-flow: row wrap;
     margin-top: 54px;
+    width: 100%;
+    justify-content: center;
   }
 
   .video-post__content-wrapper {
@@ -67,9 +69,11 @@
     order: -1;
   }
 
+  .video-post__title {
+    margin-right: auto;
+  }
+
   .video-post__btn {
-    box-sizing: border-box;
-    flex: 1 0 calc(100% - 2 * 40px);
     margin-bottom: 50px;
   }
 
@@ -98,7 +102,6 @@
   .video-post__title {
     margin: 70px 0px 0;
     padding-bottom: 0;
-    //width: 190px;
     display: none;
 
     &--desktop {
