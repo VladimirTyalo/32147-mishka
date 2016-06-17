@@ -1,47 +1,60 @@
 .index-header {
-  border: 1px solid transparent;
-  background: $color-bg-index-header;
+  background-color: $color-bg-index-header;
+  background-image: url('../img/hero-mobile@1x.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.index-header .form__type-wrapper {
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 0;
+}
+
+.index-header .container {
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .index-header__title {
+  flex: 0 0 200px;
   font-family: $font-verdana;
   font-weight: bold;
-
-  //width: 100%;
-  min-height: 300px;
+  min-height: 210px;
   margin: 0;
   padding-top: 90px;
-  padding-right: 40px;
-  padding-left: 40px;
   text-align: center;
-  background-image: url('./../img/hero-mobile@1x.jpg');
-  background-repeat: no-repeat;
-  background-position: center 10px;
-  background-size: cover;
-
   @include font($fnt-big, $line-h-big);
 }
 
 .index-header__menu {
   list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1 0 100%;
 }
 
-.index-header__text {
-  width: 50%;
-  display: inline-block;
-  padding-left: 0;
-  vertical-align: middle;
-  color: $color-fnt-invert;
 
+.index-header__text {
+  @include block-align("inline-block", "middle");
+  max-width: 145px;
+  padding-left: 0;
+  color: $color-fnt-invert;
   @include font($fnt-index-header-text, $line-h-text);
 }
 
 .index-header__icon {
   float: right;
-  opacity: 0.3;
+  padding-bottom: 10px;
+  padding-right: 23px;
+  opacity: .3;
 }
 
 .index-header__item {
+  flex: 1 0 100%;
+
   &--toys {
     background: $color-bg-toys;
   }
@@ -53,5 +66,68 @@
 
 .index-header__link {
   display: block;
-  padding: 30px;
+  padding: 28px 0 28px 30px;
+}
+
+@media #{$tabet-width} {
+
+  .index-header__line-break {
+    display: none;
+  }
+
+  .index-header .form__type-wrapper {
+    padding: 0 50px;
+    margin: 0 auto;
+  }
+
+  .index-header {
+    position: relative;
+    // wavy border
+    &::after {
+      position: absolute;
+      bottom: -10px;
+      left: 0px;
+      height: 24px;
+      width: 100%;
+      content: '';
+      background-image: url('../img/wave.png');
+      background-repeat: repeat-x;
+    }
+
+  }
+
+  .index-header__title {
+    flex: 0 0  510px;
+    @include font(40px, 50px);
+  }
+
+  .index-header__menu {
+    flex: 1 0 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  .index-header__item {
+    overflow: hidden;
+    flex: 1 0 50%;
+
+    &__accessories {
+      padding-left: 35px;
+    }
+    &__toys {
+      padding-right: 35px;
+    }
+  }
+}
+
+@media #{$desktop-width} {
+    .index-header {
+      width: auto;
+    }
+
+    .index-header__title {
+      @include font(50px, 57px);
+      flex: 1 0 630px;
+    }
 }

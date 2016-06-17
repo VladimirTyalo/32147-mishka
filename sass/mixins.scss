@@ -1,8 +1,7 @@
 // $size - in pixels
 // return rem size
 @function calculateRem($size, $base-size: 16px) {
-    $remSize: $size / $base-size;
-
+  $remSize: $size / $base-size;
   @return $remSize * 1rem;
 }
 
@@ -18,3 +17,18 @@
   @include font-size($font-size);
   @include line-height($line-height);
 }
+
+// inline block
+@mixin block-align($display: "inline-block", $vertical: "top") {
+  display: #{$display};
+  vertical-align: #{$vertical};
+}
+
+@mixin clerafix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+

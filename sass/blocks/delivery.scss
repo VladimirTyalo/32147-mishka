@@ -1,0 +1,27 @@
+.delivery {
+  display: none;
+}
+
+@media #{$tabet-width} {
+  .delivery {
+    display: block;
+    flex: 1 0 87%;
+    text-align: right;
+    padding-top: 20px;
+  }
+
+  .delivery__link {
+    @include font($fnt-text-size, $line-h-text);
+    font-weight: normal;
+    padding: 0;
+    @include block-align();
+  }
+}
+
+@media #{$desktop-width} {
+  .delivery {
+    flex: 1 0 91%;
+    justify-content: flex-end;
+    max-width: 1050px;
+  }
+}

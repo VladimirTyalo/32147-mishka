@@ -1,14 +1,38 @@
 .about {
-  // TODO replace with wavy border
-  border-top: 1px solid $color-border-btn;
+  position: relative;
+  // to prevent title up margin from falling out.
+  padding-top: 8px;
+  padding-bottom: 45px;
+
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    height: 39px;
+    width: 100%;
+    background-image: url('../img/wavy-border-gray.png');
+    background-repeat: repeat-x;
+    background-position: -9px 2px;
+    background-size: 39px 23px;
+  }
+
+  // wavy border
+  &::after {
+    top: -25px;
+    left: 0px;
+  }
+
+  // wavy border
+  &::before {
+    bottom: 0px;
+    left: 0px;
+  }
 }
 
 .about__title {
   font-family: $font-verdana;
   font-weight: bold;
-  margin-top: 35px;
-  margin-bottom: 0;
-
+  margin-bottom: 32px;
   @include font($fnt-big, $line-h-big);
 }
 
@@ -18,14 +42,94 @@
   list-style: none;
 }
 
+.about__item {
+  margin-bottom: 26px;
+}
+
 .about__item-icon {
+  height: 40px;
+  padding-left: 3px;
   display: block;
   fill: $color-icon-about-field;
+  margin-bottom: 10px;
 }
 
 .about__item-text {
   font-family: $font-verdana;
   font-weight: bold;
-
   @include font($fnt-base-size, $line-h-about-item);
+}
+
+.about__item-icon--feature-5 {
+  height: 30px;
+}
+
+@media #{$tabet-width} {
+
+  .about {
+    padding-top: 20px;
+  }
+
+  .about .form__type-wrapper {
+    margin-bottom: 75px;
+  }
+
+  .about__list {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .about__title {
+    @include font(40px, 50px);
+  }
+
+  .about__item {
+    flex: 1 0 48%;
+    padding-right: 2%;
+
+    &:nth-of-type(1) {
+      order: 1;
+    }
+
+    &:nth-of-type(2) {
+      order: 3;
+    }
+
+    &:nth-of-type(3) {
+      order: 5;
+    }
+
+    &:nth-of-type(4) {
+      order: 2;
+    }
+
+    &:nth-of-type(5) {
+      order: 4;
+    }
+
+    &:nth-of-type(6) {
+      order: 6;
+    }
+  }
+
+  .about__item-text {
+    padding-bottom: 50px;
+    @include font(20px, 20px);
+  }
+}
+
+@media #{$desktop-width} {
+
+  .about__title {
+    //margin-left: 16.67%;
+    width: 66.67%;
+    margin: 56px auto;
+    @include font(50px, 57px);
+  }
+
+  .about__list {
+    width: 66.67%;
+    margin: 0 auto;
+  }
+
 }

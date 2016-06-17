@@ -1,7 +1,7 @@
 .social-links {
-  margin-top: 30px;
-  margin-bottom: 45px;
+  padding: 28px 0;
   text-align: center;
+  border-bottom: 1px solid $color-socials-separator;
 }
 
 .social-links__item {
@@ -15,3 +15,10 @@
   fill: $color-icon-main-logo;
 }
 
+@media #{$tabet-width} {
+  .social-links {
+    margin: 0;
+    padding-top: 0;
+    @include block-align();
+  }
+}

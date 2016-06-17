@@ -1,16 +1,10 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 body {
-  background: $color-bg-main;
   font-family: $font-open-sans;
-  font-style: normal;
-  font-weight: normal;
   font-size: $fnt-base-size;
+  font-weight: normal;
+  font-style: normal;
   line-height: $line-h-base-size;
+  background: $color-bg-main;
 }
 
 img {
@@ -25,6 +19,15 @@ ul {
 }
 
 a {
-  cursor: pointer;
   text-decoration: none;
+  color: $color-fnt-main;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+.no-js {
+  display: block;
 }
