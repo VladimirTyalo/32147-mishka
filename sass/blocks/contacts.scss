@@ -1,5 +1,8 @@
 .contacts {
+  // prevent inner element margins from falling out
   padding-top: 1px;
+  padding-bottom: 1px;
+
   position: relative;
 }
 
@@ -7,16 +10,18 @@
   font-family: $font-verdana;
   font-weight: bold;
   @include font($fnt-big, $line-h-big);
+  margin-top: 0;
+  margin-bottom: 25px;
 }
 
 .contacts__info {
   font-family: $font-open-sans;
-  margin-top: 20px;
   @include font($fnt-text-size, $line-h-big);
+  margin-bottom: 30px;
 }
 
 .contacts__key {
-  margin-right: 9.4%;
+  margin-right: 30px;
 }
 
 .contacts__key,
@@ -42,15 +47,14 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-55%, -60%); // pixel perfect
 }
 
 .contacts__btn {
 
   &--mobile {
     max-width: 225px;
-    margin: 40px auto;
-    display: block;
+    margin: 35px auto;
   }
 
   &--desktop {
@@ -61,21 +65,46 @@
 
 @media #{$tabet-width} {
   .contacts__title {
-    padding-top: 60px;
-    margin-top: 0;
-    margin-bottom: 60px;
+    padding-top: 57px;
+    padding-bottom: 25px;
     background-image: url('../img/svg-icons/icon-flag.svg');
     background-repeat: no-repeat;
-    background-position: right 40px;
+    background-position: 99% 46px;
     @include font(40px, 50px);
   }
 
   .contacts__info {
     width: 47%;
     padding-bottom: 60px;
+    margin-top: 0;
+    margin-bottom: 0;
     @include block-align();
+
+    &--mail {
+      margin-right: 15px;
+    }
   }
 
+  .contacts__key,
+  .contacts__val,
+  .contacts__mail {
+    @include font($fnt-base-size, $line-h-big);
+  }
+
+  .contacts__key {
+    margin-right: 24px;
+  }
+
+  .contacts__map {
+    margin-top: 0;
+  }
+
+  .contacts__btn--mobile {
+    margin-top: 50px;
+    margin-bottom: 55px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
 }
 
 @media #{$desktop-width} {
@@ -88,7 +117,6 @@
     background-image: url('../img/svg-icons/icon-flag.svg');
     background-repeat: no-repeat;
     background-position: 5% 60px;
-
   }
 
   .contacts .container {

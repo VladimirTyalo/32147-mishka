@@ -8,18 +8,18 @@
 }
 
 .footer__copyright {
-  padding: 30px 0;
+  padding: 10px 0;
   text-align: center;
 }
 
 .footer__copyright-icon {
-  margin-left: 20px;
+  margin-left: 16px;
   @include block-align();
   fill: $color-icon-academy-logo;
 }
 
-.footer__footer__copyright-text {
-  font-family: $font-open-sans;
+.footer__copyright-text {
+  font-family: $font-verdana;
   font-weight: bold;
   display: inline-block;
   vertical-align: middle;
@@ -28,7 +28,7 @@
 
 @media #{$tabet-width} {
   .footer {
-    padding-top: 45px;
+    padding-top: 60px;
     text-align: center;
     @include clerafix();
   }
@@ -41,10 +41,6 @@
     padding: 0;
   }
 
-
-
-  .footer__logo-link {
-  }
 
   .footer__copyright {
     float: right;

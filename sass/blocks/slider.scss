@@ -35,7 +35,7 @@
 
   &--next {
     background: url('../img/svg-icons/icon-right-arrow.svg') no-repeat;
-    background-position: center;
+    background-position: 35px 8px;
   }
 
   &--disabled {
@@ -59,6 +59,10 @@
 
   .slider__btn {
     border: none;
+
+    &--next {
+      background-position: center;
+    }
   }
 }
 
