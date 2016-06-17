@@ -37,7 +37,7 @@
     flex-flow: row wrap;
     justify-content: flex-end;
 
-    flex: 1 0 75%;
+    flex: 1 1 75%;
     order: 2;
 
     &--closed {
@@ -65,11 +65,18 @@
       padding-right: 0px;
       // padding for cart icon
       padding-left: 75px;
+      @include font(16px, 30px);
     }
   }
 
   .user-block__icon-cart {
-    left: 20px;
+    left: 28px;
+  }
+
+  .user-block__icon-search {
+    left: 40px;
+    top: 35px;
+    height: 20px;
   }
 }
 

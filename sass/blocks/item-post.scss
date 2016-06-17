@@ -34,17 +34,18 @@
   .item-post {
     box-sizing: border-box;
     padding-right: 45px;
-    padding-bottom: 0;
+    //padding-bottom: 0;
     flex: 0 0 50%;
-  }
-
-  .item-post__params {
-    margin-bottom: 50px;
   }
 
   .item-post__descr {
     margin-top: -7px;
-    margin-bottom: 25px;
+    margin-bottom: 32px;
+    @include font($fnt-text-size, $line-h-big);
+  }
+
+  .item-post__param-value {
+    padding-left: 0;
   }
 }
 

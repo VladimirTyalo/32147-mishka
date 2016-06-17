@@ -1,7 +1,7 @@
 .about {
   position: relative;
   // to prevent title up margin from falling out.
-  padding-top: 8px;
+  padding-top: 4px;
   padding-bottom: 45px;
 
   &::after,
@@ -60,15 +60,39 @@
   @include font($fnt-base-size, $line-h-about-item);
 }
 
-.about__item-icon--feature-5 {
-  height: 30px;
+.about__item-icon {
+  overflow: hidden;
+  margin-bottom: 15px;
+
+  &--feature-2 {
+    height: 35px;
+    padding-top: 6px;
+  }
+
+  &--feature-5 {
+    height: 28px;
+    padding-top: 12px;
+    padding-bottom: 6px;
+  }
+
 }
 
 @media #{$tabet-width} {
 
   .about {
-    padding-top: 20px;
+    padding-top: 18px;
+    padding-bottom: 0;
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    margin-bottom: 82px;
+    // wavy border
+    &::before {
+      bottom: -100px;
+      left: 0px;
+    }
   }
+
 
   .about .form__type-wrapper {
     margin-bottom: 75px;
@@ -77,15 +101,19 @@
   .about__list {
     display: flex;
     flex-flow: row wrap;
+    margin-bottom: 50px;
   }
 
   .about__title {
     @include font(40px, 50px);
+    //margin-left: -5px; // for pixel perfect
   }
 
   .about__item {
     flex: 1 0 48%;
     padding-right: 2%;
+    padding-top: 18px;
+    margin-bottom: 32px;
 
     &:nth-of-type(1) {
       order: 1;
@@ -112,10 +140,27 @@
     }
   }
 
-  .about__item-text {
-    padding-bottom: 50px;
-    @include font(20px, 20px);
+  .about__item-icon {
+    margin-bottom: 10px;
+
+    //&--feature-2 {
+    //  height: 35px;
+    //  padding-top: 6px;
+    //}
+    //
+    //&--feature-5 {
+    //  height: 28px;
+    //  padding-top: 12px;
+    //  padding-bottom: 6px;
+    //}
+
   }
+
+  .about__item-text {
+    padding-top: 5px;
+    @include font(20px, 24px);
+  }
+
 }
 
 @media #{$desktop-width} {

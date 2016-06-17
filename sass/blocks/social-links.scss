@@ -10,15 +10,17 @@
 }
 
 .social-links__icon {
-  margin-right: 20px;
-  margin-left: 20px;
+  margin-right: 18px;
+  margin-left: 12px;
   fill: $color-icon-main-logo;
+  width: 24px;
 }
 
 @media #{$tabet-width} {
   .social-links {
     margin: 0;
     padding-top: 0;
+    margin-left: 95px;
     @include block-align();
   }
 }
