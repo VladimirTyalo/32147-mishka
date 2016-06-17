@@ -1,8 +1,8 @@
 .featured {
   position: relative;
   display: flex;
-  padding-bottom: 40px;
-  margin-top: 30px;
+  padding-bottom: 45px;
+  padding-top: 26px;
   flex-flow: row wrap;
 }
 
@@ -10,6 +10,7 @@
   font-family: $font-verdana;
   font-weight: bold;
   margin: 0;
+  margin-bottom: 6px;
   color: $color-fnt-main;
   @include font($fnt-big, $line-h-big);
   flex: 0 0 100%;
@@ -21,7 +22,7 @@
   text-transform: uppercase;
   color: $color-fnt-alternative;
   @include font($fnt-base-size, $line-h-best-seller);
-  margin-top: 15px;
+  margin-bottom: 12px;
 }
 
 .featured__image-wrapper {
@@ -41,8 +42,8 @@
   font-family: $font-verdana;
   font-weight: bold;
   font-style: normal;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 18px;
+  padding-bottom: 26px;
   text-align: center;
   @include font($fnt-base-size, $line-h-text);
 }

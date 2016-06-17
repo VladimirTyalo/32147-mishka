@@ -1,5 +1,6 @@
 .item-post {
-  padding-bottom: 32px;
+  padding-bottom: 28px;
+  border-top: 1px solid transparent;
 }
 
 .item-post__descr {
@@ -22,6 +23,10 @@
   padding-top: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid $color-top-menu-separator;
+}
+
+.item-post__param-value {
+  padding-left: 14px;
 }
 
 @media #{$tabet-width}

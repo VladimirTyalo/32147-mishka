@@ -81,8 +81,8 @@
   border-radius: 50%;
 }
 
-.form__input:checked + label::after,
-.form__input:checked + label::after {
+.form__radio-input:checked + label::after,
+.form__radio-input:checked + label::after {
   position: absolute;
   top: 50%;
   left: 23px;
@@ -109,6 +109,10 @@
   &--add-info {
     padding: 10px;
     border: 2px solid $color-border-btn;
+    box-sizing: border-box;
+    margin-top: 30px;
+    resize: none;
+    overflow: auto;
   }
 }
 
@@ -128,15 +132,12 @@
   opacity: .3;
 }
 
-
 .form__type--textarea {
-  resize: none;
-  overflow: auto;
   box-sizing: border-box;
   display: block;
 }
 
-.form__type--checkbox input:checked + label::after {
+.form__checkbox-input:checked + label::after {
   position: absolute;
   top: 10px;
   left: 7px;
@@ -147,11 +148,6 @@
 
 .form__required-info {
   display: none;
-}
-
-.form__input--add-info {
-  box-sizing: border-box;
-  margin-top: 30px;
 }
 
 @media #{$tabet-width} {

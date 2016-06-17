@@ -5,7 +5,6 @@
 .product-post__info {
   padding: 0 30px;
   border: 1px solid $color-top-menu-separator;
-  overflow: hidden;
 }
 
 .product-post__title {
@@ -69,7 +68,7 @@
   }
 
   .product-post__image-link {
-    flex: 1 0 50%;
+    flex: 0 0 50%;
   }
 
   .product-post__title {
@@ -94,5 +93,9 @@
 
   .product-post__info {
     flex: 1 0 auto;
+  }
+
+  .product-post__image-link {
+    flex:  0 0 auto;
   }
 }

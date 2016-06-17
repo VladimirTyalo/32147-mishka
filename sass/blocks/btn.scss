@@ -2,11 +2,13 @@
   font-family: $font-open-sans;
   font-weight: bold;
   display: block;
-  padding: 18px 45px;
+  padding: 16px;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
   color: $color-fnt-main;
   border: 2px solid $color-border-btn;
+
 
   @include font($fnt-base-size, $line-h-btn);
 }

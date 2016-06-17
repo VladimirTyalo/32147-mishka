@@ -1,7 +1,7 @@
 .about {
   position: relative;
   // to prevent title up margin from falling out.
-  padding-top: 1px;
+  padding-top: 8px;
   padding-bottom: 45px;
 
   &::after,
@@ -32,8 +32,7 @@
 .about__title {
   font-family: $font-verdana;
   font-weight: bold;
-  margin-bottom: 30px;
-  margin-top: 40px;
+  margin-bottom: 32px;
   @include font($fnt-big, $line-h-big);
 }
 
@@ -44,19 +43,25 @@
 }
 
 .about__item {
-  margin-bottom: 20px;
+  margin-bottom: 26px;
 }
 
 .about__item-icon {
-  height: 80px;
+  height: 40px;
+  padding-left: 3px;
   display: block;
   fill: $color-icon-about-field;
+  margin-bottom: 10px;
 }
 
 .about__item-text {
   font-family: $font-verdana;
   font-weight: bold;
   @include font($fnt-base-size, $line-h-about-item);
+}
+
+.about__item-icon--feature-5 {
+  height: 30px;
 }
 
 @media #{$tabet-width} {

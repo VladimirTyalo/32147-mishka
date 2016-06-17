@@ -13,6 +13,11 @@
   margin: 0;
 }
 
+.index-header .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+
 .index-header__title {
   flex: 0 0 200px;
   font-family: $font-verdana;
@@ -33,17 +38,17 @@
 
 
 .index-header__text {
-  display: inline-block;
-  max-width: 150px;
+  @include block-align("inline-block", "middle");
+  max-width: 145px;
   padding-left: 0;
-  vertical-align: middle;
   color: $color-fnt-invert;
   @include font($fnt-index-header-text, $line-h-text);
 }
 
 .index-header__icon {
   float: right;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
+  padding-right: 23px;
   opacity: .3;
 }
 
@@ -61,8 +66,7 @@
 
 .index-header__link {
   display: block;
-  padding: 30px;
-  padding-top: 20px;
+  padding: 28px 0 28px 30px;
 }
 
 @media #{$tabet-width} {

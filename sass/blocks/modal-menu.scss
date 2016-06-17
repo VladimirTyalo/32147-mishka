@@ -21,7 +21,7 @@
   font-family: $font-verdana;
   font-weight: bold;
   display: block;
-  padding: 28px 0;
+  padding: 26px 0 26px 0;
   color: $color-fnt-main;
   @include font($fnt-base-size, $line-h-base-size);
 }

@@ -17,7 +17,7 @@
   font-weight: bold;
   position: relative;
   display: block;
-  padding: 34px 0 26px 0;
+  padding: 28px 0 26px 0;
   color: $color-fnt-main;
   @include font($fnt-base-size, $line-h-base-size);
 }
@@ -26,7 +26,7 @@
 .user-block__icon-search {
   position: absolute;
   top: 30px;
-  left: 35px;
+  left: 30px;
   opacity: .3;
 }
 
