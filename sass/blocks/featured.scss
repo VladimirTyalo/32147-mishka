@@ -102,31 +102,34 @@
 
   .featured {
     justify-content: flex-end;
-    margin-bottom: 70px;
+    margin-bottom: 45px;
   }
 
   .featured__content-wrapper {
     flex: 0 0 83%;
-    margin-top: -160px;
+    margin-top: -168px;
   }
 
   .featured__title {
     @include font(50px, 57px);
-    margin-top: 130px;
+    margin-top: 80px;
   }
 
   .featured__best-seller {
     order: -1;
-    padding: 0 50px;
-    margin-top: 140px;
+    padding: 0 60px 0 20px;
+    margin-top: 98px;
   }
+
 
   .featured__buy {
     padding-right: 60px;
     flex: 0 0 40%;
+    margin-top: -130px;
   }
 
   .featured__image-wrapper {
     flex: 0 0 60%;
   }
+
 }

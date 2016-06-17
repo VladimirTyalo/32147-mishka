@@ -133,10 +133,28 @@
 @media #{$desktop-width} {
     .index-header {
       width: auto;
+
+      &::after {
+        background-position: -15px 0;
+      }
     }
 
     .index-header__title {
       @include font(50px, 57px);
       flex: 1 0 630px;
     }
+
+   .index-header__line-break:nth-of-type(2) {
+     display: block;
+   }
+
+   .index-header__text {
+     @include font(20px, 30px);
+     padding-left: 10px;
+   }
+
+  .index-header__link {
+    padding-bottom: 30px;
+  }
+
 }

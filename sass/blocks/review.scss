@@ -82,10 +82,16 @@
 
 @media #{$desktop-width} {
 
+  .review {
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    padding-top: 70px;
+  }
+
   .review__title {
     @include font(50px, 57px);
     width: 66.67%;
-    margin: 80px auto 65px auto;
+    margin: 0 auto 50px auto;
   }
 
   .review__content-wrapper {

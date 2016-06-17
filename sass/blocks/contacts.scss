@@ -2,7 +2,6 @@
   // prevent inner element margins from falling out
   padding-top: 1px;
   padding-bottom: 1px;
-
   position: relative;
 }
 
@@ -111,37 +110,42 @@
   .contacts {
     margin: 0 auto;
     margin-bottom: 105px;
+    padding-top: 75px;
     display: flex;
     flex-flow: row wrap;
     max-width: 1050px;
     background-image: url('../img/svg-icons/icon-flag.svg');
     background-repeat: no-repeat;
-    background-position: 5% 60px;
+    background-position: 65px 140px;
   }
 
   .contacts .container {
-    flex: 0 0 33%;
+    flex: 0 0 31%;
     margin-right: 0;
-
     order: 1;
   }
 
   .contacts__title {
     @include font(50px, 57px);
     background: none;
-
+    margin-top: 10px;
   }
 
   .contacts__info {
     display: block;
     width: 100%;
     white-space: nowrap;
-    margin-bottom: 82px;
     flex-grow: 0;
-  }
 
-  .contacts__info:nth-child(2) {
-    padding-bottom: 0;
+    &--email {
+      padding-bottom: 0;
+      margin-bottom: 32px;
+    }
+
+    &--address {
+      padding-bottom: 0;
+      margin-bottom: 80px;
+    }
   }
 
   .contacts__map {
@@ -150,6 +154,8 @@
   }
 
   .contacts__btn {
+    padding-right: 45px;
+    padding-left: 45px;
 
     &--mobile {
       display: none;

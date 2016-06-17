@@ -142,18 +142,6 @@
 
   .about__item-icon {
     margin-bottom: 10px;
-
-    //&--feature-2 {
-    //  height: 35px;
-    //  padding-top: 6px;
-    //}
-    //
-    //&--feature-5 {
-    //  height: 28px;
-    //  padding-top: 12px;
-    //  padding-bottom: 6px;
-    //}
-
   }
 
   .about__item-text {
@@ -164,17 +152,24 @@
 }
 
 @media #{$desktop-width} {
+  .about .container {
+    padding-top: 42px;
+  }
 
   .about__title {
-    //margin-left: 16.67%;
     width: 66.67%;
-    margin: 56px auto;
+    margin: 0px auto 30px auto;
     @include font(50px, 57px);
   }
 
   .about__list {
     width: 66.67%;
     margin: 0 auto;
+    padding-bottom: 52px;
+  }
+
+  .about {
+    background: $color-bg-main;
   }
 
 }
