@@ -22,7 +22,7 @@
   flex: 0 0 200px;
   font-family: $font-verdana;
   font-weight: bold;
-  min-height: 210px;
+  min-height: 212px;
   margin: 0;
   padding-top: 90px;
   text-align: center;
@@ -42,13 +42,24 @@
   max-width: 145px;
   padding-left: 0;
   color: $color-fnt-invert;
+  font-family: $font-tahoma;
   @include font($fnt-index-header-text, $line-h-text);
+  font-weight: bold;
+}
+
+
+.index-header__link {
+  display: block;
+  padding: 25px 0 30px 30px;
+  position: relative;
 }
 
 .index-header__icon {
-  float: right;
-  padding-bottom: 10px;
-  padding-right: 23px;
+  position: absolute;
+  width: 62px;
+  height: 62px;
+  right: 25px;
+  top: 21px;
   opacity: .3;
 }
 
@@ -62,11 +73,6 @@
   &--accessories {
     background: $color-bg-accessories;
   }
-}
-
-.index-header__link {
-  display: block;
-  padding: 28px 0 28px 30px;
 }
 
 @media #{$tabet-width} {
@@ -94,16 +100,16 @@
       content: '';
       background-image: url('../img/wave.png');
       background-repeat: repeat-x;
-      background-position: -4px 0;
+      background-position: -5px 0;
+      background-size: 39px 20px;
     }
-
   }
 
   .index-header__title {
     flex: 0 0  510px;
     @include font(40px, 50px);
-    padding-top: 108px;
-    min-height: 474px;
+    padding-top: 110px;
+    min-height: 476px;
   }
 
   .index-header__menu {
@@ -116,16 +122,32 @@
   .index-header__item {
     overflow: hidden;
     flex: 1 0 50%;
+  }
 
-    &__accessories {
-      padding-left: 35px;
+
+  .index-header__link {
+    padding: 28px 0 30px 30px;
+
+    &:hover {
+      padding: 23px 0 40px 30px;
     }
-    &__toys {
-      padding-right: 35px;
+
+    &:active {
+      opacity: 0.3;
     }
   }
-  .index-header__link {
-    padding-bottom: 42px;
+
+  .index-header__text {
+    @include font(20px, 30px);
+    padding-left: 8px;
+  }
+
+  .index-header__icon {
+    top: 30px;
+  }
+
+  .index-header__icon--toy {
+    right: 33px;
   }
 
 }
@@ -135,7 +157,8 @@
       width: auto;
 
       &::after {
-        background-position: -15px 0;
+        background-position: -1px 0px;
+        background-size: 58px 24px;
       }
     }
 
@@ -143,7 +166,6 @@
       @include font(50px, 57px);
       flex: 1 0 630px;
     }
-
    .index-header__line-break:nth-of-type(2) {
      display: block;
    }

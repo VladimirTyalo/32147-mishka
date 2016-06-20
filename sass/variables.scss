@@ -14,10 +14,12 @@ $green-1: #62d1ba;
 $green-2: #6bc5b3;
 $green-3: #63d1bb;
 $green-4: #56c3b2;
+$green-5: #46c1ae;
 
 
 // --- font colors ---
 $color-fnt-main: $black-1;
+$color-fnt-text: $black-3;
 $color-fnt-invert: $white-1;
 $color-fnt-alternative: $green-1;
 $color-fnt-placeholder: $grey-1;
@@ -53,6 +55,8 @@ $color-icon-main-logo: $black-1;
 $color-form-phone: $grey-2;
 $color-icon-email: $grey-2;
 $color-icon-about-field: $green-3;
+$color_icon-logo-hover: $grey-5;
+$color-icon-academy-hover: $green-5;
 
 // --- BREAK POINTS ----
 $mobile-width: "(min-width: 320px)";
@@ -64,6 +68,7 @@ $desktop-width: "(min-width : 1150px)";
 
 $font-verdana: Verdana, Geneva, Arial, sans-serif;
 $font-open-sans: "Open Sans", Arial, Helvetica, sans-serif;
+$font-tahoma: Tahoma, Arial, Helvetica, sans-serif;
 
 $fnt-text-size: 14px;
 $line-h-text: 24px;

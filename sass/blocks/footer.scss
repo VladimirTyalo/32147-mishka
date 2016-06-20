@@ -7,15 +7,32 @@
   display: none;
 }
 
+.footer__logo-link:hover .footer__logo {
+  fill: $color-fnt-alternative;
+}
+
+.footer__logo-link:active .footer__logo {
+  opacity: 0.3;
+}
+
 .footer__copyright {
-  padding: 10px 0;
+  padding: 23px 0;
   text-align: center;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .footer__copyright-icon {
   margin-left: 16px;
   @include block-align();
   fill: $color-icon-academy-logo;
+}
+
+
+.footer__copyright:hover .footer__copyright-icon {
+  fill: $color-icon-academy-hover;
 }
 
 .footer__copyright-text {
@@ -29,6 +46,7 @@
 @media #{$tabet-width} {
   .footer {
     padding-top: 60px;
+    padding-bottom: 30px;
     text-align: center;
     @include clerafix();
   }
@@ -41,13 +59,28 @@
     padding: 0;
   }
 
+  .footer__logo {
+    width: 99px;
+    margin-top: -8px;
+  }
+
 
   .footer__copyright {
     float: right;
     margin: 0;
     padding: 0;
+    padding-left: 10px;
+
+  }
+
+  .footer__copyright-icon {
+    margin-left: 11px;;
   }
 }
 
 @media #{$desktop-width} {
+
+  .footer {
+    padding-top: 55px;
+  }
 }

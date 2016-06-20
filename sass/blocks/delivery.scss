@@ -7,13 +7,13 @@
     display: block;
     flex: 1 0 87%;
     text-align: right;
-    padding-top: 18px;
+    padding-top: 14px;
   }
 
   .delivery__link {
+    font-family: $font-verdana;
     @include font($fnt-text-size, $line-h-text);
     font-weight: normal;
-    padding: 0;
     @include block-align();
   }
 }

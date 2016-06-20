@@ -6,9 +6,19 @@
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  color: $color-fnt-main;
+  color: $color-fnt-text;
   border: 2px solid $color-border-btn;
 
 
   @include font($fnt-base-size, $line-h-btn);
+
+
+  &:hover {
+    background: $black-2;
+    color: $color-fnt-invert;
+  }
+
+  &:active {
+    color: #8d8d8d;
+  }
 }

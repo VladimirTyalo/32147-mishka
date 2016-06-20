@@ -37,10 +37,16 @@
     flex: 0 0 50%;
   }
 
+
+  .item-post__params {
+    @include font(15px, $line-h-params-table);
+  }
+
   .item-post__descr {
     margin-top: -7px;
-    margin-bottom: 32px;
-    @include font($fnt-text-size, $line-h-big);
+    margin-bottom: 34px;
+    @include font($fnt-base-size, $line-h-big)
+
   }
 
   .item-post__param-value {

@@ -9,7 +9,6 @@
 
 .modal-menu__item {
   border-top: 1px solid $color-top-menu-separator;
-  text-align: center;
   margin: 0;
 
   &:nth-of-type(n + 3) {
@@ -23,9 +22,26 @@
   display: block;
   padding: 26px 0 26px 0;
   color: $color-fnt-main;
-  @include font($fnt-text-size, $line-h-base-size);
+  @include font($fnt-base-size, $line-h-base-size);
+  position: relative;
+  white-space: nowrap;
+  min-height: 24px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
+.modal-menu__text {
+  position: absolute;
+  left: 50%;
+  top: 26px;
+  transform: translateX(-86px);
+}
 
 @media #{$tabet-width} {
   .modal-menu {
@@ -42,17 +58,19 @@
   .modal-menu__item {
     border: none;
     z-index: 10;
-    padding: 20px 30px 0 0;
+    padding: 18px 30px 0 0;
     margin: 0;
   }
 
   .modal-menu__link {
     font-family: $font-verdana;
     padding: 0;
+    padding-right: 4px;
+    @include font($fnt-text-size, $line-h-text);
   }
 
-  .modal-menu__item:nth-of-type(n + 3) .modal-menu__link {
-    @include font($fnt-text-size, $line-h-text);
+  .modal-menu__text {
+    position: static;
   }
 }
 
@@ -75,7 +93,7 @@
     }
 
     &:nth-of-type(even) {
-      padding-left: 35px;
+      padding-left: 28px;
     }
 
     &:nth-of-type(n + 2) {
@@ -90,5 +108,9 @@
 
   .modal-menu__item:nth-of-type(n + 3) {
     padding-top: 20px;
+  }
+
+  .modal-menu__item:nth-of-type(-n + 2) .modal-menu__link{
+    @include font($fnt-base-size, $line-h-base-size);
   }
 }
