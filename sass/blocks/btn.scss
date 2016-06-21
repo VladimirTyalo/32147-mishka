@@ -9,18 +9,12 @@
   color: $color-fnt-text;
   border: 2px solid $color-fnt-text;
   @include font($fnt-base-size, $line-h-btn);
-}
 
-@media #{$tabet-width} {
-  .btn {
-
-    &:hover {
-      background: $color-fnt-text;
-      color: $color-fnt-invert;
-    }
-
-    &:active {
-      color: #8d8d8d;
-    }
+  &:hover {
+    background: $color-fnt-text;
+    color: $color-fnt-invert;
+  }
+  &:active {
+    color: #8d8d8d;
   }
 }

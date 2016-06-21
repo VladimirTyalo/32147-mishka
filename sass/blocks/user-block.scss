@@ -15,7 +15,7 @@
   font-weight: bold;
   position: relative;
   display: block;
-  padding: 28px 0 26px 23.75%;
+  padding: 28px 15% 26px 23.75%;
   color: $color-fnt-main;
   @include font($fnt-base-size, $line-h-base-size);
   min-height: 24px;
@@ -27,7 +27,7 @@
   width: 20px;
   height: 20px;
   top: 32px;
-  left: 31px;
+  left: 10%;
   fill: #d3d2d2;
 }
 
@@ -74,7 +74,7 @@
     min-height: 32px;
     border-bottom: none;
     padding-bottom: 30px;
-
+    padding-right: 5px;
     &--search {
       font-size: 0; // to hide text
       width: 60px;
@@ -111,6 +111,7 @@
   }
 
   .user-block__link {
+    padding-right: 1px;
     &--search {
       width: 63px;
     }

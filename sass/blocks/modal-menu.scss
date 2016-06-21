@@ -20,7 +20,7 @@
   font-family: $font-verdana;
   font-weight: bold;
   display: block;
-  padding: 26px 0 26px 23.75%;
+  padding: 26px 23.75% 26px 23.75%;
   color: $color-fnt-main;
   @include font($fnt-base-size, $line-h-base-size);
   position: relative;
