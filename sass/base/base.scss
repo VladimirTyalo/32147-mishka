@@ -5,7 +5,7 @@ body {
   font-style: normal;
   line-height: $line-h-base-size;
   background: $color-bg-main;
-  color: $color-fnt-text;
+  color: $color-fnt-main;
 }
 
 img {
@@ -34,7 +34,7 @@ button {
 }
 
 // for proper  color changing in svg
-* {
+svg, svg * {
   fill: inherit;
   stroke: inherit;
 }

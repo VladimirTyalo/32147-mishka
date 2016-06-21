@@ -35,7 +35,7 @@
 
   &--next {
     background: url('../img/svg-icons/icon-right-arrow.svg') no-repeat;
-    background-position: 35px 8px;
+    background-position: center;
   }
 
 
@@ -50,7 +50,6 @@
   }
   &--disabled {
     cursor: not-allowed;
-    opacity: 0.1 !important;
   }
 }
 

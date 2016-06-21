@@ -5,9 +5,10 @@
 
 .item-post__descr {
   font-family: $font-open-sans;
-  color: $color-fnt-main;
+  color: $color-fnt-text;
   @include font($fnt-text-size, $line-h-text);
   text-align: left;
+  margin-bottom: 17px;
 }
 
 .item-post__params {
@@ -15,6 +16,7 @@
   width: 100%;
   border-collapse: collapse;
   text-align: left;
+  color: $color-fnt-text;
   @include font($fnt-text-size, $line-h-params-table);
 }
 
@@ -37,7 +39,6 @@
     flex: 0 0 50%;
   }
 
-
   .item-post__params {
     @include font(15px, $line-h-params-table);
   }
@@ -46,7 +47,6 @@
     margin-top: -7px;
     margin-bottom: 34px;
     @include font($fnt-base-size, $line-h-big)
-
   }
 
   .item-post__param-value {
@@ -64,12 +64,9 @@
   .item-post__descr {
     margin-top: 160px;
     margin-bottom: 50px;
-
   }
 
   .item-post__params {
     margin-bottom: 0;
   }
-
-
 }

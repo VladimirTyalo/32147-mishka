@@ -23,6 +23,7 @@
   font-family: $font-open-sans;
   @include font($fnt-text-size, $line-h-big);
   margin-bottom: 18px;
+  color: $color-fnt-text;
 }
 
 .review__author {

@@ -50,39 +50,42 @@
   position: absolute;
   display: block;
   fill: $color-icon-about-field;
-  top: -40px;
+  top: 17px;
   left: 5px;
+  width: 38px;
+  height: 38px;
 
-  &--feature-1 {
-    width: 32px;
-    left: 8px;
-  }
 
   &--feature-2 {
     width: 34px;
-    top: -38px;
+    height: 34px;
+    top: 20px;
   }
 
   &--feature-3 {
     width: 46px;
-    top: -44px;
+    height: 40px;
+    top: 11px;
     left: 0px;
   }
 
   &--feature-4 {
     width: 56px;
+    height: 56px;
     left: -7px;
-    top: -42px;
+    top: 5px;
   }
 
   &--feature-5 {
     width: 34px;
+    heigth: 34px;
     left: 7px;
-    top: -38px;
+    top: 18px;
   }
 
   &--feature-6 {
     width: 34px;
+    height: 34px;
     left: 2px;
   }
 }
@@ -96,12 +99,12 @@
 @media #{$tabet-width} {
 
   .about {
-    padding-top: 24px;
+    padding-top: 23px;
 
     &::after,
     &::before {
       background-size: 39px;
-      background-position: -3px 3px;
+      background-position: 6px 13px;
     }
   }
 
@@ -123,7 +126,8 @@
   .about__item {
     flex: 1 0 49%;
     padding-right: 1%;
-    margin-bottom: 18px;
+    margin-bottom: 21px;
+    padding-top: 65px;
 
     &:nth-of-type(1) {
       order: 1;
@@ -164,7 +168,7 @@
     &::after,
     &::before {
       background-size: 58px;
-      background-position: 0;
+      background-position: 0px -25px;
     }
   }
 

@@ -7,18 +7,20 @@
   text-decoration: none;
   text-transform: uppercase;
   color: $color-fnt-text;
-  border: 2px solid $color-border-btn;
-
-
+  border: 2px solid $color-fnt-text;
   @include font($fnt-base-size, $line-h-btn);
+}
 
+@media #{$tabet-width} {
+  .btn {
 
-  &:hover {
-    background: $black-2;
-    color: $color-fnt-invert;
-  }
+    &:hover {
+      background: $color-fnt-text;
+      color: $color-fnt-invert;
+    }
 
-  &:active {
-    color: #8d8d8d;
+    &:active {
+      color: #8d8d8d;
+    }
   }
 }

@@ -18,14 +18,16 @@
 .footer__copyright {
   padding: 23px 0;
   text-align: center;
-
   &:active {
     opacity: 0.3;
   }
 }
 
 .footer__copyright-icon {
-  margin-left: 16px;
+  margin-left: 19px;
+
+  width: 28px;
+  heigth: 40px;
   @include block-align();
   fill: $color-icon-academy-logo;
 }
@@ -40,6 +42,7 @@
   font-weight: bold;
   display: inline-block;
   vertical-align: middle;
+  color: $color-fnt-copyright;
   @include font($fnt-footer, $line-h-footer);
 }
 
@@ -48,7 +51,6 @@
     padding-top: 60px;
     padding-bottom: 30px;
     text-align: center;
-    @include clerafix();
   }
 
   .footer__logo-link,
@@ -74,7 +76,7 @@
   }
 
   .footer__copyright-icon {
-    margin-left: 11px;;
+    margin-left: 18px;;
   }
 }
 

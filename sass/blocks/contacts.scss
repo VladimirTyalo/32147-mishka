@@ -17,6 +17,7 @@
   font-family: $font-open-sans;
   @include font($fnt-text-size, $line-h-big);
   margin-bottom: 30px;
+  color: $color-fnt-text;
 }
 
 .contacts__key {
@@ -33,7 +34,7 @@
   color: $color-fnt-main;
   border-bottom: 1px solid $color-underline;
   padding-bottom: 3px;
-
+  color: $color-fnt-text;
   &:hover {
     color: $color-icon-logo-hover;
   }
@@ -45,11 +46,14 @@
 
 .contacts__map {
   position: relative;
-  min-height: 458px;
   margin-top: 31px;
   background-image: url('../img/map-mobile@1x.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.contacts__map-frame {
+  min-height: 450px;
 }
 
 .contacts__icon-map-pin {
@@ -114,6 +118,10 @@
     margin-bottom: 55px;
     padding-right: 0px;
     padding-left: 0px;
+  }
+
+  .contacts__map-frame {
+    min-height: 452px;
   }
 }
 

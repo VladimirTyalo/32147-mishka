@@ -26,6 +26,7 @@
   margin: 0;
   padding-top: 90px;
   text-align: center;
+  color: $color-fnt-header;
   @include font($fnt-big, $line-h-big);
 }
 
@@ -39,7 +40,6 @@
 
 .index-header__text {
   @include block-align("inline-block", "middle");
-  max-width: 145px;
   padding-left: 0;
   color: $color-fnt-invert;
   font-family: $font-tahoma;
@@ -88,7 +88,6 @@
 
   .index-header {
     position: relative;
-
     background-size: 150%;
     // wavy border
     &::after {
@@ -117,6 +116,8 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    align-items: flex-end;
+    height: 118px;
   }
 
   .index-header__item {
@@ -126,10 +127,10 @@
 
 
   .index-header__link {
-    padding: 28px 0 30px 30px;
+    padding: 28px 30px 30px 30px;
 
     &:hover {
-      padding: 23px 0 40px 30px;
+      padding: 28px 30px 35px 30px
     }
 
     &:active {

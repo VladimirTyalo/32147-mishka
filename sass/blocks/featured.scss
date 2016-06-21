@@ -37,16 +37,18 @@
 
 .featured__buy {
   flex: 1 0 100%;
+  color: $color-fnt-text;
 }
 
 .featured__price {
   font-family: $font-verdana;
   font-weight: bold;
   font-style: normal;
-  padding-top: 18px;
+  padding-top: 15px;
   padding-bottom: 26px;
   text-align: center;
   @include font($fnt-base-size, $line-h-text);
+
 }
 
 @media #{$tabet-width} {
@@ -61,6 +63,9 @@
   .featured__content-wrapper {
     display: flex;
     flex-flow: row wrap;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 100%;
     order: 3;
   }
 
@@ -93,8 +98,8 @@
     flex: 0 0 50%;
     box-sizing: border-box;
     padding-right: 45px;
-    margin-top: -128px;
-    min-height: 128px;
+    margin-top: -124px;
+    min-height: 124px;
   }
 
   .featured__price {
@@ -122,6 +127,7 @@
   .featured__title {
     @include font(50px, 57px);
     margin-top: 80px;
+    margin-bottom: 55px;
   }
 
   .featured__best-seller {
@@ -134,8 +140,8 @@
   .featured__buy {
     padding-right: 60px;
     flex: 0 0 40%;
-    margin-top: -124px;
-    min-height: 124px;
+    margin-top: -118px;
+    min-height: 118px;
   }
 
 

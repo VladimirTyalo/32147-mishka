@@ -1,7 +1,5 @@
 .user-block {
   position: relative;
-  text-align: center;
-
   &--closed {
     display: none;
   }
@@ -17,18 +15,10 @@
   font-weight: bold;
   position: relative;
   display: block;
-  padding: 28px 0 26px 0;
+  padding: 28px 0 26px 23.75%;
   color: $color-fnt-main;
   @include font($fnt-base-size, $line-h-base-size);
   min-height: 24px;
-}
-
-.user-block__text {
-  position: absolute;
-  left: 50%;
-  top: 28px;
-  transform: translateX(-86px);
-  white-space: nowrap;
 }
 
 .user-block__icon-cart,
@@ -38,7 +28,7 @@
   height: 20px;
   top: 32px;
   left: 31px;
-  opacity: .2;
+  fill: #d3d2d2;
 }
 
 
@@ -47,9 +37,9 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
-
     flex: 1 1 75%;
     order: 2;
+    align-self: flex-start;
 
     &--closed {
       // allways show
@@ -63,27 +53,31 @@
 
   .user-block__item:hover .user-block__icon-search,
   .user-block__item:hover .user-block__icon-cart {
-    fill: $color-fnt-alternative;
-    opacity: 1;
+    fill: #63d1bb;
   }
 
-  .user-block__item:hover .user-block__text{
-    opacity: 0.6;
+  .user-block__item:hover .user-block__link {
+    color: #8d8d8d;
   }
+
 
   .user-block__item:active .user-block__icon-search,
-  .user-block__item:active .user-block__icon-cart,
-  .user-block__item:active .user-block__text {
-    opacity: 0.3;
+  .user-block__item:active .user-block__icon-cart {
+    fill: #d0f1ea;
+  }
+
+  .user-block__item:active .user-block__link {
+    color: #cacaca;
   }
 
   .user-block__link {
-    min-height: 34px;
+    min-height: 32px;
     border-bottom: none;
+    padding-bottom: 30px;
 
     &--search {
       font-size: 0; // to hide text
-      width: 84px;
+      width: 60px;
       border-right: 1px solid $color-top-menu-separator;
       border-left: 1px solid $color-top-menu-separator;
     }
@@ -91,14 +85,10 @@
     &--cart {
       padding-right: 0px;
       // padding for cart icon
-      width: 190px;
-      padding-left: 75px;
+      width: 193px;
+      padding-left: 72px;
       @include font(16px, 30px);
     }
-  }
-
-  .user-block__text {
-    position: static;
   }
 
   .user-block__icon-cart {
@@ -118,5 +108,11 @@
   .user-block {
     order: 3;
     flex: 0 0 35%;
+  }
+
+  .user-block__link {
+    &--search {
+      width: 63px;
+    }
   }
 }
