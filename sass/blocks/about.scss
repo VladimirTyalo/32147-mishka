@@ -168,7 +168,19 @@
     &::after,
     &::before {
       background-size: 58px;
-      background-position: 0px -25px;
+      background-position: 0px 0px;
+    }
+
+    // wavy border
+    &::after {
+      top: -15px;
+      left: 20px;
+    }
+
+    // wavy border
+    &::before {
+      bottom: 5px;
+      left: 20px;
     }
   }
 
