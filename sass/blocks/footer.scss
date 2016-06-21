@@ -7,30 +7,50 @@
   display: none;
 }
 
+.footer__logo-link:hover .footer__logo {
+  fill: $color-fnt-alternative;
+}
+
+.footer__logo-link:active .footer__logo {
+  opacity: 0.3;
+}
+
 .footer__copyright {
-  padding: 30px 0;
+  padding: 23px 0;
   text-align: center;
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .footer__copyright-icon {
-  margin-left: 20px;
+  margin-left: 19px;
+
+  width: 28px;
+  heigth: 40px;
   @include block-align();
   fill: $color-icon-academy-logo;
 }
 
-.footer__footer__copyright-text {
-  font-family: $font-open-sans;
+
+.footer__copyright:hover .footer__copyright-icon {
+  fill: $color-icon-academy-hover;
+}
+
+.footer__copyright-text {
+  font-family: $font-verdana;
   font-weight: bold;
   display: inline-block;
   vertical-align: middle;
+  color: $color-fnt-main;
   @include font($fnt-footer, $line-h-footer);
 }
 
 @media #{$tabet-width} {
   .footer {
-    padding-top: 45px;
+    padding-top: 60px;
+    padding-bottom: 30px;
     text-align: center;
-    @include clerafix();
   }
 
   .footer__logo-link,
@@ -41,17 +61,28 @@
     padding: 0;
   }
 
-
-
-  .footer__logo-link {
+  .footer__logo {
+    width: 99px;
+    margin-top: -8px;
   }
+
 
   .footer__copyright {
     float: right;
     margin: 0;
     padding: 0;
+    padding-left: 10px;
+
+  }
+
+  .footer__copyright-icon {
+    margin-left: 18px;;
   }
 }
 
 @media #{$desktop-width} {
+
+  .footer {
+    padding-top: 55px;
+  }
 }

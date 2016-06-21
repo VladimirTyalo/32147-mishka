@@ -5,9 +5,10 @@
 
 .item-post__descr {
   font-family: $font-open-sans;
-  color: $color-fnt-main;
+  color: $color-fnt-text;
   @include font($fnt-text-size, $line-h-text);
   text-align: left;
+  margin-bottom: 17px;
 }
 
 .item-post__params {
@@ -15,6 +16,7 @@
   width: 100%;
   border-collapse: collapse;
   text-align: left;
+  color: $color-fnt-text;
   @include font($fnt-text-size, $line-h-params-table);
 }
 
@@ -32,38 +34,45 @@
 @media #{$tabet-width}
 {
   .item-post {
-    box-sizing: border-box;
-    padding-right: 45px;
-    padding-bottom: 0;
-    flex: 0 0 50%;
+    padding-right: 10%;
+    flex: 0 0 40%;
   }
 
+  .item-post__param-key {
+    padding-right: 10px;
+  }
   .item-post__params {
-    margin-bottom: 50px;
+    @include font(15px, $line-h-params-table);
   }
 
   .item-post__descr {
     margin-top: -7px;
-    margin-bottom: 25px;
+    margin-bottom: 34px;
+    @include font($fnt-base-size, $line-h-big)
+  }
+
+  .item-post__param-value {
+    padding-left: 0;
   }
 }
 
 @media #{$desktop-width} {
 
   .item-post {
-    padding-right: 60px;
-    flex: 0 0 40%;
+    padding-right: 6.4%;
+    flex: 0 0 33.6%;
   }
 
   .item-post__descr {
     margin-top: 160px;
     margin-bottom: 50px;
-
   }
 
   .item-post__params {
     margin-bottom: 0;
   }
 
-
+  .item-post__param-key {
+    padding-right: 0px;
+  }
 }

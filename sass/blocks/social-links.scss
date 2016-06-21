@@ -1,5 +1,5 @@
 .social-links {
-  padding: 28px 0;
+  padding: 26px 0 16px 0;
   text-align: center;
   border-bottom: 1px solid $color-socials-separator;
 }
@@ -10,15 +10,27 @@
 }
 
 .social-links__icon {
-  margin-right: 20px;
-  margin-left: 20px;
-  fill: $color-icon-main-logo;
+  margin-right: 18px;
+  margin-left: 12px;
+  fill: $color-fnt-text;
+  width: 24px;
+
+}
+
+.social-links__link:hover .social-links__icon {
+  fill: $color-fnt-alternative;
+}
+
+.social-links__link:active .social-links__icon {
+  opacity: 0.3;
 }
 
 @media #{$tabet-width} {
   .social-links {
     margin: 0;
     padding-top: 0;
+    margin-left: 95px;
     @include block-align();
+    border-bottom: none;
   }
 }

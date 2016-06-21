@@ -22,10 +22,11 @@
   flex: 0 0 200px;
   font-family: $font-verdana;
   font-weight: bold;
-  min-height: 210px;
+  min-height: 212px;
   margin: 0;
   padding-top: 90px;
   text-align: center;
+  color: $color-fnt-header;
   @include font($fnt-big, $line-h-big);
 }
 
@@ -39,16 +40,26 @@
 
 .index-header__text {
   @include block-align("inline-block", "middle");
-  max-width: 145px;
   padding-left: 0;
   color: $color-fnt-invert;
+  font-family: $font-tahoma;
   @include font($fnt-index-header-text, $line-h-text);
+  font-weight: bold;
+}
+
+
+.index-header__link {
+  display: block;
+  padding: 25px 0 30px 30px;
+  position: relative;
 }
 
 .index-header__icon {
-  float: right;
-  padding-bottom: 10px;
-  padding-right: 23px;
+  position: absolute;
+  width: 62px;
+  height: 62px;
+  right: 25px;
+  top: 21px;
   opacity: .3;
 }
 
@@ -64,11 +75,6 @@
   }
 }
 
-.index-header__link {
-  display: block;
-  padding: 28px 0 28px 30px;
-}
-
 @media #{$tabet-width} {
 
   .index-header__line-break {
@@ -82,23 +88,27 @@
 
   .index-header {
     position: relative;
+    background-size: 150%;
     // wavy border
     &::after {
       position: absolute;
       bottom: -10px;
       left: 0px;
-      height: 24px;
+      height: 20px;
       width: 100%;
       content: '';
       background-image: url('../img/wave.png');
       background-repeat: repeat-x;
+      background-position: -5px 0;
+      background-size: 39px 20px;
     }
-
   }
 
   .index-header__title {
     flex: 0 0  510px;
     @include font(40px, 50px);
+    padding-top: 110px;
+    min-height: 476px;
   }
 
   .index-header__menu {
@@ -106,28 +116,68 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    align-items: flex-end;
+    height: 118px;
   }
 
   .index-header__item {
     overflow: hidden;
     flex: 1 0 50%;
+  }
 
-    &__accessories {
-      padding-left: 35px;
+
+  .index-header__link {
+    padding: 28px 30px 30px 30px;
+
+    &:hover {
+      padding: 28px 30px 35px 30px
     }
-    &__toys {
-      padding-right: 35px;
+
+    &:active {
+      opacity: 0.3;
     }
   }
+
+  .index-header__text {
+    @include font(20px, 30px);
+    padding-left: 8px;
+  }
+
+  .index-header__icon {
+    top: 30px;
+  }
+
+  .index-header__icon--toy {
+    right: 33px;
+  }
+
 }
 
 @media #{$desktop-width} {
     .index-header {
       width: auto;
+
+      &::after {
+        background-position: -1px 0px;
+        background-size: 58px 24px;
+      }
     }
 
     .index-header__title {
       @include font(50px, 57px);
       flex: 1 0 630px;
     }
+   .index-header__line-break:nth-of-type(2) {
+     display: block;
+   }
+
+   .index-header__text {
+     @include font(20px, 30px);
+     padding-left: 10px;
+   }
+
+  .index-header__link {
+    padding-bottom: 30px;
+  }
+
 }

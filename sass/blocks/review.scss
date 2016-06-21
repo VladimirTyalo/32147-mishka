@@ -1,6 +1,7 @@
 .review {
   padding-bottom: 40px;
   position: relative;
+  padding-top: 26px;
 }
 
 .review__item {
@@ -10,7 +11,7 @@
 .review__title {
   font-family: $font-verdana;
   font-weight: bold;
-  margin-top: 30px;
+  margin-bottom: 24px;
   @include font($fnt-big, $line-h-big);
 }
 
@@ -21,55 +22,60 @@
 .review__text {
   font-family: $font-open-sans;
   @include font($fnt-text-size, $line-h-big);
+  margin-bottom: 18px;
+  color: $color-fnt-text;
 }
 
 .review__author {
-  font-family: $font-open-sans;
-  font-weight: bold;
+  font-family: $font-verdana;
   @include font($fnt-text-size, $line-h-text);
+  font-weight: bold;
 }
 
 .review__nick {
   font-family: $font-open-sans;
   font-weight: normal;
-  margin-bottom: 35px;
+  margin-bottom: 28px;
+  margin-top: 5px;
   @include font($fnt-text-size, $line-h-big);
 }
 
 .review__btn {
-  margin-top: 38px;
+  margin-top: 37px;
 }
 
 @media #{$tabet-width} {
   .review {
-    background-image: url("../img/review@1x.jpg");
-    background-repeat: no-repeat;
-    overflow: hidden;
-    padding-bottom: 75px;
+    padding-bottom: 135px;
   }
 
-  .review__content-wrapper {
-    padding: 0 6.5%;
-  }
   .review__item {
-    min-height: 190px;
+    min-height: 210px;
   }
 
   .review__title {
     @include font(40px, 50px);
-    margin: 80px 25% 65px 50px;
+    margin: 48px 25% 50px -5px;
+  }
+
+  .review__text {
+    @include font($fnt-base-size, $line-h-big);
+    margin-bottom: 10px;
   }
 
   .review__btn {
-    width: 25%;
+    width: 25.5%;
     margin: 0;
     padding-right: 0;
     padding-left: 0;
     position: absolute;
-    top: 82px;
+    top: 76px;
     right: 0;
   }
 
+  .review__author {
+    @include font($fnt-base-size, $line-h-text);
+  }
   .review__nick {
     margin-bottom: 0;
   }
@@ -77,10 +83,16 @@
 
 @media #{$desktop-width} {
 
+  .review {
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    padding-top: 70px;
+  }
+
   .review__title {
     @include font(50px, 57px);
     width: 66.67%;
-    margin: 80px auto 65px auto;
+    margin: 0 auto 50px auto;
   }
 
   .review__content-wrapper {
@@ -91,5 +103,6 @@
   .review__btn {
     box-sizing: border-box;
     width: 16.67%;
+    top: 80px;
   }
 }

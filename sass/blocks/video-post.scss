@@ -89,7 +89,10 @@
   }
 
   .video-post__content-wrapper {
-    flex: 0 0 65%;
+    //flex: 0 0 65%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 65%;
   }
 
   .video-post__info {

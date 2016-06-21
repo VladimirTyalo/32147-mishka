@@ -1,7 +1,5 @@
 .user-block {
   position: relative;
-  text-align: center;
-
   &--closed {
     display: none;
   }
@@ -17,17 +15,20 @@
   font-weight: bold;
   position: relative;
   display: block;
-  padding: 28px 0 26px 0;
+  padding: 28px 15% 26px 23.75%;
   color: $color-fnt-main;
   @include font($fnt-base-size, $line-h-base-size);
+  min-height: 24px;
 }
 
 .user-block__icon-cart,
 .user-block__icon-search {
   position: absolute;
-  top: 30px;
-  left: 30px;
-  opacity: .3;
+  width: 20px;
+  height: 20px;
+  top: 32px;
+  left: 10%;
+  fill: #d3d2d2;
 }
 
 
@@ -36,9 +37,9 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
-
-    flex: 1 0 75%;
+    flex: 1 1 75%;
     order: 2;
+    align-self: flex-start;
 
     &--closed {
       // allways show
@@ -50,13 +51,33 @@
     border-top: none;
   }
 
-  .user-block__link {
-    min-height: 30px;
-    border-bottom: none;
+  .user-block__item:hover .user-block__icon-search,
+  .user-block__item:hover .user-block__icon-cart {
+    fill: #63d1bb;
+  }
 
+  .user-block__item:hover .user-block__link {
+    color: #8d8d8d;
+  }
+
+
+  .user-block__item:active .user-block__icon-search,
+  .user-block__item:active .user-block__icon-cart {
+    fill: #d0f1ea;
+  }
+
+  .user-block__item:active .user-block__link {
+    color: #cacaca;
+  }
+
+  .user-block__link {
+    min-height: 32px;
+    border-bottom: none;
+    padding-bottom: 30px;
+    padding-right: 5px;
     &--search {
       font-size: 0; // to hide text
-      min-width: 90px;
+      width: 60px;
       border-right: 1px solid $color-top-menu-separator;
       border-left: 1px solid $color-top-menu-separator;
     }
@@ -64,18 +85,35 @@
     &--cart {
       padding-right: 0px;
       // padding for cart icon
-      padding-left: 75px;
+      width: 193px;
+      padding-left: 72px;
+      @include font(16px, 30px);
     }
   }
 
   .user-block__icon-cart {
-    left: 20px;
+    left: 32px;
+    top: 34px;
+    height: 19px;
+  }
+
+  .user-block__icon-search {
+    left: 33px;
+    top: 34px;
+    height: 19px;
   }
 }
 
 @media #{$desktop-width} {
   .user-block {
     order: 3;
-    flex: 1 0 40%;
+    flex: 0 0 35%;
+  }
+
+  .user-block__link {
+    padding-right: 1px;
+    &--search {
+      width: 63px;
+    }
   }
 }

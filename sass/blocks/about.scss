@@ -1,6 +1,5 @@
 .about {
   position: relative;
-  // to prevent title up margin from falling out.
   padding-top: 8px;
   padding-bottom: 45px;
 
@@ -12,8 +11,8 @@
     width: 100%;
     background-image: url('../img/wavy-border-gray.png');
     background-repeat: repeat-x;
-    background-position: -9px 2px;
-    background-size: 39px 23px;
+    background-position: -2px 12px;
+    background-size: 16px;
   }
 
   // wavy border
@@ -24,7 +23,7 @@
 
   // wavy border
   &::before {
-    bottom: 0px;
+    bottom: 18px;
     left: 0px;
   }
 }
@@ -32,7 +31,6 @@
 .about__title {
   font-family: $font-verdana;
   font-weight: bold;
-  margin-bottom: 32px;
   @include font($fnt-big, $line-h-big);
 }
 
@@ -43,15 +41,53 @@
 }
 
 .about__item {
-  margin-bottom: 26px;
+  position: relative;
+  padding-bottom: 15px;
+  padding-top: 68px;
 }
 
 .about__item-icon {
-  height: 40px;
-  padding-left: 3px;
+  position: absolute;
   display: block;
   fill: $color-icon-about-field;
-  margin-bottom: 10px;
+  top: 17px;
+  left: 5px;
+  width: 38px;
+  height: 38px;
+
+
+  &--feature-2 {
+    width: 34px;
+    height: 34px;
+    top: 20px;
+  }
+
+  &--feature-3 {
+    width: 46px;
+    height: 40px;
+    top: 11px;
+    left: 0px;
+  }
+
+  &--feature-4 {
+    width: 56px;
+    height: 56px;
+    left: -7px;
+    top: 5px;
+  }
+
+  &--feature-5 {
+    width: 34px;
+    heigth: 34px;
+    left: 7px;
+    top: 18px;
+  }
+
+  &--feature-6 {
+    width: 34px;
+    height: 34px;
+    left: 2px;
+  }
 }
 
 .about__item-text {
@@ -60,14 +96,16 @@
   @include font($fnt-base-size, $line-h-about-item);
 }
 
-.about__item-icon--feature-5 {
-  height: 30px;
-}
-
 @media #{$tabet-width} {
 
   .about {
-    padding-top: 20px;
+    padding-top: 23px;
+
+    &::after,
+    &::before {
+      background-size: 39px;
+      background-position: 6px 13px;
+    }
   }
 
   .about .form__type-wrapper {
@@ -77,15 +115,19 @@
   .about__list {
     display: flex;
     flex-flow: row wrap;
+    margin-bottom: 50px;
   }
 
   .about__title {
     @include font(40px, 50px);
+    margin-bottom: 34px;
   }
 
   .about__item {
-    flex: 1 0 48%;
-    padding-right: 2%;
+    flex: 1 0 49%;
+    padding-right: 1%;
+    margin-bottom: 21px;
+    padding-top: 65px;
 
     &:nth-of-type(1) {
       order: 1;
@@ -113,23 +155,54 @@
   }
 
   .about__item-text {
-    padding-bottom: 50px;
-    @include font(20px, 20px);
+    padding-top: 5px;
+    @include font(20px, 24px);
   }
+
 }
 
 @media #{$desktop-width} {
+  .about {
+    background: $color-bg-main;
+
+    &::after,
+    &::before {
+      background-size: 58px;
+      background-position: 0px 0px;
+    }
+
+    // wavy border
+    &::after {
+      top: -15px;
+      left: 20px;
+    }
+
+    // wavy border
+    &::before {
+      bottom: 5px;
+      left: 20px;
+    }
+  }
+
+  .about .container {
+    padding-top: 40px;
+  }
 
   .about__title {
-    //margin-left: 16.67%;
-    width: 66.67%;
-    margin: 56px auto;
+    width: 67%;
+    margin: 0px auto 35px auto;
     @include font(50px, 57px);
   }
 
   .about__list {
     width: 66.67%;
     margin: 0 auto;
+    padding-bottom: 52px;
+  }
+
+  .about__item {
+    padding-top: 64px;
+    margin-bottom: 22px;
   }
 
 }

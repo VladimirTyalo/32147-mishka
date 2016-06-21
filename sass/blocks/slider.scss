@@ -38,9 +38,18 @@
     background-position: center;
   }
 
+
+  &--prev:hover,
+  &--next:hover {
+    opacity: 0.6;
+  }
+
+  &--prev:active,
+  &--next:active {
+    opacity: 0.3;
+  }
   &--disabled {
     cursor: not-allowed;
-    opacity: 0.1;
   }
 }
 
@@ -52,13 +61,17 @@
   .slider__controls {
     position: absolute;
     right: 0;
-    bottom: 100px;
+    bottom: 164px;
     width: 180px;
     border: none;
   }
 
   .slider__btn {
     border: none;
+
+    &--next {
+      background-position: center;
+    }
   }
 }
 
