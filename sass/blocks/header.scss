@@ -16,7 +16,6 @@
 @media #{$tablet-width} {
   .header {
     position: relative;
-    margin-bottom: 73px;
     // wavy border
     &::after {
       position: absolute;
@@ -41,7 +40,6 @@
 @media #{$desktop-width} {
 
   .header {
-    margin-bottom: 123px;
     // wavy border
     &::after {
       background-position: 0 0;
