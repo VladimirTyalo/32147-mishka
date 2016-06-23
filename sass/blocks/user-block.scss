@@ -31,8 +31,7 @@
   fill: #d3d2d2;
 }
 
-
-@media #{$tabet-width} {
+@media #{$tablet-width} {
   .user-block {
     display: flex;
     flex-flow: row wrap;
@@ -59,7 +58,6 @@
   .user-block__item:hover .user-block__link {
     color: #8d8d8d;
   }
-
 
   .user-block__item:active .user-block__icon-search,
   .user-block__item:active .user-block__icon-cart {

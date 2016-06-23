@@ -53,11 +53,11 @@
 }
 
 .product-post__order-icon {
-  fill: #ccc;
+  fill: #cccccc;
 }
 
-@media #{$tabet-width} {
-  .product-post  {
+@media #{$tablet-width} {
+  .product-post {
     display: flex;
     flex-flow: row nowrap;
     margin-bottom: 52px;
@@ -70,7 +70,6 @@
       box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
     }
   }
-
 
   .product-post:hover .product-post__title-link,
   .product-post:hover .product-post__price {
@@ -143,7 +142,7 @@
   }
 
   .product-post__image-link {
-    flex:  0 0 auto;
+    flex: 0 0 auto;
   }
 
   .product-post__buy {
@@ -152,6 +151,6 @@
   }
 
   .product-post__price {
-    padding-left:0;
+    padding-left: 0;
   }
 }

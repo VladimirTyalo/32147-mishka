@@ -1,17 +1,14 @@
 .catalog-content {
 }
 
-
 .catalog-content .container {
   display: flex;
   flex-flow: column nowrap;
   align-items: stretch;
-
   padding-bottom: 90px;
 }
 
-
-@media #{$tabet-width} {
+@media #{$tablet-width} {
   .catalog-content .container {
     padding-bottom: 62px;
   }

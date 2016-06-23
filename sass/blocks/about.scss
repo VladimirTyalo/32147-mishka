@@ -95,7 +95,7 @@
   @include font($fnt-base-size, $line-h-about-item);
 }
 
-@media #{$tabet-width} {
+@media #{$tablet-width} {
 
   .about {
     padding-top: 22px;
@@ -110,7 +110,7 @@
     }
   }
 
-  @media (min-resolution: 1.5dppx) {
+  @media #{$retina}  {
     background-image: url("../img/review@2x.jpg");
   }
 
@@ -182,13 +182,13 @@
     // wavy border
     &::after {
       top: -15px;
-      left: 20px;
+      left: 0px;
     }
 
     // wavy border
     &::before {
       bottom: 5px;
-      left: 20px;
+      left: 0px;
     }
   }
 

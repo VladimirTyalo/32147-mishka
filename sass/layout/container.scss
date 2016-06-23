@@ -2,7 +2,7 @@
   margin: 0 auto;
   padding: 0px 30px;
 
-  @media #{$tabet-width}{
+  @media #{$tablet-width}{
     /* 1050px * 0.91 ~= 955px (центровка начнётся чуть раньше 1050px) */
     width: 87%;
     padding: 0 50px;

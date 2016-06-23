@@ -63,7 +63,7 @@
   padding: 16px auto 16px auto;
 }
 
-@media #{$tabet-width} {
+@media #{$tablet-width} {
   .video-post {
     display: flex;
     flex-flow: row wrap;
@@ -86,7 +86,7 @@
     margin-bottom: 20px;
   }
 
-  .video-post__content-wrapper:hover::after{
+  .video-post__content-wrapper:hover::after {
     left: 50%;
     top: 50%;
     width: 125px;
@@ -94,7 +94,7 @@
     transform: translate(-50%, -50%);
   }
 
-  .video-post__content-wrapper:active::after{
+  .video-post__content-wrapper:active::after {
     left: 50%;
     top: 50%;
     width: 105px;
@@ -158,7 +158,6 @@
       display: block;
     }
   }
-
 
   .video-post__icon-video {
     width: 42px;

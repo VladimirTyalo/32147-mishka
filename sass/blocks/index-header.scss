@@ -79,7 +79,7 @@
   }
 }
 
-@media #{$tabet-width} {
+@media #{$tablet-width} {
 
   .index-header__line-break {
     display: none;
@@ -92,7 +92,8 @@
 
   .index-header {
     position: relative;
-    background-size: 150%;
+    background-image: url("../img/hero-desktop@1x.jpg");
+
     // wavy border
     &::after {
       position: absolute;
@@ -105,6 +106,12 @@
       background-repeat: repeat-x;
       background-position: -5px 0;
       background-size: 39px 20px;
+    }
+  }
+
+  @media #{$retina} {
+    .index-header {
+      background-image: url("../img/hero-desktop@1x.jpg");
     }
   }
 
@@ -160,16 +167,9 @@
 
   .index-header {
     width: auto;
-    background-image: url("../img/hero-desktop@1x.jpg");
     &::after {
       background-position: -1px 0px;
       background-size: 58px 24px;
-    }
-  }
-
-  @media (min-resolution: 1.5dppx) {
-    .index-header {
-      background-image: url("../img/hero-desktop@1x.jpg");
     }
   }
 

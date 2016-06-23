@@ -44,7 +44,7 @@
   margin-top: 37px;
 }
 
-@media #{$tabet-width} {
+@media #{$tablet-width} {
   .review {
     padding-bottom: 135px;
     padding-top: 24px;
@@ -90,7 +90,7 @@
     padding-top: 70px;
   }
 
-  @media (min-resolution: 1.5dppx) {
+  @media #{$retina} {
     background-image: url("../img/review@2x.jpg");
   }
 

@@ -13,7 +13,7 @@
   color: #231f20;
 }
 
-@media #{$tabet-width} {
+@media #{$tablet-width} {
   .header {
     position: relative;
     margin-bottom: 73px;
@@ -26,7 +26,6 @@
       width: 100%;
       content: '';
       background-image: url('../img/wave.png');
-      //background-image: url('../img/bg-zigzag-fill');
       background-repeat: repeat-x;
       background-position: 2px 2px;
       background-size: 38px 30px;
