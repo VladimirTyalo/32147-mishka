@@ -24,8 +24,12 @@
 
 .video-post__icon-video {
   position: absolute;
+  top: 50%;
   fill: #63d1bb;
   left: 20px;
+  width: 55px;
+  height: 32px;
+  transform: translateY(-50%);
 }
 
 .video-post__content-wrapper {
@@ -82,7 +86,6 @@
     margin-bottom: 20px;
   }
 
-// TODO not working
   .video-post__content-wrapper:hover::after{
     left: 50%;
     top: 50%;
@@ -112,8 +115,7 @@
   }
 
   .video-post__icon-video {
-    top: -8px;
-    left: 18px;
+    left: 15px;
   }
 
   .video-post__btn {
