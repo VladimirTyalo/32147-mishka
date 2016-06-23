@@ -54,7 +54,7 @@ gulp.task("style", function () {
         })
       ]))
       .pipe(gulp.dest("css"))
-      //.pipe(server.reload({stream: true}));
+      .pipe(server.reload({stream: true}));
 });
 
 gulp.task("serve", ["style"], function () {
