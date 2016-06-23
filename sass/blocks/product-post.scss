@@ -60,7 +60,7 @@
   .product-post  {
     display: flex;
     flex-flow: row nowrap;
-    margin-bottom: 54px;
+    margin-bottom: 55px;
   }
 
   .product-post__info {
@@ -68,6 +68,7 @@
     flex-flow: column nowrap;
     flex: 1 0 50%;
     box-sizing: border-box;
+    padding-top: 22px;
   }
 
   .product-post__image-link {
@@ -90,7 +91,7 @@
 
   .product-post__buy {
     margin-top: auto;
-    padding-bottom: 22px;
+    padding-bottom: 24px;
   }
 
   .product-post__price {
@@ -111,6 +112,7 @@
 
   .product-post__info {
     flex: 1 0 auto;
+    padding: 26px 25px 0 24px;
   }
 
   .product-post__image-link {

@@ -9,7 +9,6 @@
 
 .top-menu__logo-link {
   margin: 20px 0 14px;
-  //margin-bottom: 14px;
   text-align: center;
   display: block;
 }
@@ -45,12 +44,13 @@
   }
 
   .top-menu__logo-link {
-    flex: 1 0 150px;
+    flex: 1 0 160px;
     justify-content: flex-start;
     order: 1;
     text-align: left;
     align-self: flex-start;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
+    margin-top: 22px;
   }
 }
 
@@ -61,7 +61,8 @@
     flex: 1 0 20%;
     display: flex;
     justify-content: center;
-
+    margin-top: 10px;
+    margin-right: 24px;
   }
 
 }
