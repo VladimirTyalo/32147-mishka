@@ -10,6 +10,7 @@
   margin: 67px 10px 77px 10px;
   text-align: center;
   @include font($fnt-big, $line-h-big);
+  color: #231f20;
 }
 
 @media #{$tabet-width} {
@@ -34,12 +35,24 @@
 
   .header__title {
     @include font(40px, 50px);
-    margin: 75px 0 90px 0;
-    margin-top: 50px;
+    margin: 50px 0 90px 0;
   }
 }
 
 @media #{$desktop-width} {
 
+  .header {
+    margin-bottom: 123px;
+    // wavy border
+    &::after {
+      background-position: 0 0;
+      background-size: 58px 40px;
+    }
+  }
+
+  .header__title {
+    @include font(50px, 57px);
+    margin-bottom: 110px;
+  }
 }
 
