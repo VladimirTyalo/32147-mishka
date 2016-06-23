@@ -15,28 +15,31 @@
 @media #{$tabet-width} {
   .header {
     position: relative;
-
+    margin-bottom: 72px;
     // wavy border
     &::after {
       position: absolute;
-      bottom: -20px;
+      bottom: -15px;
       left: 0px;
       height: 39px;
+      width: 100%;
       content: '';
       background-image: url('../img/wave.png');
+      //background-image: url('../img/bg-zigzag-fill');
       background-repeat: repeat-x;
-      background-position: -9px 2px;
-      background-size: 39px 23px;
+      background-position: 2px 2px;
+      background-size: 38px 30px;
     }
   }
 
   .header__title {
     @include font(40px, 50px);
     margin: 75px 0 90px 0;
+    margin-top: 50px;
   }
 }
 
-@media #{$tabet-width} {
+@media #{$desktop-width} {
 
 }
 

@@ -12,7 +12,9 @@
 
 
 @media #{$tabet-width} {
-
+  .catalog-content .container {
+    padding-bottom: 62px;
+  }
 }
 
 @media #{$desktop-width} {

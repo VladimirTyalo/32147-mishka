@@ -60,11 +60,10 @@
   .product-post  {
     display: flex;
     flex-flow: row nowrap;
-    margin-top: 54px;
+    margin-bottom: 54px;
   }
 
   .product-post__info {
-    padding: 0 30px;
     display: flex;
     flex-flow: column nowrap;
     flex: 1 0 50%;
@@ -76,16 +75,31 @@
   }
 
   .product-post__title {
-    margin-bottom: 0;
+    margin-bottom: 6px;
+  }
+
+  .product-post__title-link {
     @include font(18px, 24px);
   }
 
   .product-post__descr {
     margin-top: 0;
+    @include font(15px, 30px);
+    font-family: $font-open-sans;
   }
 
   .product-post__buy {
     margin-top: auto;
+    padding-bottom: 22px;
+  }
+
+  .product-post__price {
+    @include font($fnt-base-size, $line-h-text);
+    padding-left: 4px;
+  }
+
+  .product-post__order-icon {
+    padding-right: 8px;
   }
 }
 
