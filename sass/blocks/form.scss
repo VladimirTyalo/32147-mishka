@@ -1,18 +1,21 @@
 .form__type {
   position: relative;
-  margin-top: 50px;
   background: $color-bg-main;
 }
 
 .form__descr {
-  font-family: $font-verdana;
-  @include font($fnt-text-size, $line-h-form-descr);
+  font-family: $font-open-sans;
+  @include font(14px, 25px);
+  color: $color-fnt-text;
+  margin-bottom: 25px;
 }
 
 .form__title {
   font-family: $font-open-sans;
   font-weight: bold;
   display: block;
+  margin-top: 0;
+  margin-bottom: 0;
   color: $color-fnt-alternative;
   background: $color-bg-main;
   @include font($fnt-form-title, $line-h-form-title);
@@ -44,20 +47,19 @@
   font-weight: bold;
   position: relative;
   display: block;
-  margin-top: 30px;
   padding-left: 62px;
-  @include font($fnt-form-field, $line-h-form-field);
+  @include font(16px, 19px);
 }
 
 .form__radio-label {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 0px;
   padding-left: 62px;
 }
 
 .form__checkbox-label {
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding-top: 35px;
+  padding-bottom: 10px;
 }
 
 .form__input-label {
@@ -68,12 +70,11 @@
 .form__checkbox-label::before {
   position: absolute;
   cursor: pointer;
-  top: 50%;
+  top: 25px;
   left: 0;
-  width: 40px;
-  height: 40px;
+  width: 37px;
+  height: 37px;
   content: '';
-  transform: translateY(-50%);
 }
 
 .form__radio-label::before {
@@ -81,11 +82,10 @@
   border-radius: 50%;
 }
 
-.form__radio-input:checked + label::after,
 .form__radio-input:checked + label::after {
   position: absolute;
-  top: 50%;
-  left: 23px;
+  top: 46px;
+  left: 20px;
   width: 16px;
   height: 16px;
   content: '';
@@ -98,27 +98,36 @@
   border: 3px solid $color-border-btn;
 }
 
+.form__type--radio {
+  margin-bottom: 47px;
+}
+
+.form__type--checkbox {
+  margin-bottom: 39px;
+}
+
 .form__input {
   width: 100%;
-  padding: 15px 0;
+  padding: 18px 0 18px 0;
   color: $color-fnt-placeholder;
   border: none;
   border-bottom: 2px solid $color-border-btn;
   @include font($fnt-form-field, $line-h-form-field);
+  background: $color-bg-main;
 
   &--add-info {
-    padding: 10px;
+    padding: 13px;
     border: 2px solid $color-border-btn;
     box-sizing: border-box;
-    margin-top: 30px;
     resize: none;
     overflow: auto;
+
   }
 }
 
 .form__button-submit {
   width: 100%;
-  margin: 60px 0;
+  margin: 50px 0 60px 0;
   cursor: pointer;
   background: $color-bg-main;
   display: block;
@@ -127,9 +136,21 @@
 .form__icon-tel,
 .form__icon-email {
   position: absolute;
-  right: 30px;
-  bottom: 12px;
   opacity: .3;
+}
+
+.form__icon-tel {
+  width: 26px;
+  height: 26px;
+  right: 38px;
+  bottom: 18px;
+}
+
+.form__icon-email {
+  width: 34px;
+  height: 34px;
+  right: 34px;
+  bottom: 10px;
 }
 
 .form__type--textarea {
@@ -137,13 +158,47 @@
   display: block;
 }
 
+.form__type--textarea .form__title {
+  margin-bottom: 36px;
+}
+
+.form__type--name {
+  margin-bottom: 32px;
+}
+
+.form__type--name .form__input-wrapper {
+  padding-top: 14px;
+}
+
+.form__type--name .form__input-label {
+  margin-top: 22px;
+}
+
+.form__type--phone {
+  margin-bottom: 44px;
+}
+
+.form__type--email {
+  margin-bottom: 34px;
+}
+
+
+.form__type--phone .form__input,
+.form__type--email .form__input {
+  padding-top: 22px;
+  padding-bottom: 20px;
+  padding-left: 4px;
+  @include font(16px, 19px);
+  font-weight: normal;
+}
+
 .form__checkbox-input:checked + label::after {
-  position: absolute;
-  top: 10px;
-  left: 7px;
-  width: 24px;
   content: url('../img/svg-icons/icon-tick.svg');
-  height: 24px;
+  position: absolute;
+  top: 33px;
+  left: 7px;
+  width: 15px;
+  height: 15px;
 }
 
 .form__required-info {
