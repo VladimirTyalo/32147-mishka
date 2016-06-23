@@ -1,5 +1,5 @@
 .product-post {
-  margin-bottom: 30px;
+  margin-bottom: 31px;
 }
 
 .product-post__info {
@@ -60,7 +60,7 @@
   .product-post  {
     display: flex;
     flex-flow: row nowrap;
-    margin-bottom: 55px;
+    margin-bottom: 52px;
 
     &:hover {
       box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
@@ -100,13 +100,6 @@
 
   .product-post__image-link {
     flex: 0 0 50%;
-
-    //&:hover {
-    //  color: #8d8d8d;
-    //}
-    //&:active {
-    //  color: #cacaca;
-    //}
   }
 
   .product-post__title {

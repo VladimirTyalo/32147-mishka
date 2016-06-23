@@ -7,7 +7,7 @@
 .header__title {
   font-family: $font-verdana;
   font-weight: bold;
-  margin: 72px 10px 77px 10px;
+  margin: 68px 10px 77px 10px;
   text-align: center;
   @include font($fnt-big, $line-h-big);
   color: #231f20;
@@ -35,7 +35,7 @@
 
   .header__title {
     @include font(40px, 50px);
-    margin: 50px 0 90px 0;
+    margin: 51px 0 90px 0;
   }
 }
 

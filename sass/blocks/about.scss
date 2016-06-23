@@ -98,7 +98,7 @@
 @media #{$tabet-width} {
 
   .about {
-    padding-top: 23px;
+    padding-top: 22px;
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-position: 0 85%;
@@ -171,6 +171,7 @@
   .about {
     background: $color-bg-main;
     background-image: none;
+    padding-top: 26px;
 
     &::after,
     &::before {
