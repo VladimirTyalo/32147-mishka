@@ -20,16 +20,12 @@
   &--desktop {
     display: none;
   }
+}
 
-  &::before {
-    content: url("../img/svg-icons/icon-video.svg");
-    width: 50px;
-    height: 40px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 33px;
-  }
+.video-post__icon-video {
+  position: absolute;
+  fill: #63d1bb;
+  left: 20px;
 }
 
 .video-post__content-wrapper {
@@ -69,12 +65,38 @@
     flex-flow: row wrap;
     width: 100%;
     justify-content: center;
+
+    &:hover {
+      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    &:active {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+    }
+
   }
 
   .video-post__content-wrapper {
     flex: 1 0 100%;
     order: -1;
     margin-bottom: 20px;
+  }
+
+// TODO not working
+  .video-post__content-wrapper:hover::after{
+    left: 50%;
+    top: 50%;
+    width: 125px;
+    height: 96px;
+    transform: translate(-50%, -50%);
+  }
+
+  .video-post__content-wrapper:active::after{
+    left: 50%;
+    top: 50%;
+    width: 105px;
+    height: 80px;
+    opacity: 0.6;
   }
 
   .video-post__info {
@@ -87,11 +109,11 @@
     margin-top: 10px;
     margin-bottom: 34px;
     @include font(18px, 24px);
+  }
 
-    &::before {
-      width: 54px;
-      left: 26px;
-    }
+  .video-post__icon-video {
+    top: -8px;
+    left: 18px;
   }
 
   .video-post__btn {
@@ -133,10 +155,14 @@
     &--desktop {
       display: block;
     }
-    &::before {
-      top: -34px;
-      left: 4px;
-    }
+  }
+
+
+  .video-post__icon-video {
+    width: 42px;
+    height: 34px;
+    top: -56px;
+    left: -2px;
   }
 
   .video-post__descr {

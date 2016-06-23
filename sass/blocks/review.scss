@@ -89,6 +89,10 @@
     padding-top: 70px;
   }
 
+  @media (min-resolution: 1.5dppx) {
+    background-image: url("../img/review@2x.jpg");
+  }
+
   .review__title {
     @include font(50px, 57px);
     width: 66.67%;

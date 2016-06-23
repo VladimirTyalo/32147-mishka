@@ -91,17 +91,13 @@
             <img class="top-menu__logo" src="img/logo-mobile.svg"
                  alt="логотип 'Мишка'">
           </picture>
-          <!--<svg class="top-menu__logo" width="90" height="40">-->
-            <!--<use x="0" y="0" xlink:href="#logo-mobile"></use>-->
-          <!--</svg>-->
-          <!--&lt;!&ndash;<object class="top-menu__logo" data="img/svg-icons/logo-mobile.svg" type="image/svg+xml"></object>&ndash;&gt;-->
         </a>
 
         <div class="top-menu__burger"></div>
 
         <ul class="modal-menu modal-menu--closed no-js">
           <li class="modal-menu__item">
-            <a href="catalog.html" class="modal-menu__link">
+            <a class="modal-menu__link">
               Каталог товаров
             </a>
           </li>
@@ -245,7 +241,12 @@
         </article>
 
         <article class="video-post">
-          <h2 class="video-post__title">Процесс производства</h2>
+          <h2 class="video-post__title">
+            <svg class="video-post__icon-video" width="50" height="40">
+              <use x="0" y="0" xlink:href="#icon-video"></use>
+            </svg>
+            Процесс производства
+          </h2>
           <div class="video-post__content-wrapper">
             <picture class="video-post__retina">
               <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
@@ -259,7 +260,11 @@
             <!--</video>-->
           </div>
           <div class="video-post__info">
-            <h2 class="video-post__title video-post__title--desktop">Процесс<br> производства</h2>
+            <h2 class="video-post__title video-post__title--desktop">
+              <svg class="video-post__icon-video" width="50" height="40">
+              <use x="0" y="0" xlink:href="#icon-video"></use>
+            </svg>
+              Процесс<br> производства</h2>
             <p class="video-post__descr">
               По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
             </p>

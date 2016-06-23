@@ -90,9 +90,13 @@
     <nav class="top-menu">
       <div class="container">
         <a class="top-menu__logo-link">
-          <svg class="top-menu__logo" width="90" height="40">
-            <use x="0" y="0" xlink:href="#logo-mobile"></use>
-          </svg>
+          <picture class="top-menu__logo-options">
+            <source class="top-menu__logo" media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+            <source class="top-menu__logo" media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+
+            <img class="top-menu__logo" src="img/logo-mobile.svg"
+                 alt="логотип 'Мишка'">
+          </picture>
         </a>
 
         <div class="top-menu__burger"></div>
@@ -108,20 +112,21 @@
               Вязание на заказ
             </a>
           </li>
-          <li class="modal-menu__item ">
+          <li class="modal-menu__item">
             <a href="#" class="modal-menu__link">
               Новые поступления
             </a>
           </li>
           <li class="modal-menu__item">
-            <a href="#" class="modal-menu__link ">
+            <a href="#" class="modal-menu__link">
               Распродажа
             </a>
           </li>
+
         </ul>
 
         <div class="user-block user-block--closed no-js">
-          <div class="user-block__item user-block__item--search">
+          <div class="user-block__item">
             <a href="#" class="user-block__link user-block__link--search">
               <svg class="user-block__icon-search" width="24" height="24">
                 <use x="0" y="0" xlink:href="#icon-search"></use>
@@ -207,7 +212,13 @@
           </article>
 
           <div class="featured__image-wrapper">
-            <img class="featured__image" src="img/triple-set-mobile@1x.jpg" alt="Вязаные корзинки">
+            <picture class="featured__image-options">
+              <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+
+              <img class="featured__image" src="img/triple-set-mobile@1x.jpg" alt="Вязаные корзинки"
+                   srcset="img/triple-set-mobile@1x.jpg 1x, img/triple-set-mobile@2x.jpg 2x">
+            </picture>
           </div>
           <div class="featured__buy">
             <div class="featured__price">Цена: 990 руб.</div>

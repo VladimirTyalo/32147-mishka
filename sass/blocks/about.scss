@@ -55,7 +55,6 @@
   width: 38px;
   height: 38px;
 
-
   &--feature-2 {
     width: 34px;
     height: 34px;
@@ -100,12 +99,19 @@
 
   .about {
     padding-top: 23px;
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 85%;
 
     &::after,
     &::before {
       background-size: 39px;
       background-position: 6px 13px;
     }
+  }
+
+  @media (min-resolution: 1.5dppx) {
+    background-image: url("../img/review@2x.jpg");
   }
 
   .about .form__type-wrapper {
@@ -164,6 +170,7 @@
 @media #{$desktop-width} {
   .about {
     background: $color-bg-main;
+    background-image: none;
 
     &::after,
     &::before {
