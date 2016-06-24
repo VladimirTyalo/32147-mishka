@@ -166,7 +166,6 @@
     padding-top: 5px;
     @include font(20px, 24px);
   }
-
 }
 
 @media #{$desktop-width} {
@@ -179,6 +178,7 @@
     &::before {
       background-size: 58px;
       background-position: 22px 0px;
+      //overflow: hidden;
     }
 
     // wavy border
