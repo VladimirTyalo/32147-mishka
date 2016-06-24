@@ -430,31 +430,105 @@
 
 @media #{$desktop-width} {
 
+  .form {
+    padding-top: 88px;
+    padding-bottom: 80px;
+  }
+
   .form__title {
     display: flex;
     margin-top: 0;
-    padding-top: 40px;
+    padding-top: 75px;
     flex: 0 0 16.67%;
     justify-content: center;
   }
 
+  .form__type--radio {
+    margin-bottom: 44px;
+  }
+
+  .form__type--radio .form__input-wrapper {
+    padding-top: 46px;
+  }
+
   .form__input-wrapper {
-    flex: 0 0 66.67%;
+    flex: 1 0 66.67%;
     flex-flow: row wrap;
+  }
+
+  .form__type--checkbox .form__title {
+    padding-top: 0;
+    margin-top: 30px;
+  }
+
+  .form__type--checkbox .container {
+    padding-bottom: 58px;
   }
 
   .form__checkbox-label {
     box-sizing: border-box;
-    flex: 1 0 33%;
+    flex: 0 0 30%;
+
+    &:nth-of-type(even) {
+      flex: 0 0 30%;
+    }
+  }
+
+  .form__type--name .form__title {
+    margin-top: 28px;
+    padding-top: 0;
+  }
+
+  .form__type--name .form__input-wrapper,
+  .form__type--phone .form__input-wrapper,
+  .form__type--email .form__input-wrapper {
+    flex: 0 0 66.67%;
+  }
+
+  .form__type--phone .form__title {
+    margin-top: 54px;
+    padding: 0;
+  }
+
+  .form__type--email {
+    padding-top: 2px;
+  }
+
+  .form__type--email .form__title {
+    padding: 0;
+  }
+
+  .form__icon-tel {
+    right: 10px;
+  }
+
+  .form__type--email .form__input {
+    padding: 20px 80px 20px 15px;
+  }
+
+  .form__icon-email {
+    right: 5px;
+  }
+
+  .form__type--textarea .form__input-wrapper{
+    flex: 0 0 66.67%;
+    margin-bottom: 73px;
+  }
+
+  .form__type--textarea .form__title {
+    margin-top: 18px;
+    padding: 0;
   }
 
   .form__button-submit {
     margin-left: 16.67%;
-    flex: 0 0 30%;
+    flex: 0 0 22%;
   }
 
   .form__required-info {
     flex: 0 0 33%;
+    margin-left: auto;
+    margin-right: 16.67%;
   }
 
   .form__descr {
