@@ -111,7 +111,9 @@
   }
 
   @media #{$retina}  {
-    background-image: url("../img/review@2x.jpg");
+    .about {
+      background-image: url("../img/review@2x.jpg");
+    }
   }
 
   .about .form__type-wrapper {
