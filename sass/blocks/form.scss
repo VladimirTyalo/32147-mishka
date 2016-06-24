@@ -291,6 +291,7 @@
     height: 47px;
   }
 
+  .form__radio-input:not(:checked) + label:active::after,
   .form__radio-input:checked + label::after {
     content: '';
     top: 40px;
@@ -366,6 +367,7 @@
     }
   }
 
+  .form__checkbox-input:not(:checked) + label:active::after,
   .form__checkbox-input:checked + label::after {
     top: 24px;
     left: 9px;
