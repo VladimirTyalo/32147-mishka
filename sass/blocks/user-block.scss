@@ -72,33 +72,34 @@
     min-height: 32px;
     border-bottom: none;
     padding-bottom: 30px;
-    padding-right: 5px;
+    padding-right: 0;
+    padding-left: 0;
 
     &--search {
       font-size: 0; // to hide text
-      width: 60px;
+      min-width: 82px;
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: 82px;
       border-right: 1px solid $color-top-menu-separator;
       border-left: 1px solid $color-top-menu-separator;
     }
 
     &--cart {
-      padding-right: 0px;
-      // padding for cart icon
-      width: 193px;
       padding-left: 72px;
       @include font(16px, 30px);
     }
   }
 
   .user-block__icon-cart {
-    left: 32px;
+    left: 27px;
     top: 34px;
     height: 19px;
   }
 
   .user-block__icon-search {
-    left: 33px;
-    top: 34px;
+    left: 31px;
+    top: 35px;
     height: 19px;
   }
 }
@@ -106,13 +107,13 @@
 @media #{$desktop-width} {
   .user-block {
     order: 3;
-    flex: 0 0 35%;
+    flex: 0 0 37%;
   }
 
   .user-block__link {
     padding-right: 1px;
     &--search {
-      width: 63px;
+      flex: 0 1 82px;
     }
   }
 }
