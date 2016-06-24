@@ -139,6 +139,7 @@
 
   .index-header__link {
     padding: 28px 30px 30px 30px;
+    transition: padding 0.2s;
 
     &:hover {
       padding: 28px 30px 35px 30px

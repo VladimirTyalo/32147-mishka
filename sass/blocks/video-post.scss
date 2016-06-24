@@ -40,7 +40,8 @@
 
 .video-post__icon-play {
   position: absolute;
-  fill: inherit;
+  background-image: url("../img/svg-icons/icon-play.svg");
+  background-repeat: no-repeat;
   left: 50%;
   top: 50%;
   width: 105px;
