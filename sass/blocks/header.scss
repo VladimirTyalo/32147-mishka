@@ -27,7 +27,7 @@
       background-image: url('../img/wave.png');
       background-repeat: repeat-x;
       background-position: 2px 2px;
-      background-size: 38px 30px;
+      background-size: 38px 23px;
     }
   }
 
@@ -42,8 +42,9 @@
   .header {
     // wavy border
     &::after {
+      bottom: -17px;
       background-position: 0 0;
-      background-size: 58px 40px;
+      background-size: 58px 30px;
     }
   }
 

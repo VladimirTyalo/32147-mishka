@@ -168,8 +168,9 @@
   .index-header {
     width: auto;
     &::after {
-      background-position: -1px 0px;
-      background-size: 58px 24px;
+      bottom: -7px;
+      background-position: -2px 0px;
+      background-size: 58px 30px;
     }
   }
 
