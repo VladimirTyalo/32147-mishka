@@ -85,13 +85,14 @@
     flex: 1 0 50%;
     box-sizing: border-box;
     padding-top: 22px;
-    &:hover {
-      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
-    }
+  }
 
-    &:active {
-      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
-    }
+  .product-post:hover .product-post__info {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .product-post:active .product-post__info {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
   }
 
   .product-post__image-link {
