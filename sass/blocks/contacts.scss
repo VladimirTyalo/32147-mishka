@@ -36,7 +36,7 @@
   padding-bottom: 3px;
   color: $color-fnt-text;
   &:hover {
-    color: $color-icon-logo-hover;
+    color: #46c1ae;
   }
 
   &:active {
@@ -50,6 +50,7 @@
   background-image: url('../img/map-mobile@1x.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  min-height: 456px;
 }
 
 .contacts__map-frame {
@@ -76,7 +77,7 @@
 
 }
 
-@media #{$tabet-width} {
+@media #{$tablet-width} {
   .contacts .container {
     font-size: 0;
   }
@@ -111,6 +112,7 @@
 
   .contacts__map {
     margin-top: 0;
+    background-image: url('../img/map-tablet@1x.jpg');
   }
 
   .contacts__btn--mobile {
@@ -174,6 +176,7 @@
   .contacts__map {
     flex: 0 0 50%;
     order: 2;
+    background-image: url('../img/map-desktop@1x.jpg');
   }
 
   .contacts__btn {

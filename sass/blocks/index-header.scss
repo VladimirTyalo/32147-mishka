@@ -5,6 +5,13 @@
   background-position: center top;
 }
 
+@media #{$retina} {
+  .index-header {
+    background-image: url('../img/hero-mobile@2x.jpg');
+    background-size: auto 373px;
+  }
+}
+
 .index-header .form__type-wrapper {
   padding: 0;
   display: flex;
@@ -37,7 +44,6 @@
   flex: 1 0 100%;
 }
 
-
 .index-header__text {
   @include block-align("inline-block", "middle");
   padding-left: 0;
@@ -46,7 +52,6 @@
   @include font($fnt-index-header-text, $line-h-text);
   font-weight: bold;
 }
-
 
 .index-header__link {
   display: block;
@@ -75,7 +80,7 @@
   }
 }
 
-@media #{$tabet-width} {
+@media #{$tablet-width} {
 
   .index-header__line-break {
     display: none;
@@ -88,7 +93,8 @@
 
   .index-header {
     position: relative;
-    background-size: 150%;
+    background-image: url("../img/hero-desktop@1x.jpg");
+
     // wavy border
     &::after {
       position: absolute;
@@ -104,8 +110,14 @@
     }
   }
 
+  @media #{$retina} {
+    .index-header {
+      background-image: url("../img/hero-desktop@2x.jpg");
+    }
+  }
+
   .index-header__title {
-    flex: 0 0  510px;
+    flex: 0 0 510px;
     @include font(40px, 50px);
     padding-top: 110px;
     min-height: 476px;
@@ -125,9 +137,9 @@
     flex: 1 0 50%;
   }
 
-
   .index-header__link {
     padding: 28px 30px 30px 30px;
+    transition: padding 0.2s;
 
     &:hover {
       padding: 28px 30px 35px 30px
@@ -154,27 +166,28 @@
 }
 
 @media #{$desktop-width} {
-    .index-header {
-      width: auto;
 
-      &::after {
-        background-position: -1px 0px;
-        background-size: 58px 24px;
-      }
+  .index-header {
+    width: auto;
+    &::after {
+      bottom: -7px;
+      background-position: -2px 0px;
+      background-size: 58px 30px;
     }
+  }
 
-    .index-header__title {
-      @include font(50px, 57px);
-      flex: 1 0 630px;
-    }
-   .index-header__line-break:nth-of-type(2) {
-     display: block;
-   }
+  .index-header__title {
+    @include font(50px, 57px);
+    flex: 1 0 630px;
+  }
+  .index-header__line-break:nth-of-type(2) {
+    display: block;
+  }
 
-   .index-header__text {
-     @include font(20px, 30px);
-     padding-left: 10px;
-   }
+  .index-header__text {
+    @include font(20px, 30px);
+    padding-left: 10px;
+  }
 
   .index-header__link {
     padding-bottom: 30px;

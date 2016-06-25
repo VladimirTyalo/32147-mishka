@@ -1,24 +1,25 @@
 .catalog-content {
-  margin-top: 80px;
 }
-
 
 .catalog-content .container {
   display: flex;
   flex-flow: column nowrap;
   align-items: stretch;
-
   padding-bottom: 90px;
 }
 
-
-@media #{$tabet-width} {
-
+@media #{$tablet-width} {
+  .catalog-content .container {
+    padding-bottom: 62px;
+    margin-top: 72px;
+  }
 }
 
 @media #{$desktop-width} {
   .catalog-content .container {
     flex-flow: row wrap;
     justify-content: space-between;
+    padding-bottom: 106px;
+    margin-top: 123px;
   }
 }

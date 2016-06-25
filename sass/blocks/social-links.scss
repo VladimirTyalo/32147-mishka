@@ -1,5 +1,5 @@
 .social-links {
-  padding: 26px 0 16px 0;
+  padding: 26px 0 20px 0;
   text-align: center;
   border-bottom: 1px solid $color-socials-separator;
 }
@@ -14,7 +14,6 @@
   margin-left: 12px;
   fill: $color-fnt-text;
   width: 24px;
-
 }
 
 .social-links__link:hover .social-links__icon {
@@ -25,7 +24,7 @@
   opacity: 0.3;
 }
 
-@media #{$tabet-width} {
+@media #{$tablet-width} {
   .social-links {
     margin: 0;
     padding-top: 0;

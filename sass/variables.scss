@@ -63,11 +63,13 @@ $color-icon-academy-hover: $green-5;
 
 // --- BREAK POINTS ----
 $mobile-width: "(min-width: 320px)";
-$tabet-width: "(min-width : 768px)";
+$tablet-width: "(min-width : 768px)";
 $desktop-width: "(min-width : 1150px)";
 
+$retina: "(min-resolution: 144dpi), (min-resolution: 1.5dppx)";
 
-// --- TYPOGRAPHY ---
+
+  // --- TYPOGRAPHY ---
 
 $font-verdana: Verdana, Geneva, Arial, sans-serif;
 $font-open-sans: "Open Sans", Arial, Helvetica, sans-serif;

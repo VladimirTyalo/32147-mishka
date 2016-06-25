@@ -28,7 +28,7 @@
   min-height: 24px;
 }
 
-@media #{$tabet-width} {
+@media #{$tablet-width} {
   .modal-menu {
     display: flex;
     flex-flow: row wrap;

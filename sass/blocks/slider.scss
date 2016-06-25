@@ -38,7 +38,6 @@
     background-position: center;
   }
 
-
   &--prev:hover,
   &--next:hover {
     opacity: 0.6;
@@ -53,7 +52,7 @@
   }
 }
 
-@media #{$tabet-width} {
+@media #{$tablet-width} {
 
   .slider {
     position: relative;

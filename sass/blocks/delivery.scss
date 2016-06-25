@@ -2,8 +2,7 @@
   display: none;
 }
 
-
-@media #{$tabet-width} {
+@media #{$tablet-width} {
   .delivery {
     display: block;
     flex: 1 0 87%;

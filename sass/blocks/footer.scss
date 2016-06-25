@@ -16,7 +16,7 @@
 }
 
 .footer__copyright {
-  padding: 23px 0;
+  padding: 26px 0 26px 0;
   text-align: center;
   &:active {
     opacity: 0.3;
@@ -25,13 +25,11 @@
 
 .footer__copyright-icon {
   margin-left: 19px;
-
   width: 28px;
   heigth: 40px;
   @include block-align();
   fill: $color-icon-academy-logo;
 }
-
 
 .footer__copyright:hover .footer__copyright-icon {
   fill: $color-icon-academy-hover;
@@ -46,9 +44,9 @@
   @include font($fnt-footer, $line-h-footer);
 }
 
-@media #{$tabet-width} {
+@media #{$tablet-width} {
   .footer {
-    padding-top: 60px;
+    padding-top: 58px;
     padding-bottom: 30px;
     text-align: center;
   }
@@ -66,13 +64,11 @@
     margin-top: -8px;
   }
 
-
   .footer__copyright {
     float: right;
     margin: 0;
     padding: 0;
     padding-left: 10px;
-
   }
 
   .footer__copyright-icon {

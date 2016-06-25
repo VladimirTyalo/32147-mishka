@@ -31,15 +31,15 @@
   padding-left: 14px;
 }
 
-@media #{$tabet-width}
+@media #{$tablet-width}
 {
   .item-post {
-    padding-right: 10%;
-    flex: 0 0 40%;
+    padding-right: 6%;
+    flex: 0 0 44%;
   }
 
   .item-post__param-key {
-    padding-right: 10px;
+    padding-right: 0px;
   }
   .item-post__params {
     @include font(15px, $line-h-params-table);

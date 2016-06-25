@@ -44,9 +44,10 @@
   margin-top: 37px;
 }
 
-@media #{$tabet-width} {
+@media #{$tablet-width} {
   .review {
     padding-bottom: 135px;
+    padding-top: 24px;
   }
 
   .review__item {
@@ -55,7 +56,7 @@
 
   .review__title {
     @include font(40px, 50px);
-    margin: 48px 25% 50px -5px;
+    margin: 42px 25% 50px -5px;
   }
 
   .review__text {
@@ -69,7 +70,7 @@
     padding-right: 0;
     padding-left: 0;
     position: absolute;
-    top: 76px;
+    top: 70px;
     right: 0;
   }
 
@@ -87,6 +88,10 @@
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     padding-top: 70px;
+  }
+
+  @media #{$retina} {
+    background-image: url("../img/review@2x.jpg");
   }
 
   .review__title {
