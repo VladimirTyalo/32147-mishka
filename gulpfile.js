@@ -74,8 +74,7 @@ gulp.task("serve", function () {
     server: "build",
     notify: false,
     open: true,
-    ui: false,
-    port: 3005
+    ui: false
   });
 
   gulp.watch("sass/**/*.{scss,sass}", ["style"]);
