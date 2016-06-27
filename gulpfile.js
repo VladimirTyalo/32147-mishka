@@ -9,7 +9,14 @@ const gulp = require("gulp"),
   gulpGlob = require("gulp-sass-glob"), // to import whole directories of scss
   path = require("path"),
   svgmin = require('gulp-svgmin'),
-  svgstore = require("gulp-svgstore");
+  svgstore = require("gulp-svgstore"),
+  mqpacker = require("css-mqpacker"),
+  minify = require("gulp-csso"),
+  rename = require("gulp-rename"),
+  imagemin = require("gulp-imagemin"),
+  del = require("del"),
+  runSequence = require('run-sequence');
+
 
 const SVGMIN_PLUGINS = [
   {
@@ -36,7 +43,6 @@ const SVGMIN_PLUGINS = [
   }
 ];
 
-
 gulp.task("style", function () {
   gulp.src("sass/style.scss")
       .pipe(plumber())
@@ -51,28 +57,42 @@ gulp.task("style", function () {
             "last 2 Opera versions",
             "last 2 Edge versions"
           ]
+        }),
+        mqpacker({
+          sort: true
         })
       ]))
-      .pipe(gulp.dest("css"))
+      .pipe(gulp.dest("build/css"))
+      .pipe(minify())
+      .pipe(rename("style.min.css"))
+      .pipe(gulp.dest("build/css"))
       .pipe(server.reload({stream: true}));
 });
 
-gulp.task("serve", ["style"], function () {
+gulp.task("serve", function () {
   server.init({
-    server: ".",
+    server: "build",
     notify: false,
     open: true,
     ui: false
   });
 
   gulp.watch("sass/**/*.{scss,sass}", ["style"]);
-  gulp.watch("*.html").on("change", server.reload);
+  gulp.watch("*.html").on("change", function (file) {
+
+    // copy html file to build folder
+    gulp.src(file.path)
+        .pipe(gulp.dest("build"))
+        .pipe(server.reload({stream: true}));
+  });
 });
 
+
+
 // run only once to make optimize svg and make svg sprite
-gulp.task('svgmin', function () {
+gulp.task('svgsprite', function () {
   return gulp
-    .src('./img/svg-icons/*.svg')
+    .src('build/img/svg-icons/*.svg')
     .pipe(svgmin(function getOptions(file) {
       var prefix = path.basename(file.relative, path.extname(file.relative));
       var cleanUpPlugin = {
@@ -82,7 +102,6 @@ gulp.task('svgmin', function () {
       };
 
       SVGMIN_PLUGINS.push(cleanUpPlugin);
-
       return {
         plugins: SVGMIN_PLUGINS
       }
@@ -92,7 +111,46 @@ gulp.task('svgmin', function () {
         pretty: true
       }
     }))
-    .pipe(svgstore())
-    .pipe(gulp.dest('./img/sprite/'));
+    .pipe(svgstore({inlineSvg: true}))
+    .pipe(gulp.dest('build/img/sprite/'));
+});
+
+// optimize images
+gulp.task("images", function () {
+  return gulp.src("build/img/**/*.{jpg,png,gif,svg}").pipe(imagemin([
+               imagemin.optipng({optimizationlevel: 3}),
+               imagemin.jpegtran({progressive: true})
+             ]))
+             .pipe(gulp.dest("build/img"));
+});
+
+
+gulp.task("copy", function () {
+  return gulp.src([
+               "fonts/**/*.{woff,woff2}",
+               "img/**",
+               "js/**",
+               "*.html"
+             ], {
+               base: "."
+             })
+             .pipe(gulp.dest("build"));
+});
+
+
+gulp.task("clean", function () {
+  return del("build");
+});
+
+
+gulp.task("build", function (fn) {
+  runSequence(
+    "clean",
+    "copy",
+    "style",
+    "images",
+    "svgsprite",
+    fn
+  );
 });
 

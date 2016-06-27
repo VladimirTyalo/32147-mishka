@@ -91,7 +91,9 @@
   }
 
   @media #{$retina} {
-    background-image: url("../img/review@2x.jpg");
+    .review {
+      background-image: url("../img/review@2x.jpg");
+    }
   }
 
   .review__title {

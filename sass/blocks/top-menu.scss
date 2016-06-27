@@ -8,12 +8,15 @@
 }
 
 .top-menu__logo-link {
-  margin: 26px 0 14px;
+  margin: 22px 0 14px;
   text-align: center;
   display: block;
 }
 
 .top-menu__logo {
+  width: 86px;
+  height: 35px;
+
   &:hover {
     opacity: 0.6;
   }
@@ -62,6 +65,11 @@
     margin-bottom: 12px;
     margin-top: 22px;
   }
+
+  .top-menu__logo {
+    width: 112px;
+    height: 46px;
+  }
 }
 
 @media #{$desktop-width} {
@@ -72,5 +80,10 @@
     display: flex;
     justify-content: center;
     margin-top: 10px;
+  }
+
+  .top-menu__logo {
+    width: 148px;
+    height: 73px;
   }
 }

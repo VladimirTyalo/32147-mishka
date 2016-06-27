@@ -22,10 +22,9 @@
 .slider__btn {
   cursor: pointer;
   font-size: 20px;
-  display: inline-block;
+  @include block-align();
   width: 49.9%;
   min-height: 50px;
-  vertical-align: top;
   border: 1px solid $color-top-menu-separator;
 
   &--prev {

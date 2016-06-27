@@ -5,8 +5,7 @@
 }
 
 .social-links__item {
-  display: inline-block;
-  vertical-align: top;
+  @include block-align();
 }
 
 .social-links__icon {

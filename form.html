@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
     <title>Мишка: форма </title>
+    <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
 
@@ -72,9 +73,10 @@
           <picture class="top-menu__logo-options">
             <source class="top-menu__logo" media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
             <source class="top-menu__logo" media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <source class="top-menu__logo" media="(max-width: 768px)" srcset="img/logo-mobile.svg">
 
             <img class="top-menu__logo" src="img/logo-mobile.svg"
-                 alt="логотип 'Мишка'">
+                 alt="логотип 'Мишка'" width="86" height="35">
           </picture>
         </a>
 
