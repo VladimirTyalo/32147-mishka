@@ -45,7 +45,7 @@
   font-family: $font-verdana;
   font-weight: bold;
   font-style: normal;
-  display: inline-block;
+  @include block-align();
   @include font($fnt-text-size, $line-h-text);
 }
 
