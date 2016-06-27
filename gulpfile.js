@@ -82,15 +82,17 @@ gulp.task("serve", function () {
 
     // copy html file to build folder
     gulp.src(file.path)
-        .pipe(gulp.dest("build"));
+        .pipe(gulp.dest("build"))
+        .pipe(server.reload({stream: true}));
 
-    // reloading delay server after 1 sec (should be enough to copy file)
-    setTimeout(function() {
-      server.reload();
-    }, 1000);
+    //// reloading delay server after 1 sec (should be enough to copy file)
+    //setTimeout(function() {
+    //  server.reload();
+    //}, 1000);
 
   });
 });
+
 
 
 // run only once to make optimize svg and make svg sprite

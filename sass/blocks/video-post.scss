@@ -13,7 +13,7 @@
   padding-left: 90px;
   position: relative;
   margin-bottom: 25px;
-  margin-top: 24px;
+  margin-top: 22px;
   @include font($fnt-base-size, $line-h-base-size);
   font-family: $font-verdana;
   font-weight: bold;
@@ -35,7 +35,7 @@
 
 .video-post__content-wrapper {
   position: relative;
-  margin-bottom: 24px;
+  margin-bottom: 27px;
 }
 
 .video-post__icon-play {
@@ -64,7 +64,7 @@
 }
 
 .video-post__info {
-  padding: 0 32px;
+  padding: 0 32px 30px;
 }
 
 .video-post__descr {
@@ -72,7 +72,7 @@
   color: $color-fnt-main;
   padding: 0;
   margin: 0;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
 }
 
 .video-post__btn {
@@ -99,6 +99,7 @@
   .video-post__content-wrapper {
     flex: 1 0 100%;
     margin-bottom: 30px;
+    order: -1;
   }
 
   .video-post__info {
@@ -131,6 +132,7 @@
 @media #{$desktop-width} {
   .video-post {
     justify-content: flex-start;
+    flex-wrap: nowrap;
   }
 
   .video-post__content-wrapper {
@@ -142,7 +144,7 @@
 
   .video-post__info {
     box-sizing: border-box;
-    flex: 0 0 35%;
+    //flex: 0 0 35%;
     padding-left: 78px;
     padding-right: 46px;
   }
@@ -173,6 +175,7 @@
   .video-post__btn {
     align-self: flex-start;
     margin: 0;
+    margin-bottom: 60px;
   }
 }
 

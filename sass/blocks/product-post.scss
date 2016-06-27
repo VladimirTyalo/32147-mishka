@@ -60,7 +60,7 @@
   .product-post {
     display: flex;
     flex-flow: row nowrap;
-    margin-bottom: 52px;
+    margin-bottom: 54px;
   }
 
 .product-post__title-link:hover,
@@ -82,7 +82,7 @@
   .product-post__info {
     display: flex;
     flex-flow: column nowrap;
-    flex: 1 0 50%;
+    flex-grow: 1;
     box-sizing: border-box;
     padding-top: 22px;
   }
