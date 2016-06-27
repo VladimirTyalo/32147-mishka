@@ -46,9 +46,10 @@
 .contacts__map {
   position: relative;
   margin-top: 31px;
-  background-image: url('../img/map-mobile@1x.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: url("../img/svg-icons/icon-map-pin.svg"), url('../img/map-mobile@1x.jpg');
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto, cover;
+  background-position: center, center;
   min-height: 456px;
 }
 
@@ -111,7 +112,10 @@
 
   .contacts__map {
     margin-top: 0;
-    background-image: url('../img/map-tablet@1x.jpg');
+    background: url("../img/svg-icons/icon-map-pin.svg"), url('../img/map-tablet@1x.jpg');
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto, cover;
+    background-position: center, center;
   }
 
   .contacts__btn--mobile {
@@ -175,7 +179,10 @@
   .contacts__map {
     flex: 0 0 50%;
     order: 2;
-    background-image: url('../img/map-desktop@1x.jpg');
+    background: url("../img/svg-icons/icon-map-pin.svg"), url('../img/map-desktop@1x.jpg');
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto, cover;
+    background-position: center, center;
   }
 
   .contacts__btn {
