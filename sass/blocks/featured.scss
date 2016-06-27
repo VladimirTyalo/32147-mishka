@@ -16,6 +16,11 @@
   flex: 0 0 100%;
 }
 
+
+.featured__image {
+  background: #cae3e6;
+}
+
 .featured__best-seller {
   font-family: $font-open-sans;
   font-weight: bold;
@@ -91,6 +96,8 @@
 
   .featured__image {
     display: block;
+    width: 100%;
+    height: auto;
   }
 
   .featured__buy {

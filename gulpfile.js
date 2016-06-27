@@ -84,12 +84,6 @@ gulp.task("serve", function () {
     gulp.src(file.path)
         .pipe(gulp.dest("build"))
         .pipe(server.reload({stream: true}));
-
-    //// reloading delay server after 1 sec (should be enough to copy file)
-    //setTimeout(function() {
-    //  server.reload();
-    //}, 1000);
-
   });
 });
 
