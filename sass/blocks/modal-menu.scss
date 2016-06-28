@@ -7,6 +7,10 @@
   }
 }
 
+.no-js {
+  display: block;
+}
+
 .modal-menu__item {
   border-top: 1px solid $color-top-menu-separator;
   margin: 0;
