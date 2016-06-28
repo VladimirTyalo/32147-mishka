@@ -18,7 +18,7 @@
 @media #{$desktop-width} {
   .catalog-content .container {
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding-bottom: 106px;
     margin-top: 123px;
   }

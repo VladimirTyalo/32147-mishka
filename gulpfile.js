@@ -17,7 +17,6 @@ const gulp = require("gulp"),
   del = require("del"),
   runSequence = require('run-sequence');
 
-
 const SVGMIN_PLUGINS = [
   {
     removeDoctype: true
@@ -87,8 +86,6 @@ gulp.task("serve", function () {
   });
 });
 
-
-
 // run only once to make optimize svg and make svg sprite
 gulp.task('svgsprite', function () {
   return gulp
@@ -124,7 +121,6 @@ gulp.task("images", function () {
              .pipe(gulp.dest("build/img"));
 });
 
-
 gulp.task("copy", function () {
   return gulp.src([
                "fonts/**/*.{woff,woff2}",
@@ -137,11 +133,9 @@ gulp.task("copy", function () {
              .pipe(gulp.dest("build"));
 });
 
-
 gulp.task("clean", function () {
   return del("build");
 });
-
 
 gulp.task("build", function (fn) {
   runSequence(

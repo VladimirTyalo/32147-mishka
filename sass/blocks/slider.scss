@@ -28,12 +28,12 @@
   border: 1px solid $color-top-menu-separator;
 
   &--prev {
-    background: url('../img/svg-icons/icon-left-arrow.svg') no-repeat;
+    background: url("../img/svg-icons/icon-left-arrow.svg") no-repeat;
     background-position: center;
   }
 
   &--next {
-    background: url('../img/svg-icons/icon-right-arrow.svg') no-repeat;
+    background: url("../img/svg-icons/icon-right-arrow.svg") no-repeat;
     background-position: center;
   }
 
