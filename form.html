@@ -7,7 +7,7 @@
     <title>Мишка: форма </title>
     <script src="js/picturefill.min.js" async></script>
   </head>
-  <body>
+  <body class="form-page">
 
     <!-- this svg is a container for svg icons and should not appear on the page.
     To emphasise this I use inline style="display: none" -->
@@ -208,10 +208,10 @@
       <div class="form__type form__type--phone">
         <div class="container">
           <h2 class="form__title">
-            <span class="form__title-element">ТЕЛ</span>
+            <label class="form__title-element" for="tel">ТЕЛ</label>
           </h2>
           <div class="form__input-wrapper">
-            <input class="form__input" type="tel" placeholder="+7  XXX  XX  XX" required>
+            <input class="form__input" type="tel" id="tel" placeholder="+7  XXX  XX  XX" required pattern="\+*[0-9]{1,11}">
             <svg class="form__icon-tel" width="40" height="40">
               <use x="0" y="0" xlink:href="#icon-phone"></use>
             </svg>
@@ -222,10 +222,10 @@
       <div class="form__type form__type--email">
         <div class="container">
           <h2 class="form__title">
-            <span class="form__title-element">E-MAIL</span>
+            <label class="form__title-element" for="email">E-MAIL</label>
           </h2>
           <div class="form__input-wrapper">
-            <input class="form__input" type="email" placeholder="Ваш e-mail" required>
+            <input class="form__input" type="email" id="email" placeholder="Ваш e-mail" required>
             <svg class="form__icon-email" width="40" height="40">
               <use x="0" y="0" xlink:href="#icon-mail"></use>
             </svg>
@@ -236,10 +236,10 @@
       <div class="form__type form__type--textarea">
         <div class="container">
           <h2 class="form__title">
-            <span class="form__title-element">ДОП</span>
+            <label class="form__title-element" for="add-info">ДОП</label>
           </h2>
           <div class="form__input-wrapper">
-            <textarea class="form__input  form__input--add-info" rows="6" placeholder="Опишите все ваши пожелания к заказу" required></textarea>
+            <textarea class="form__input  form__input--add-info" id="add-info" rows="6" placeholder="Опишите все ваши пожелания к заказу" required></textarea>
           </div>
 
           <button class="btn form__button-submit" type="submit">Отправить заказ</button>

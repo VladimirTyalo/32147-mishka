@@ -1,6 +1,6 @@
 .container {
   margin: 0 auto;
-  padding: 0px 30px;
+  padding: 0px 29px;
 
   @media #{$tablet-width}{
     /* 1050px * 0.91 ~= 955px (центровка начнётся чуть раньше 1050px) */

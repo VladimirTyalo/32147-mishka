@@ -1,13 +1,13 @@
 .index-header {
   background-color: $color-bg-index-header;
-  background-image: url('../img/hero-mobile@1x.jpg');
+  background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center top;
 }
 
-@media #{$retina} {
+@media #{$retina-mobile} {
   .index-header {
-    background-image: url('../img/hero-mobile@2x.jpg');
+    background-image: url("../img/hero-mobile@2x.jpg");
     background-size: auto 373px;
   }
 }
@@ -102,8 +102,8 @@
       left: 0px;
       height: 20px;
       width: 100%;
-      content: '';
-      background-image: url('../img/wave.png');
+      content: "";
+      background-image: url("../img/wave.png");
       background-repeat: repeat-x;
       background-position: -5px 0;
       background-size: 39px 20px;
@@ -113,6 +113,7 @@
   @media #{$retina} {
     .index-header {
       background-image: url("../img/hero-desktop@2x.jpg");
+      background-size: auto 740px;
     }
   }
 
@@ -173,6 +174,12 @@
       bottom: -7px;
       background-position: -2px 0px;
       background-size: 58px 30px;
+    }
+  }
+
+  @media #{$retina} {
+    .index-header {
+      background-size: 100%;
     }
   }
 

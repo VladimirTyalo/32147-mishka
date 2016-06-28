@@ -1,16 +1,20 @@
 .header {
   border: 1px solid transparent;
   background: $color-bg-header;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .header__title {
   font-family: $font-verdana;
   font-weight: bold;
-  margin: 70px 0px 82px 0px;
+  margin: 70px 0px 76px 0px;
   text-align: center;
   @include font($fnt-big, $line-h-big);
   color: #231f20;
+}
+
+.form-page .header__title {
+  margin-top: 76px;
 }
 
 @media #{$tablet-width} {
@@ -18,13 +22,13 @@
     position: relative;
     // wavy border
     &::after {
+      content: "";
       position: absolute;
       bottom: -15px;
       left: 0px;
       height: 39px;
       width: 100%;
-      content: '';
-      background-image: url('../img/wave.png');
+      background-image: url("../img/wave.png");
       background-repeat: repeat-x;
       background-position: 2px 2px;
       background-size: 38px 23px;
@@ -34,6 +38,10 @@
   .header__title {
     @include font(40px, 50px);
     margin: 51px 0 90px 0;
+  }
+
+  .form-page .header__title {
+    margin-top: 50px;
   }
 }
 

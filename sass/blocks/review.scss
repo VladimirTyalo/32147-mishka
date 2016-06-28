@@ -46,7 +46,7 @@
 
 @media #{$tablet-width} {
   .review {
-    padding-bottom: 135px;
+    padding-bottom: 137px;
     padding-top: 24px;
   }
 
@@ -93,6 +93,7 @@
   @media #{$retina} {
     .review {
       background-image: url("../img/review@2x.jpg");
+      background-size: auto 458px;
     }
   }
 

@@ -3,7 +3,7 @@
 }
 
 .product-post__info {
-  padding: 25px 26px 0 26px;
+  padding: 24px 26px 0 26px;
   border: 1px solid $color-top-menu-separator;
 }
 
@@ -64,8 +64,8 @@
     margin-bottom: 54px;
   }
 
-.product-post__title-link:hover,
-.product-post__price:hover {
+  .product-post__title-link:hover,
+  .product-post__price:hover {
     color: #8d8d8d;
   }
 
@@ -133,6 +133,11 @@
   .product-post {
     flex: 0 0 30%;
     flex-flow: column nowrap;
+    margin-right: 52px;
+
+    &:nth-child(3n) {
+      margin-right: 0px;
+    }
   }
 
   .product-post__info {

@@ -5,6 +5,10 @@
   }
 }
 
+.no-js {
+  display: block;
+}
+
 .user-block__item {
   border-top: 1px solid $color-top-menu-separator;
   position: relative;

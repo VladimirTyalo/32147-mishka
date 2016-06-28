@@ -85,7 +85,7 @@
     display: flex;
     flex-flow: row wrap;
     width: 100%;
-    justify-content: center;
+    justify-content: flex-start;
 
     &:hover {
       box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
@@ -99,7 +99,7 @@
 
   .video-post__content-wrapper {
     flex: 1 0 100%;
-    margin-bottom: 30px;
+    margin-bottom: 36px;
     order: -1;
   }
 
@@ -108,10 +108,7 @@
   }
 
   .video-post__title {
-    margin-right: auto;
-    margin-left: 15px;
-    margin-top: 10px;
-    margin-bottom: 34px;
+    margin: 0px auto 34px 15px;
     @include font(18px, 24px);
   }
 

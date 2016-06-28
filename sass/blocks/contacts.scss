@@ -30,7 +30,6 @@
 }
 
 .contacts__mail {
-  color: $color-fnt-main;
   border-bottom: 1px solid $color-underline;
   padding-bottom: 3px;
   color: $color-fnt-text;
@@ -46,7 +45,7 @@
 .contacts__map {
   position: relative;
   margin-top: 31px;
-  background: url("../img/svg-icons/icon-map-pin.svg"), url('../img/map-mobile@1x.jpg');
+  background: url("../img/svg-icons/icon-map-pin.svg"), url("../img/map-mobile@1x.jpg");
   background-repeat: no-repeat, no-repeat;
   background-size: auto, cover;
   background-position: center, center;
@@ -83,7 +82,7 @@
   }
 
   .contacts__title {
-    background-image: url('../img/svg-icons/icon-flag.svg');
+    background-image: url("../img/svg-icons/icon-flag.svg");
     background-repeat: no-repeat;
     background-position: 99.5% 20px;
     @include font(40px, 50px);
@@ -112,7 +111,7 @@
 
   .contacts__map {
     margin-top: 0;
-    background: url("../img/svg-icons/icon-map-pin.svg"), url('../img/map-tablet@1x.jpg');
+    background: url("../img/svg-icons/icon-map-pin.svg"), url("../img/map-tablet@1x.jpg");
     background-repeat: no-repeat, no-repeat;
     background-size: auto, cover;
     background-position: center, center;
@@ -138,7 +137,7 @@
     display: flex;
     flex-flow: row wrap;
     max-width: 1050px;
-    background-image: url('../img/svg-icons/icon-flag.svg');
+    background-image: url("../img/svg-icons/icon-flag.svg");
     background-repeat: no-repeat;
     background-position: 65px 114px;
   }
@@ -179,7 +178,7 @@
   .contacts__map {
     flex: 0 0 50%;
     order: 2;
-    background: url("../img/svg-icons/icon-map-pin.svg"), url('../img/map-desktop@1x.jpg');
+    background: url("../img/svg-icons/icon-map-pin.svg"), url("../img/map-desktop@1x.jpg");
     background-repeat: no-repeat, no-repeat;
     background-size: auto, cover;
     background-position: center, center;
@@ -195,7 +194,7 @@
     }
 
     &--desktop {
-      display: inline-block;
+      @include block-align();
     }
   }
 
