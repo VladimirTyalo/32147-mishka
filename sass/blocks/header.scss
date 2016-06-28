@@ -13,10 +13,6 @@
   color: #231f20;
 }
 
-.form-page .header__title {
-  margin-top: 76px;
-}
-
 @media #{$tablet-width} {
   .header {
     position: relative;
@@ -38,10 +34,6 @@
   .header__title {
     @include font(40px, 50px);
     margin: 51px 0 90px 0;
-  }
-
-  .form-page .header__title {
-    margin-top: 50px;
   }
 }
 

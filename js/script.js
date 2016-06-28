@@ -82,7 +82,7 @@
     burgerButton.addEventListener("click", function (ev) {
       ev.preventDefault();
 
-      burgerButton.classList.toggle("top-menu__burger--close");
+      burgerButton.classList.toggle("top-menu__burger--closed");
       modalMenu.classList.toggle("modal-menu--closed");
       userBlock.classList.toggle("user-block--closed");
     });
