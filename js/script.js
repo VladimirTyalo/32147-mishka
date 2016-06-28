@@ -56,7 +56,6 @@
       ev.preventDefault();
       if (this.classList.contains(btnDisabledClass))  return;
 
-
       var currentReview = slider.querySelector("." + reviewShowClass);
 
       if (!currentReview)return;
@@ -77,21 +76,21 @@
 
   }
 
+  function toggleMenu(){
+      burgerButton.classList.toggle("top-menu__burger--close");
+      modalMenu.classList.toggle("modal-menu--closed");
+      userBlock.classList.toggle("user-block--closed");
+      }
 
   function handleMenu() {
     burgerButton.addEventListener("click", function (ev) {
       ev.preventDefault();
-
-      burgerButton.classList.toggle("top-menu__burger--closed");
-      modalMenu.classList.toggle("modal-menu--closed");
-      userBlock.classList.toggle("user-block--closed");
+      toggleMenu();
     });
   }
 
   function initMenuState() {
-    userBlock.classList.remove("no-js");
-    modalMenu.classList.remove("no-js");
+    toggleMenu();
   }
-
 
 })();
