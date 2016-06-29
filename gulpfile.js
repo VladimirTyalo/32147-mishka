@@ -8,14 +8,14 @@ const gulp = require("gulp"),
   server = require("browser-sync"),
   gulpGlob = require("gulp-sass-glob"), // to import whole directories of scss
   path = require("path"),
-  svgmin = require('gulp-svgmin'),
+  svgmin = require("gulp-svgmin"),
   svgstore = require("gulp-svgstore"),
   mqpacker = require("css-mqpacker"),
   minify = require("gulp-csso"),
   rename = require("gulp-rename"),
   imagemin = require("gulp-imagemin"),
   del = require("del"),
-  runSequence = require('run-sequence');
+  runSequence = require("run-sequence");
 
 const SVGMIN_PLUGINS = [
   {
@@ -87,14 +87,14 @@ gulp.task("serve", function () {
 });
 
 // run only once to make optimize svg and make svg sprite
-gulp.task('svgsprite', function () {
+gulp.task("svgsprite", function () {
   return gulp
-    .src('build/img/svg-icons/*.svg')
+    .src("build/img/svg-icons/*.svg")
     .pipe(svgmin(function getOptions(file) {
       var prefix = path.basename(file.relative, path.extname(file.relative));
       var cleanUpPlugin = {
         cleanupIDs: {
-          prefix: prefix + '-', minify: true
+          prefix: prefix + "-", minify: true
         }
       };
 
@@ -109,7 +109,7 @@ gulp.task('svgsprite', function () {
       }
     }))
     .pipe(svgstore({inlineSvg: true}))
-    .pipe(gulp.dest('build/img/sprite/'));
+    .pipe(gulp.dest("build/img/sprite/"));
 });
 
 // optimize images
