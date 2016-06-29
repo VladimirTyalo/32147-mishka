@@ -1,22 +1,21 @@
 // --- COLOR SCHEME ---
-$black-1: #000;
+$black-1: #000000;
 $black-2: #221f1f;
-$black-3: #444;
+$black-3: #444444;
 $black-4: #241f20;
-$white-1: #fff;
+$white-1: #ffffff;
 $white-2: #f1f1f1;
 $white-3: #ececec;
 $white-4: #d3d2d2;
-$grey-1:  #c7c7c7;
-$grey-2:  #ccc;
-$grey-3:  #fafafa;
-$grey-5:  #e5e5e5;
+$grey-1: #c7c7c7;
+$grey-2: #cccccc;
+$grey-3: #fafafa;
+$grey-5: #e5e5e5;
 $green-1: #62d1ba;
 $green-2: #6bc5b3;
 $green-3: #63d1bb;
 $green-4: #56c3b2;
 $green-5: #46c1ae;
-
 
 // --- font colors ---
 $color-fnt-main: $black-1;
@@ -27,7 +26,6 @@ $color-fnt-placeholder: $grey-1;
 $color-fnt-metro: $green-2;
 $color-fnt-copyright: $black-2;
 $color-fnt-header: $black-4;
-
 
 // --- background colors ---
 $color-bg-main: $white-1;
@@ -69,8 +67,7 @@ $desktop-width: "(min-width : 1150px)";
 $retina: "(min-resolution: 144dpi), (min-resolution: 1.5dppx)";
 $retina-mobile: "(max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx)";
 
-
-  // --- TYPOGRAPHY ---
+// --- TYPOGRAPHY ---
 
 $font-verdana: Verdana, Geneva, Arial, sans-serif;
 $font-open-sans: "Open Sans", Arial, Helvetica, sans-serif;
@@ -84,7 +81,6 @@ $line-h-base-size: 24px;
 
 $fnt-big: 24px;
 $line-h-big: 30px;
-
 
 // --------------- non standard font params ----------
 

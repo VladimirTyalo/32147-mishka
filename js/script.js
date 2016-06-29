@@ -10,16 +10,13 @@
   var btnNext = document.querySelector(".slider__btn--next");
   var slider = document.querySelector(".slider__inner");
 
-
   initMenuState();
-
 
   handleMenu();
 
   if (slider && btnPrev && btnNext) {
     handleSlider();
   }
-
 
   function handleSlider() {
 
@@ -76,11 +73,11 @@
 
   }
 
-  function toggleMenu(){
-      burgerButton.classList.toggle("top-menu__burger--close");
-      modalMenu.classList.toggle("modal-menu--closed");
-      userBlock.classList.toggle("user-block--closed");
-      }
+  function toggleMenu() {
+    burgerButton.classList.toggle("top-menu__burger--close");
+    modalMenu.classList.toggle("modal-menu--closed");
+    userBlock.classList.toggle("user-block--closed");
+  }
 
   function handleMenu() {
     burgerButton.addEventListener("click", function (ev) {
