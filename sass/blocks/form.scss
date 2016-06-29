@@ -170,7 +170,7 @@
 .form__icon-tel,
 .form__icon-email {
   position: absolute;
-  opacity: .3;
+  fill: #cccccc;
 }
 
 .form__icon-tel {
@@ -251,6 +251,15 @@
   padding-left: 4px;
   @include font(16px, 19px);
   font-weight: normal;
+}
+
+.form__input:invalid + [class^="form__icon"] {
+  fill: #cccccc;
+}
+
+.form__input:hover + [class^="form__icon"],
+.form__input:focus + [class^="form__icon"] {
+  fill: #62d1ba;
 }
 
 .form__checkbox-input:checked + label::after,
