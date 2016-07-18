@@ -3,16 +3,17 @@
 
   var express = require('express');
   var app = express();
+  var path = require("path");
 
   app.set("port", (process.env.PORT || 8080));
 
-  app.use(express.static(__dirname + "/build"));
+  app.use(express.static(path.join(__dirname, 'build')));
 
-  app.set("views", __dirname + "/build");
+  app.set("views", path.join(__dirname,"/build"));
   app.set("views engine", "ejs");
 
   app.get("/", function (req, res) {
-    res.render("index.html");
+    res.render("index");
   });
 
 
@@ -21,11 +22,11 @@
   });
 
   app.get("/catalog", function (req, res) {
-    res.render("catalog.html");
+    res.render("catalog");
   });
 
   app.get("/form", function (req, res) {
-    res.render("form.html");
+    res.render("form");
   });
 
   app.use(function (req, res) {
