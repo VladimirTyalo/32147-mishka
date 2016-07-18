@@ -9,8 +9,11 @@
 
   app.use(express.static(path.join(__dirname, 'build')));
 
+
+  app.engine('html', require('ejs').renderFile);
+  app.set('view engine', 'html');
+
   app.set("views", path.join(__dirname,"/build"));
-  app.set("views engine", "ejs");
 
   app.get("/", function (req, res) {
     res.render("index");
