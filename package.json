@@ -4,6 +4,7 @@
   "private": true,
   "description": "Личный проект «Мишка» от HTML Academy",
   "author": "Vladimir Tyalo",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:htmlacademy-adaptive/32147-mishka.git"
@@ -35,7 +36,8 @@
     "start": "npm run build && gulp serve"
   },
   "engines": {
-    "node": "5.8"
+    "node": "^5.8.0",
+    "npm": "^3.9.6"
   },
   "dependencies": {
     "ejs": "^2.4.2",
