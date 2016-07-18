@@ -35,11 +35,12 @@
     "start": "npm run build && gulp serve"
   },
   "engines": {
-    "node": "5.11"
+    "node": "5.8"
   },
   "dependencies": {
     "ejs": "^2.4.2",
     "express": "^4.14.0",
     "gulp-sass-glob": "^1.0.6"
-  }
+  },
+  "start": "node index.js"
 }
