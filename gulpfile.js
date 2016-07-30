@@ -65,7 +65,8 @@ gulp.task("style", function () {
       .pipe(minify())
       .pipe(rename("style.min.css"))
       .pipe(gulp.dest("build/css"))
-      .pipe(server.reload({stream: true}));
+      //.pipe(server.reload({stream: true}));
+      .pipe(server.stream());
 });
 
 gulp.task("serve", function () {
@@ -76,7 +77,7 @@ gulp.task("serve", function () {
     ui: false
   });
 
-  gulp.watch("sass/**/*.{scss,sass}", ["style"]);
+  gulp.watch("sass/**/*.{scss, sass}", ["style"]);
   gulp.watch("*.html").on("change", function (file) {
 
     // copy html file to build folder
